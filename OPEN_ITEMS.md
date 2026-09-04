@@ -4,6 +4,38 @@ Deferred, accepted or unprovisioned work. Entries are deleted when done.
 
 ## Blocking
 
+- **CI is red: `npm ci` cannot resolve the lockfile on Linux.** Four attempts, all
+  failed; stopped under CI-07 rather than looping a fifth time.
+
+  Exact error on the runner and, as of the last attempt, reproducible locally with
+  `npm ci --dry-run`:
+
+  ```
+  npm error code EUSAGE
+  npm error Missing: @emnapi/core@1.10.0 from lock file
+  npm error Missing: @emnapi/runtime@1.10.0 from lock file
+  npm error Missing: @emnapi/wasi-threads@1.2.1 from lock file
+  npm error Missing: tslib@2.8.1 from lock file
+  ```
+
+  What was tried, in order: `npm install --package-lock-only` over the existing
+  lockfile; regenerating from scratch then a full `npm install`; resolving from the
+  registry with `node_modules` moved aside; committing the lockfile that `npm ci`
+  itself rewrote. The last one did add every platform's top-level binaries
+  (`@biomejs/cli-linux-x64`, `@next/swc-linux-x64-gnu`,
+  `@tailwindcss/oxide-linux-x64-gnu`), which the earlier ones lacked, but left these
+  four nested transitive deps unresolved.
+
+  All four are transitive dependencies of the **wasm fallback** packages
+  `@tailwindcss/oxide-wasm32-wasi` and `@img/sharp-wasm32`, which npm records without
+  their nested tree. Untried options, in rough order of preference: generate the
+  lockfile on Linux (a one-off `workflow_dispatch` job that runs `npm install` on
+  Ubuntu and commits the result); add `overrides` pinning the `@emnapi/*` and `tslib`
+  versions so they land in the lockfile; or drop the wasm fallbacks.
+
+  **`npm ci --dry-run` now reproduces the failure locally**, naming the same four
+  packages, so iterate against that rather than against a CI round trip.
+
 - **The deployment is not publicly reachable.** Vercel Deployment Protection is on, so
   `https://mystic-falls-codex-owoe01bcw-akshit-bansal11s-projects.vercel.app` answers
   `302` to `vercel.com/sso-api` rather than serving the site. Turning it off required a
