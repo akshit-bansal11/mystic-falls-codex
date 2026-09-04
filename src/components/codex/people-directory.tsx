@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
-import { CATEGORY_TEXT_CLASS } from '@/lib/codex/category-index'
+import { StrandDot } from '@/components/codex/strand-dot'
 import type { Category, CategoryKey } from '@/types/codex/category'
 import type { PersonSummary } from '@/types/codex/person'
 
@@ -71,10 +71,10 @@ export function PeopleDirectory({ people, categories }: PeopleDirectoryProps) {
                 'min-h-11 rounded-control border px-3 font-mono text-meta transition-colors duration-fast ease-standard',
                 strand === category.key
                   ? 'border-strong bg-raised'
-                  : 'border-default hover:border-strong',
-                CATEGORY_TEXT_CLASS[category.key],
+                  : 'border-default text-muted hover:text-primary',
               ].join(' ')}
             >
+              <StrandDot strand={category.key} className="mr-2" />
               {category.name}
             </button>
           ))}
@@ -86,9 +86,22 @@ export function PeopleDirectory({ people, categories }: PeopleDirectoryProps) {
       </p>
 
       {visible.length === 0 ? (
-        <p className="text-muted bg-raised rounded-card px-4 py-8 text-center text-body">
-          No one here matches that. Try a shorter search, or clear the strand filter.
-        </p>
+        <div className="bg-raised rounded-card px-4 py-10 text-center">
+          <p className="text-primary text-body">
+            No one matches {query ? `"${query.trim()}"` : 'that'}
+            {strand ? ' in this strand' : ''}.
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              setQuery('')
+              setStrand(null)
+            }}
+            className="border-default text-primary hover:border-strong duration-fast ease-standard mt-4 min-h-11 rounded-control border px-4 font-mono text-meta transition-colors"
+          >
+            Show all 110 people
+          </button>
+        </div>
       ) : (
         <ul className="grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((person) => (
@@ -97,7 +110,8 @@ export function PeopleDirectory({ people, categories }: PeopleDirectoryProps) {
                 href={`/people/${person.id}`}
                 className="bg-surface border-subtle hover:border-strong duration-fast ease-standard block h-full rounded-card border p-4 transition-colors"
               >
-                <span className={`text-eyebrow uppercase ${CATEGORY_TEXT_CLASS[person.category]}`}>
+                <span className="text-faint flex items-center gap-2 text-eyebrow uppercase">
+                  <StrandDot strand={person.category} />
                   {person.kind}
                 </span>
                 <span className="text-primary mt-1 block font-display text-h3">{person.name}</span>

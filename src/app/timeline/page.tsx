@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { StrandDot } from '@/components/codex/strand-dot'
 import { TIMELINE } from '@/data/timeline'
-import { CATEGORY_BY_KEY, CATEGORY_TEXT_CLASS } from '@/lib/codex/category-index'
+import { CATEGORY_BY_KEY } from '@/lib/codex/category-index'
 
 export const metadata: Metadata = {
   title: 'Timeline',
@@ -30,11 +31,10 @@ export default function TimelinePage() {
                   key={`${entry.date}-${entry.event.slice(0, 32)}`}
                   className="border-subtle grid grid-cols-1 gap-1 border-l-2 pl-4 sm:grid-cols-[10rem_1fr] sm:gap-4"
                 >
-                  <p
-                    className={`font-mono text-meta ${CATEGORY_TEXT_CLASS[entry.category]}`}
-                    title={CATEGORY_BY_KEY.get(entry.category)?.name}
-                  >
-                    {entry.date}
+                  <p className="text-muted flex items-center gap-2 font-mono text-meta">
+                    <StrandDot strand={entry.category} />
+                    <span>{entry.date}</span>
+                    <span className="sr-only">{CATEGORY_BY_KEY.get(entry.category)?.name}</span>
                   </p>
                   <div>
                     <p className="text-primary font-body text-lead">{entry.event}</p>

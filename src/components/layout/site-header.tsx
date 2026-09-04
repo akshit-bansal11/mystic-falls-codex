@@ -10,7 +10,7 @@ export function SiteHeader() {
             The Mystic Falls <em className="text-accent not-italic">Codex</em>
           </h1>
           <p className="text-muted mt-1 text-meta">
-            Two thousand years of one story &mdash; Silas to the Salvatore School.
+            Two thousand years of one story, Silas to the Salvatore School.
           </p>
         </div>
         <ThemeToggle />

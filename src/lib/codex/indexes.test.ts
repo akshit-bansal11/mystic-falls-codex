@@ -1,9 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import {
-  CATEGORY_BORDER_CLASS,
-  CATEGORY_BY_KEY,
-  CATEGORY_TEXT_CLASS,
-} from '@/lib/codex/category-index'
+import { CATEGORY_BY_KEY } from '@/lib/codex/category-index'
 import { ERA_BY_NUM, ERA_ORDER } from '@/lib/codex/era-index'
 import { NODE_BY_ID } from '@/lib/codex/node-index'
 import { PERSON_BY_ID } from '@/lib/codex/person-index'
@@ -39,16 +35,6 @@ describe('CATEGORY_BY_KEY', () => {
 
   it('carries the CSS variable the strand is coloured by', () => {
     expect(CATEGORY_BY_KEY.get('origin')?.cssVar).toBe('--c-origin')
-  })
-})
-
-describe('strand class maps', () => {
-  it('gives every strand a text class', () => {
-    expect(Object.keys(CATEGORY_TEXT_CLASS)).toHaveLength(6)
-  })
-
-  it('gives every strand a border class', () => {
-    expect(Object.keys(CATEGORY_BORDER_CLASS)).toHaveLength(6)
   })
 })
 

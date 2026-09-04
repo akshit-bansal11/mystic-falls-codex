@@ -1,6 +1,7 @@
 'use client'
 
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
+import { StrandDot } from '@/components/codex/strand-dot'
 import type { Category, CategoryKey } from '@/types/codex/category'
 
 interface MapViewportProps {
@@ -121,6 +122,7 @@ export function MapViewport({ categories, children, canvasWidth, canvasHeight }:
                 strand === category.key ? 'border-strong text-primary bg-raised' : 'border-default',
               ].join(' ')}
             >
+              <StrandDot strand={category.key} className="mr-2" />
               {category.name}
             </button>
           ))}

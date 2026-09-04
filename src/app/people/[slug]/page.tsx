@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { StrandDot } from '@/components/codex/strand-dot'
 import { Breadcrumbs } from '@/components/layout/breadcrumbs'
 import { PEOPLE } from '@/data/people'
-import { CATEGORY_BY_KEY, CATEGORY_TEXT_CLASS } from '@/lib/codex/category-index'
+import { CATEGORY_BY_KEY } from '@/lib/codex/category-index'
 import { NODE_BY_ID } from '@/lib/codex/node-index'
 import { PERSON_BY_ID } from '@/lib/codex/person-index'
 
@@ -38,12 +39,14 @@ export default async function PersonPage({ params }: PersonPageProps) {
   if (!person) notFound()
 
   const category = CATEGORY_BY_KEY.get(person.category)
-  const strandClass = CATEGORY_TEXT_CLASS[person.category]
 
   return (
     <article className="max-w-3xl">
       <Breadcrumbs trail={[{ href: '/people', label: 'People' }]} current={person.name} />
-      <p className={`text-eyebrow uppercase ${strandClass}`}>{category?.name}</p>
+      <p className="text-faint flex items-center gap-2 text-eyebrow uppercase">
+        <StrandDot strand={person.category} />
+        {category?.name}
+      </p>
       <h2 className="text-primary mt-1 font-display text-display">{person.name}</h2>
       {person.alsoKnownAs ? (
         <p className="text-muted mt-1 font-body text-lead italic">{person.alsoKnownAs}</p>

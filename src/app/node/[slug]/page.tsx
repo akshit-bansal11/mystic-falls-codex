@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { StrandDot } from '@/components/codex/strand-dot'
 import { Breadcrumbs } from '@/components/layout/breadcrumbs'
 import { CAUSAL_MAP } from '@/data/causal-map'
-import { CATEGORY_BY_KEY, CATEGORY_TEXT_CLASS } from '@/lib/codex/category-index'
+import { CATEGORY_BY_KEY } from '@/lib/codex/category-index'
 import { ERA_BY_NUM } from '@/lib/codex/era-index'
 import { NODE_BY_ID } from '@/lib/codex/node-index'
 import { PERSON_BY_ID } from '@/lib/codex/person-index'
@@ -39,7 +40,6 @@ export default async function NodePage({ params }: NodePageProps) {
 
   const category = CATEGORY_BY_KEY.get(node.category)
   const era = ERA_BY_NUM.get(node.era)
-  const strandClass = CATEGORY_TEXT_CLASS[node.category]
 
   // What this event caused, and what caused it: the second direction is not
   // stored, so it is derived by scanning for links that point here.
@@ -53,9 +53,10 @@ export default async function NodePage({ params }: NodePageProps) {
   return (
     <article className="max-w-3xl">
       <Breadcrumbs trail={[{ href: '/', label: 'The Map' }]} current={node.title} />
-      <p className={`font-mono text-eyebrow uppercase ${strandClass}`}>
+      <p className="text-faint flex items-center gap-2 font-mono text-eyebrow uppercase">
+        <StrandDot strand={node.category} />
         {category?.name} &middot; Era {node.era}
-        {era ? ` — ${era.name}` : ''}
+        {era ? `, ${era.name}` : ''}
       </p>
       <h2 className="text-primary mt-1 font-display text-display">{node.title}</h2>
       <p className="text-faint mt-1 font-mono text-meta">{node.dated}</p>

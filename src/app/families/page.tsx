@@ -15,8 +15,8 @@ export default function FamiliesPage() {
     <>
       <h2 className="text-primary font-display text-h1">Families</h2>
       <p className="text-muted mt-2 mb-10 max-w-2xl text-lead">
-        Eleven trees. Solid lines are blood, level lines are marriages, dashed lines are sirelines
-        &mdash; the vampire equivalent of descent.
+        Eleven trees. Solid lines are blood, level lines are marriages, dashed lines are sirelines:
+        the vampire equivalent of descent.
       </p>
 
       <div className="space-y-16">
