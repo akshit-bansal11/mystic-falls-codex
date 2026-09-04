@@ -1,0 +1,108 @@
+# Directory structure
+
+Generated from the tree. A hand-edit is a bug; regenerate instead.
+Last generated: 2026-09-04
+
+```
+.
+.stylelintrc.json
+AGENTS.md
+CLAUDE.md
+DECISIONS.md
+DRIFT.md
+OPEN_ITEMS.md
+README.md
+STATE.md
+TECH-STACK.md
+biome.json
+next-env.d.ts
+next.config.ts
+package.json
+tsconfig.json
+vitest.config.mts
+.claude/
+  CLAUDE.md
+.github/
+  PULL_REQUEST_TEMPLATE.md
+  dependabot.yml
+  workflows/
+    ci.yml
+public/
+  theme-init.js
+src/
+  app/
+    globals.css
+    layout.tsx
+    not-found.tsx
+    page.tsx
+    robots.ts
+    sitemap.ts
+    eras/
+      page.tsx
+    families/
+      page.tsx
+    groups/
+      page.tsx
+    node/
+      [slug]/
+        page.tsx
+    people/
+      page.tsx
+      [slug]/
+        page.tsx
+    rules/
+      page.tsx
+    timeline/
+      page.tsx
+    watch-order/
+      page.tsx
+  components/
+    codex/
+      map-viewport.tsx
+      people-directory.tsx
+    layout/
+      breadcrumbs.tsx
+      site-footer.tsx
+      site-header.tsx
+      site-nav.tsx
+      skip-link.tsx
+      theme-toggle.tsx
+  config/
+    nav.ts
+    site.ts
+  data/
+    categories.ts
+    causal-map.ts
+    codex.parity.test.ts
+    era-narratives.ts
+    eras.ts
+    family-trees.ts
+    groups.ts
+    people.ts
+    rules.ts
+    timeline.ts
+    watch-order.ts
+  lib/
+    theme.ts
+    codex/
+      category-index.ts
+      era-index.ts
+      family-layout.test.ts
+      family-layout.ts
+      indexes.test.ts
+      map-layout.test.ts
+      map-layout.ts
+      node-index.ts
+      person-index.ts
+  types/
+    codex/
+      category.ts
+      causal-node.ts
+      era.ts
+      family.ts
+      group.ts
+      person.ts
+      rule.ts
+      timeline.ts
+      watch-order.ts
+```
