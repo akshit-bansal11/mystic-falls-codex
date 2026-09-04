@@ -1,7 +1,6 @@
 import { MapViewport } from '@/components/codex/map-viewport'
 import { CATEGORIES } from '@/data/categories'
-import { CATEGORY_BY_KEY } from '@/lib/codex/category-index'
-import { buildMapEdges, buildMapLayout, CANVAS_WIDTH, MAP } from '@/lib/codex/map-layout'
+import { buildMapEdges, buildMapLayout, CANVAS_WIDTH, MAP, wrapLabel } from '@/lib/codex/map-layout'
 
 export default function MapPage() {
   const { bands, nodes, canvasHeight } = buildMapLayout()
@@ -24,8 +23,37 @@ export default function MapPage() {
           className="block"
         >
           <title id="causal-map-title">
-            Causal map: {nodes.length} events across {bands.length} eras
+            Causal map: {nodes.length} events across {bands.length} eras, {edges.length} causal
+            links
           </title>
+
+          <defs>
+            {/* Two markers rather than one: an arrowhead cannot inherit the
+                stroke of the path it caps across a state change, so the
+                highlighted edge swaps to its own marker. */}
+            <marker
+              id="arrow"
+              viewBox="0 0 8 8"
+              refX="7"
+              refY="4"
+              markerWidth="7"
+              markerHeight="7"
+              orient="auto-start-reverse"
+            >
+              <path d="M0 1 L7 4 L0 7 z" fill="var(--border-default)" />
+            </marker>
+            <marker
+              id="arrow-active"
+              viewBox="0 0 8 8"
+              refX="7"
+              refY="4"
+              markerWidth="8"
+              markerHeight="8"
+              orient="auto-start-reverse"
+            >
+              <path d="M0 1 L7 4 L0 7 z" fill="var(--accent)" />
+            </marker>
+          </defs>
 
           {bands.map((band, index) => (
             <g key={band.era.num}>
@@ -59,24 +87,31 @@ export default function MapPage() {
             </g>
           ))}
 
+          {/* Paths are drawn first so they sit behind the boxes, and are
+              deliberately lighter and thinner than any node edge: a connection
+              should never read as the outline of a thing. */}
           <g fill="none">
             {edges.map((edge) => (
               <path
                 key={`${edge.from}-${edge.to}`}
                 d={edge.path}
                 data-edge=""
+                data-from={edge.from}
+                data-to={edge.to}
                 stroke="var(--border-default)"
-                strokeWidth={1.25}
+                strokeWidth={1}
+                markerEnd="url(#arrow)"
               />
             ))}
           </g>
 
           {nodes.map((node) => {
-            const category = CATEGORY_BY_KEY.get(node.category)
+            const lines = wrapLabel(node.title, 26, 2)
             return (
               <a
                 key={node.id}
                 href={`/node/${node.id}`}
+                data-node={node.id}
                 data-strand={node.category}
                 className="[&:focus-visible_rect]:stroke-[var(--border-strong)] [&:focus-visible_rect]:stroke-2 [&:hover_rect]:stroke-[var(--border-strong)]"
               >
@@ -85,32 +120,28 @@ export default function MapPage() {
                   y={node.y}
                   width={MAP.nodeWidth}
                   height={MAP.nodeHeight}
-                  rx={8}
+                  rx={2}
                   fill="var(--bg-surface)"
-                  stroke={`var(${category?.cssVar ?? '--border-default'})`}
+                  stroke="var(--border-default)"
                   strokeWidth={1.5}
                 />
                 <text
-                  x={node.x + 12}
-                  y={node.y + 21}
-                  className="fill-[var(--text-faint)] font-mono text-[10px]"
+                  x={node.x + 13}
+                  y={node.y + 19}
+                  className="fill-[var(--text-faint)] font-mono text-[9px] tracking-[0.08em]"
                 >
                   {node.dated}
                 </text>
-                <text
-                  x={node.x + 12}
-                  y={node.y + 42}
-                  className="fill-[var(--text-primary)] text-[14px]"
-                >
-                  {node.title.length > 26 ? `${node.title.slice(0, 25)}…` : node.title}
-                </text>
-                <text
-                  x={node.x + 12}
-                  y={node.y + 60}
-                  className="fill-[var(--text-faint)] font-mono text-[10px]"
-                >
-                  {node.leadsTo.length} consequence{node.leadsTo.length === 1 ? '' : 's'}
-                </text>
+                {lines.map((line, index) => (
+                  <text
+                    key={line}
+                    x={node.x + 13}
+                    y={node.y + (lines.length === 1 ? 46 : 40 + index * 16)}
+                    className="fill-[var(--text-primary)] text-[13.4px] font-semibold"
+                  >
+                    {line}
+                  </text>
+                ))}
               </a>
             )
           })}

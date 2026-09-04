@@ -133,3 +133,33 @@ export function buildMapEdges(placed: PlacedNode[]): MapEdge[] {
 
   return edges
 }
+
+/**
+ * Greedy word wrap for a node label.
+ *
+ * The original wrapped titles onto two lines rather than truncating, so a node
+ * showed its whole name. Overflow past the last line is folded back onto it, so
+ * nothing is silently dropped without the caller seeing it.
+ */
+export function wrapLabel(text: string, maxChars: number, maxLines: number): string[] {
+  const lines: string[] = []
+  let current = ''
+
+  for (const word of text.split(' ')) {
+    const candidate = current ? `${current} ${word}` : word
+    if (candidate.length > maxChars && current) {
+      lines.push(current)
+      current = word
+    } else {
+      current = candidate
+    }
+  }
+  if (current) lines.push(current)
+
+  if (lines.length > maxLines) {
+    const folded = lines.slice(maxLines - 1).join(' ')
+    lines.length = maxLines - 1
+    lines.push(folded)
+  }
+  return lines
+}

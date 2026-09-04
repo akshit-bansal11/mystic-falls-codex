@@ -1,7 +1,6 @@
 'use client'
 
-import { type ReactNode, useRef, useState } from 'react'
-import { CATEGORY_TEXT_CLASS } from '@/lib/codex/category-index'
+import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import type { Category, CategoryKey } from '@/types/codex/category'
 
 interface MapViewportProps {
@@ -17,21 +16,81 @@ const MIN_ZOOM = 0.4
 const MAX_ZOOM = 1.6
 
 /**
- * Pan and zoom for the causal map.
+ * Pan, zoom, strand filtering and relationship highlighting for the causal map.
  *
  * The scroll container is a real scrolling region, so panning works with the
  * scrollbars, the keyboard and touch without any of this code. Drag-to-pan is a
- * convenience layered on top, which is what satisfies SC 2.5.7 (UI-08): the
- * original offered dragging as the only way to move the map.
+ * convenience layered on top, which is what satisfies SC 2.5.7 (UI-08).
  *
- * Filtering is done with a data attribute read by CSS, so choosing a strand
- * ships no node data to the browser.
+ * Highlighting reads `data-from` / `data-to` off the already-rendered edges, so
+ * pointing at a node lights its causal links and dims the rest without any node
+ * data crossing to the browser. Without it, eighty nodes' worth of edges all
+ * draw at one weight and the connections are unreadable.
  */
 export function MapViewport({ categories, children, canvasWidth, canvasHeight }: MapViewportProps) {
   const [zoom, setZoom] = useState(1)
   const [strand, setStrand] = useState<CategoryKey | 'all'>('all')
   const scrollRef = useRef<HTMLDivElement>(null)
   const drag = useRef<{ x: number; y: number; left: number; top: number } | null>(null)
+
+  const highlight = useCallback((id: string | null) => {
+    const root = scrollRef.current
+    if (!root) return
+
+    const edges = root.querySelectorAll<SVGPathElement>('[data-edge]')
+    const nodes = root.querySelectorAll<SVGAElement>('[data-node]')
+
+    if (!id) {
+      for (const edge of edges) edge.classList.remove('is-related', 'is-faded')
+      for (const node of nodes) node.classList.remove('is-related', 'is-faded')
+      return
+    }
+
+    const related = new Set<string>([id])
+    for (const edge of edges) {
+      const { from, to } = edge.dataset
+      const touches = from === id || to === id
+      edge.classList.toggle('is-related', touches)
+      edge.classList.toggle('is-faded', !touches)
+      if (touches) {
+        if (from) related.add(from)
+        if (to) related.add(to)
+      }
+    }
+    for (const node of nodes) {
+      const touches = related.has(node.dataset.node ?? '')
+      node.classList.toggle('is-related', touches)
+      node.classList.toggle('is-faded', !touches)
+    }
+  }, [])
+
+  // Delegated rather than declared as JSX handlers: the scroll container is a
+  // plain region, not a control, so hanging hover and focus handlers on it is
+  // the static-element-interaction failure. Listening from an effect is the
+  // imperative DOM work useEffect exists for.
+  useEffect(() => {
+    const root = scrollRef.current
+    if (!root) return
+
+    const idFrom = (target: EventTarget | null): string | null => {
+      if (!(target instanceof Element)) return null
+      return target.closest<HTMLElement>('[data-node]')?.dataset.node ?? null
+    }
+
+    const onEnter = (event: Event) => highlight(idFrom(event.target))
+    const onLeave = () => highlight(null)
+
+    root.addEventListener('pointerover', onEnter)
+    root.addEventListener('pointerleave', onLeave)
+    root.addEventListener('focusin', onEnter)
+    root.addEventListener('focusout', onLeave)
+    return () => {
+      root.removeEventListener('pointerover', onEnter)
+      root.removeEventListener('pointerleave', onLeave)
+      root.removeEventListener('focusin', onEnter)
+      root.removeEventListener('focusout', onLeave)
+    }
+  }, [highlight])
 
   return (
     <div>
@@ -58,9 +117,8 @@ export function MapViewport({ categories, children, canvasWidth, canvasHeight }:
               onClick={() => setStrand(strand === category.key ? 'all' : category.key)}
               aria-pressed={strand === category.key}
               className={[
-                'duration-fast ease-standard min-h-11 rounded-control border px-3 font-mono text-meta transition-colors',
-                strand === category.key ? 'border-strong bg-raised' : 'border-default',
-                CATEGORY_TEXT_CLASS[category.key],
+                'duration-fast ease-standard text-muted hover:text-primary min-h-11 rounded-control border px-3 font-mono text-meta transition-colors',
+                strand === category.key ? 'border-strong text-primary bg-raised' : 'border-default',
               ].join(' ')}
             >
               {category.name}
@@ -104,12 +162,19 @@ export function MapViewport({ categories, children, canvasWidth, canvasHeight }:
         </div>
       </div>
 
-      <p className="text-faint mb-3 font-mono text-meta">
-        Scroll or drag to move. Every node links to what caused it and what it caused.
+      {/* A legend, because the difference between a box and a line carrying an
+          arrow is only obvious once someone says which is which. */}
+      <p className="text-faint mb-3 flex flex-wrap items-center gap-x-5 gap-y-1 font-mono text-meta">
+        <span>
+          <span aria-hidden="true">▭</span> event
+        </span>
+        <span>
+          <span aria-hidden="true">→</span> caused
+        </span>
+        <span>Point at an event to trace what it caused.</span>
+        <span>Scroll or drag to move.</span>
       </p>
 
-      {/* A real scrolling region: scrollbars, arrow keys and touch all pan it
-          without JavaScript. Drag is an extra, not the only way in. */}
       <div
         ref={scrollRef}
         data-strand-filter={strand}

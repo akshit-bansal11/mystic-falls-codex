@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { buildMapEdges, buildMapLayout } from '@/lib/codex/map-layout'
+import { buildMapEdges, buildMapLayout, wrapLabel } from '@/lib/codex/map-layout'
 import type { CausalNode } from '@/types/codex/causal-node'
 import type { Era, EraNum } from '@/types/codex/era'
 
@@ -156,5 +156,32 @@ describe('buildMapEdges', () => {
     // both anchors collapse to the centre, and dy >= dx is 0 >= 0, so the
     // vertical branch is taken with the minimum bow of 28
     expect(edges[0].path).toBe('M186 84 C 186 112, 186 56, 186 84')
+  })
+})
+
+describe('wrapLabel', () => {
+  it('leaves a label that fits on one line unwrapped', () => {
+    const lines = wrapLabel('Silas & Qetsiyah', 26, 2)
+
+    expect(lines).toEqual(['Silas & Qetsiyah'])
+  })
+
+  it('breaks a long label onto a second line at a word boundary', () => {
+    const lines = wrapLabel('The hybrid curse is broken at last', 26, 2)
+
+    // 'The hybrid curse is broken' is exactly 26 characters, so it fits
+    expect(lines).toEqual(['The hybrid curse is broken', 'at last'])
+  })
+
+  it('folds overflow back onto the last line rather than dropping words', () => {
+    const lines = wrapLabel('one two three four five six seven eight nine ten', 10, 2)
+
+    expect(lines).toEqual(['one two', 'three four five six seven eight nine ten'])
+  })
+
+  it('never returns more lines than it was allowed', () => {
+    const lines = wrapLabel('alpha bravo charlie delta echo foxtrot golf hotel', 8, 2)
+
+    expect(lines).toHaveLength(2)
   })
 })

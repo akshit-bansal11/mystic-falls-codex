@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { FAMILY_TREES } from '@/data/family-trees'
-import { CATEGORY_BY_KEY } from '@/lib/codex/category-index'
 import { LINK_STYLE, linkPath, placeMember, TREE, treeSize } from '@/lib/codex/family-layout'
 import { PERSON_BY_ID } from '@/lib/codex/person-index'
 
@@ -81,7 +80,6 @@ export default function FamiliesPage() {
                   {placed.map((member) => {
                     const person = PERSON_BY_ID.get(member.person)
                     if (!person) return null
-                    const strand = CATEGORY_BY_KEY.get(person.category)
 
                     return (
                       <a
@@ -96,7 +94,7 @@ export default function FamiliesPage() {
                           height={TREE.boxHeight}
                           rx={6}
                           fill="var(--bg-surface)"
-                          stroke={`var(${strand?.cssVar ?? '--border-default'})`}
+                          stroke="var(--border-default)"
                           strokeWidth={1.5}
                         />
                         <text
