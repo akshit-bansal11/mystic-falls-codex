@@ -1,6 +1,7 @@
 import { MapViewport } from '@/components/codex/map-viewport'
 import { CATEGORIES } from '@/data/categories'
 import { buildMapEdges, buildMapLayout, CANVAS_WIDTH, MAP, wrapLabel } from '@/lib/codex/map-layout'
+import { STRAND_FILL, STRAND_STROKE } from '@/lib/codex/strand-classes'
 
 export default function MapPage() {
   const { bands, nodes, canvasHeight } = buildMapLayout()
@@ -113,7 +114,7 @@ export default function MapPage() {
                 href={`/node/${node.id}`}
                 data-node={node.id}
                 data-strand={node.category}
-                className="[&:focus-visible_rect]:stroke-[var(--border-strong)] [&:focus-visible_rect]:stroke-2 [&:hover_rect]:stroke-[var(--border-strong)]"
+                className="[&:focus-visible_rect]:stroke-[var(--border-strong)] [&:focus-visible_rect]:stroke-2"
               >
                 <rect
                   x={node.x}
@@ -122,8 +123,17 @@ export default function MapPage() {
                   height={MAP.nodeHeight}
                   rx={2}
                   fill="var(--bg-surface)"
-                  stroke="var(--border-default)"
                   strokeWidth={1.5}
+                  className={STRAND_STROKE[node.category]}
+                />
+                {/* The rail carries the strand at full strength; the border
+                    carries it at reading weight. Both are marks, not text. */}
+                <rect
+                  x={node.x}
+                  y={node.y}
+                  width={3}
+                  height={MAP.nodeHeight}
+                  className={STRAND_FILL[node.category]}
                 />
                 <text
                   x={node.x + 13}

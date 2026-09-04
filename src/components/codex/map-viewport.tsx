@@ -202,7 +202,7 @@ export function MapViewport({ categories, children, canvasWidth, canvasHeight }:
         onPointerCancel={() => {
           drag.current = null
         }}
-        className="bg-sunk rounded-surface border-subtle max-h-[80vh] overflow-auto border"
+        className="bg-sunk rounded-surface border-subtle h-[85vh] min-h-[34rem] overflow-auto border"
       >
         <div style={{ width: canvasWidth * zoom, height: canvasHeight * zoom }}>
           <div

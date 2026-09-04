@@ -3,6 +3,7 @@ import { SectionIndex } from '@/components/layout/section-index'
 import { FAMILY_TREES } from '@/data/family-trees'
 import { LINK_STYLE, linkPath, placeMember, TREE, treeSize } from '@/lib/codex/family-layout'
 import { PERSON_BY_ID } from '@/lib/codex/person-index'
+import { STRAND_STROKE } from '@/lib/codex/strand-classes'
 
 export const metadata: Metadata = {
   title: 'Families',
@@ -100,8 +101,8 @@ export default function FamiliesPage() {
                           height={TREE.boxHeight}
                           rx={6}
                           fill="var(--bg-surface)"
-                          stroke="var(--border-default)"
                           strokeWidth={1.5}
+                          className={STRAND_STROKE[person.category]}
                         />
                         <text
                           x={member.x + 10}

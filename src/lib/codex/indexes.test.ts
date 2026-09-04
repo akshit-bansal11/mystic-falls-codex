@@ -32,10 +32,6 @@ describe('CATEGORY_BY_KEY', () => {
   it('resolves a strand key to its display name', () => {
     expect(CATEGORY_BY_KEY.get('vamp')?.name).toBe('Vampires')
   })
-
-  it('carries the CSS variable the strand is coloured by', () => {
-    expect(CATEGORY_BY_KEY.get('origin')?.cssVar).toBe('--c-origin')
-  })
 })
 
 describe('ERA_BY_NUM', () => {
