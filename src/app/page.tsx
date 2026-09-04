@@ -29,9 +29,9 @@ export default function MapPage() {
           </title>
 
           <defs>
-            {/* Two markers rather than one: an arrowhead cannot inherit the
-                stroke of the path it caps across a state change, so the
-                highlighted edge swaps to its own marker. */}
+            {/* An arrowhead cannot inherit the stroke of the path it caps, so
+                each strand needs its own marker for the traced chain to carry
+                that strand's colour rather than one shared accent. */}
             <marker
               id="arrow"
               viewBox="0 0 8 8"
@@ -43,17 +43,20 @@ export default function MapPage() {
             >
               <path d="M0 1 L7 4 L0 7 z" fill="var(--border-default)" />
             </marker>
-            <marker
-              id="arrow-active"
-              viewBox="0 0 8 8"
-              refX="7"
-              refY="4"
-              markerWidth="8"
-              markerHeight="8"
-              orient="auto-start-reverse"
-            >
-              <path d="M0 1 L7 4 L0 7 z" fill="var(--accent)" />
-            </marker>
+            {CATEGORIES.map((category) => (
+              <marker
+                key={category.key}
+                id={`arrow-${category.key}`}
+                viewBox="0 0 8 8"
+                refX="7"
+                refY="4"
+                markerWidth="8"
+                markerHeight="8"
+                orient="auto-start-reverse"
+              >
+                <path d="M0 1 L7 4 L0 7 z" className={STRAND_FILL[category.key]} />
+              </marker>
+            ))}
           </defs>
 
           {bands.map((band, index) => (
@@ -68,18 +71,19 @@ export default function MapPage() {
                   strokeWidth={1}
                 />
               ) : null}
+              {/* One element with two spans: laying the numeral and the name
+                  out as separate absolutely-placed texts collided as soon as a
+                  numeral was wider than the gap between them. */}
+              <text x={20} y={band.top + 30}>
+                <tspan className="fill-[var(--text-faint)] font-mono text-[11px] tracking-wider">
+                  Era {band.era.num}
+                </tspan>
+                <tspan dx={14} className="fill-[var(--text-primary)] text-[15px]">
+                  {band.era.name}
+                </tspan>
+              </text>
               <text
                 x={20}
-                y={band.top + 31}
-                className="fill-[var(--text-faint)] font-mono text-[11px] tracking-wider"
-              >
-                Era {band.era.num}
-              </text>
-              <text x={66} y={band.top + 30} className="fill-[var(--text-primary)] text-[15px]">
-                {band.era.name}
-              </text>
-              <text
-                x={66}
                 y={band.top + 46}
                 className="fill-[var(--text-faint)] font-mono text-[10px]"
               >
@@ -117,6 +121,7 @@ export default function MapPage() {
                 className="[&:focus-visible_rect]:stroke-[var(--border-strong)] [&:focus-visible_rect]:stroke-2"
               >
                 <rect
+                  data-box=""
                   x={node.x}
                   y={node.y}
                   width={MAP.nodeWidth}

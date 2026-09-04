@@ -42,10 +42,17 @@ export function MapViewport({ categories, children, canvasWidth, canvasHeight }:
     const nodes = root.querySelectorAll<SVGAElement>('[data-node]')
 
     if (!id) {
+      delete root.dataset.trace
       for (const edge of edges) edge.classList.remove('is-related', 'is-faded')
       for (const node of nodes) node.classList.remove('is-related', 'is-faded')
       return
     }
+
+    // The chain is drawn in the hovered node's own strand, not one shared
+    // accent, so tracing a strand looks like that strand.
+    const origin = root.querySelector<SVGAElement>(`[data-node="${id}"]`)
+    const strand = origin?.dataset.strand
+    if (strand) root.dataset.trace = strand
 
     const related = new Set<string>([id])
     for (const edge of edges) {
@@ -202,7 +209,7 @@ export function MapViewport({ categories, children, canvasWidth, canvasHeight }:
         onPointerCancel={() => {
           drag.current = null
         }}
-        className="bg-sunk rounded-surface border-subtle h-[85vh] min-h-[34rem] overflow-auto border"
+        className="bg-sunk border-subtle no-scrollbar h-[82dvh] min-h-[32rem] w-screen mx-[calc(50%-50vw)] overflow-auto border-y"
       >
         <div style={{ width: canvasWidth * zoom, height: canvasHeight * zoom }}>
           <div

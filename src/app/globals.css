@@ -261,7 +261,11 @@
   }
 }
 
+/* A full-bleed child is exactly one viewport wide, and 100vw counts the
+   vertical scrollbar, so without this the page gains a sliver of horizontal
+   scroll. UI-16 wants none at any width. */
 body {
+  overflow-x: clip;
   background-color: var(--bg-page);
   color: var(--text-primary);
   font-family: var(--font-spectral), ui-serif, Georgia, serif;
@@ -280,12 +284,13 @@ body {
 /* =============================================================================
    Causal map states
 
-   The map is monochrome on purpose. Colour is reserved for one meaning only -
-   the causal chain you are currently tracing - so the accent means "this is
-   connected to what you are pointing at" and nothing else (DES-10).
+   Each event carries its strand as a coloured border and a full-strength rail.
+   Tracing a chain recolours that chain in the hovered node's own strand, so
+   following the origins strand looks like the origins strand rather than like
+   one shared accent.
 
-   Nodes and paths are told apart by weight and cap, not hue: a node is a filled
-   box with a 1.5px border, a path is a 1px unfilled line carrying an arrowhead.
+   Nodes and paths are still told apart by form, not hue: a node is a filled box
+   with a 1.5px border, a path is a 1px unfilled line carrying an arrowhead.
    ============================================================================= */
 
 [data-edge],
@@ -296,8 +301,8 @@ body {
     stroke var(--duration-fast) var(--ease-standard);
 }
 
-/* Everything not on the traced chain recedes rather than disappearing, so the
-   shape of the whole map is still readable while one strand is followed. */
+/* Everything off the traced chain recedes rather than disappearing, so the
+   shape of the whole map stays readable while one chain is followed. */
 [data-edge].is-faded {
   opacity: 0.12;
 }
@@ -307,14 +312,65 @@ body {
 }
 
 [data-edge].is-related {
-  stroke: var(--accent);
   stroke-width: 1.75;
-  marker-end: url("#arrow-active");
 }
 
-[data-node].is-related rect {
-  stroke: var(--accent);
+[data-node].is-related [data-box] {
   stroke-width: 2;
+}
+
+[data-trace="origin"] [data-edge].is-related {
+  stroke: var(--strand-origin);
+  marker-end: url("#arrow-origin");
+}
+
+[data-trace="origin"] [data-node].is-related [data-box] {
+  stroke: var(--strand-origin);
+}
+
+[data-trace="vamp"] [data-edge].is-related {
+  stroke: var(--strand-vamp);
+  marker-end: url("#arrow-vamp");
+}
+
+[data-trace="vamp"] [data-node].is-related [data-box] {
+  stroke: var(--strand-vamp);
+}
+
+[data-trace="wolf"] [data-edge].is-related {
+  stroke: var(--strand-wolf);
+  marker-end: url("#arrow-wolf");
+}
+
+[data-trace="wolf"] [data-node].is-related [data-box] {
+  stroke: var(--strand-wolf);
+}
+
+[data-trace="witch"] [data-edge].is-related {
+  stroke: var(--strand-witch);
+  marker-end: url("#arrow-witch");
+}
+
+[data-trace="witch"] [data-node].is-related [data-box] {
+  stroke: var(--strand-witch);
+}
+
+[data-trace="death"] [data-edge].is-related {
+  stroke: var(--strand-death);
+  marker-end: url("#arrow-death");
+}
+
+[data-trace="death"] [data-node].is-related [data-box] {
+  stroke: var(--strand-death);
+}
+
+[data-trace="house"] [data-edge].is-related {
+  stroke: var(--strand-house);
+  marker-end: url("#arrow-house");
+}
+
+[data-trace="house"] [data-node].is-related [data-box] {
+  stroke: var(--strand-house);
 }
 
 /* Strand filter. Selecting a strand sets a data attribute on the scroll
@@ -332,4 +388,17 @@ body {
 [data-strand-filter="death"] [data-strand]:not([data-strand="death"]),
 [data-strand-filter="house"] [data-strand]:not([data-strand="house"]) {
   opacity: 0.14;
+}
+
+/* The map pans by drag, by keyboard and by wheel, so the scrollbars were only
+   drawing a frame around the chart. Scrolling itself is untouched: the region
+   is still a real scroll container, tabbing to a node still brings it into
+   view, and the zoom controls and drag are unchanged. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
