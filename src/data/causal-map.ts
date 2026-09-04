@@ -4,9 +4,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "silas",
     "title": "Silas & Qetsiyah",
-    "era": "I — The First Immortals",
+    "era": "I",
     "dated": "c. 100 BC",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "Silas, a warlock of the ancient world, and Qetsiyah, the strongest witch of her age, were betrothed — and together they made the first immortality elixir. Silas drank it with her handmaiden Amara instead. Every supernatural thing that follows for two thousand years is Qetsiyah's revenge for that afternoon.",
     "facts": [
       "Immortality here is not vampirism. Silas eats normally, walks in daylight, and cannot be staked. Vampires arrive a thousand years later and are a cheaper, cursed imitation.",
@@ -47,9 +47,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "amara",
     "title": "Amara",
-    "era": "I — The First Immortals",
+    "era": "I",
     "dated": "c. 100 BC",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "The handmaiden Silas chose. Qetsiyah did not kill her — she did something worse. Amara was made the Anchor to the Other Side: awake, immortal, and used as the doorway through which every supernatural death passed for two thousand years. Silas spent all of it believing she was simply dead.",
     "facts": [
       "Amara is the original face. Tatia, Katerina Petrova and Elena Gilbert are all her shadows.",
@@ -78,9 +78,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "balance",
     "title": "Nature’s Balance",
-    "era": "I — The First Immortals",
+    "era": "I",
     "dated": "the one law",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "The rule the entire universe runs on: nature permits no imbalance. Every immortality gets a cure. Every curse gets a loophole. Every shortcut generates a shadow. Doppelgängers, the cure, the Five, the white oak, the sireline rule — none of these are villains' inventions. They are corrections.",
     "facts": [
       "It is also the writers' honest engine: whenever a character gets too powerful, the balance clause supplies the counterweight.",
@@ -107,9 +107,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "cure",
     "title": "The Cure",
-    "era": "I — The First Immortals",
+    "era": "I",
     "dated": "c. 100 BC",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "Qetsiyah made exactly one dose of a cure for immortality and entombed it with Silas. The cruelty is in the design: to escape starvation he would have to take it, become mortal, die — and land on the Other Side with her, forever, instead of finding peace with Amara.",
     "facts": [
       "One dose exists at a time, and it travels by blood: whoever drinks a cured person's blood soon enough gets it next.",
@@ -146,9 +146,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "otherside",
     "title": "The Other Side",
-    "era": "I — The First Immortals",
+    "era": "I",
     "dated": "c. 100 BC",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "Qetsiyah's purgatory: a mirror of the living world where every supernatural being goes when it dies — able to see everything, touch nothing, and wait. It was built to trap one man. Everybody else who died supernatural for two thousand years was collateral damage.",
     "facts": [
       "Humans do not go there. They find peace. Only the supernatural get filed.",
@@ -181,9 +181,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "anchor",
     "title": "The Anchor",
-    "era": "I — The First Immortals",
+    "era": "I",
     "dated": "c. 100 BC",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "The Other Side's doorstop. Every supernatural death physically passes through the Anchor, who feels each one. Amara held it for two thousand years. Bonnie Bennett takes it in 2013, which is why she can suddenly see and touch the dead — and why traffic accumulates in her.",
     "facts": [
       "The Anchor is immortal and cannot be killed while the Other Side stands.",
@@ -214,9 +214,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "doppel",
     "title": "The Doppelgänger Curse",
-    "era": "I — The First Immortals",
+    "era": "I",
     "dated": "ongoing",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "Nature's response to two people cheating death: it keeps reprinting their faces. Silas and Amara each got a recurring mortal shadow, born again every few centuries. It matters because doppelgänger blood is the only fuel that will run an Original-tier spell.",
     "facts": [
       "Amara's line runs Amara → Tatia → Katerina Petrova → Elena Gilbert.",
@@ -257,9 +257,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "travelers",
     "title": "The Travelers",
-    "era": "I — The First Immortals",
+    "era": "I",
     "dated": "c. 100 BC →",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "The coven Silas and Qetsiyah both came from, cursed by the wider witch community after her immortality spell: they can never settle. Any home they build turns to ruin, any community they form scatters. Two thousand years of wandering, all of it aimed at one goal — undo the curse, using the blood of the doppelgängers her spell created.",
     "facts": [
       "Their magic is heresy to Spirit witches. They draw on the collective will of the Travelers, not on nature or ancestors.",
@@ -288,9 +288,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "esther",
     "title": "Esther & Mikael",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "10th century",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "A witch and a warrior from the Old World. They lost a child to plague, and Esther's friend Ayana told them of a land across the sea where the people were healthy and strong. They took what family they had left and went. Esther is the most consequential person in the franchise and one of its worst mothers.",
     "facts": [
       "Mikael is a warrior who despised weakness, and made that his children's entire childhood. Klaus got the worst of it.",
@@ -323,9 +323,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "dahlia",
     "title": "Dahlia’s Bargain",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "10th century",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "Esther was barren. Her elder sister Dahlia — far stronger and considerably worse — made her fertile, in exchange for the firstborn of every generation of their bloodline, forever. Esther paid once, with Freya, and spent the next thousand years hiding everyone else.",
     "facts": [
       "Dahlia sleeps a century between each waking year, sustained by the firstborn magic she collects.",
@@ -358,9 +358,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "freya",
     "title": "Freya, Taken",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "10th century",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "The Mikaelsons' true firstborn, handed to Dahlia as payment and reported dead of plague. Raised as Dahlia's weapon, held in the same cycle of a century's sleep for each year awake, and returned to the story a thousand years later as the only Mikaelson who is still a witch — and the only one who can plan.",
     "facts": [
       "She is the family's problem-solver in New Orleans: nearly every workable spell in The Originals is hers.",
@@ -394,9 +394,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "newworld",
     "title": "The Village in the New World",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "c. 1000",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "They settled in what would eventually be Mystic Falls, Virginia, beside a community of people who became wolves at the full moon. For years the arrangement held perfectly well: the wolves changed, everyone else stayed indoors, and in the morning it was over.",
     "facts": [
       "Ayana, the witch who guided them, is an ancestor of the Bennett line.",
@@ -429,9 +429,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "wolves",
     "title": "The Wolves Next Door",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "pre-history",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "Werewolves are the older species. They existed long before Esther's spell, turning involuntarily and agonisingly on the full moon, and they are the reason the Mikaelsons hid one night a month. Vampires were, from day one, built partly as a defence against them.",
     "facts": [
       "The werewolf gene passes by blood but stays dormant until the carrier causes a human death. This single rule kills more characters than any villain in the franchise.",
@@ -466,9 +466,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "ansel",
     "title": "Ansel & the Affair",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "10th century",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "Esther had an affair with a man from the wolf village. Niklaus is his son, and neither of them knew it until Klaus's first kill woke his wolf side. Mikael's response was to kill Ansel, his family and half the village's wolves in a night — and to spend the next thousand years reminding Klaus what he was.",
     "facts": [
       "Klaus's rage, his loyalty tests, his compulsion to build a family that cannot leave — all of it dates from this.",
@@ -496,9 +496,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "henrik",
     "title": "Henrik’s Death",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "c. 1000",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "The youngest Mikaelson. Klaus sneaked him out to watch the wolves change and one of them tore him apart. Esther, refusing to bury another child, went looking for a spell that would make the rest of them impossible to kill. Everything in eleven seasons of television descends from one boy's curiosity and one brother's bad judgement.",
     "facts": [
       "Klaus has carried the blame for a thousand years and it informs every cruelty he commits.",
@@ -521,9 +521,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "tatia",
     "title": "Tatia",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "c. 1000",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "A woman of the village whom both Elijah and Klaus loved, and the first Petrova doppelgänger — Amara's shadow, arriving exactly when the story needed her. Esther killed her, put her blood in the wine for the immortality spell, and used it again to bind Klaus's wolf.",
     "facts": [
       "The doppelgänger line is therefore built into the Originals from the first minute of their existence. Nothing about Elena's importance is coincidence.",
@@ -557,9 +557,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "whiteoak",
     "title": "The White Oak",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "c. 1000",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "An ancient white oak at the centre of the village, whose life force Esther drew on for the spell. Because nature charges for everything, the same tree is the only thing in existence that can permanently kill what she made. The family burned it immediately. Wood from it kept turning up anyway.",
     "facts": [
       "Surviving pieces: a stake Mikael carried, and a tree the natives replanted some three hundred years after the family left, felled by the Salvatores around 1912 to build Wickery Bridge — and its sign.",
@@ -595,9 +595,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "spell",
     "title": "The Immortality Spell",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "c. 1000",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Esther's working, cast on her husband and five surviving children — not on herself; she remained a witch. The ingredients: the white oak's life, the sun, Tatia's doppelgänger blood in the wine, and Mikael running each of them through with a sword. They woke wanting blood. Ayana refused to take part. Esther did it anyway.",
     "facts": [
       "She meant it as protection. What she produced was a species with no natural predator and an emotional range turned up to a level nobody can survive sober.",
@@ -635,9 +635,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "originals",
     "title": "The Original Vampires",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "c. 1000 →",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Mikael, Finn, Elijah, Niklaus, Kol and Rebekah — six of them; Esther cast the spell and stayed a witch. The first vampires, and the source of every vampire who has ever existed. Nothing kills them but white oak; a silver dagger dipped in white oak ash merely puts them to sleep, which is how Klaus keeps his siblings for centuries at a time.",
     "facts": [
       "\"Always and forever\" is Elijah's vow and the family's central promise — made, broken and re-made roughly once a season.",
@@ -678,9 +678,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "weakness",
     "title": "What Nature Charged",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "the price",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "The counterweights that arrived with vampirism: burning in sunlight, no entry to a home without an invitation, vervain, wood through the heart, and every emotion amplified into something close to unbearable. Witches patched the first with daylight rings. Nothing patches the last.",
     "facts": [
       "The humanity switch — shutting emotion off entirely — is the flip side of that amplification, and the reason otherwise sympathetic characters commit massacres on a semi-regular schedule.",
@@ -712,9 +712,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "hybridcurse",
     "title": "The Hybrid Curse",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "c. 1000",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "When Klaus's first kill triggered his wolf, Esther bound it — using Tatia's blood and the moonstone — so he could never be both. She did it to keep Mikael from killing him. Klaus spent a thousand years working to undo it, and the first two seasons of The Vampire Diaries are really about nothing else.",
     "facts": [
       "Undoing it requires the moonstone, a Petrova doppelgänger, a werewolf and a vampire, sacrificed on a full moon by a witch.",
@@ -751,9 +751,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "sirelines",
     "title": "The Four Sirelines",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "c. 1000 →",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Every vampire alive descends from one Original. Kill that Original with white oak and the entire line dies with them. Klaus's line is by far the largest, which makes him functionally unkillable — killing him would wipe out most vampires on Earth, including nearly everyone the audience likes.",
     "facts": [
       "The Originals maps the modern lines onto the first three vampires the family made: Lucien for Klaus's line, Tristan for Elijah's, Aurora for Rebekah's. Five Originals sired lines in all — Finn, Elijah, Klaus, Kol and Rebekah.",
@@ -791,9 +791,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "mikaelhunt",
     "title": "Mikael the Destroyer",
-    "era": "II — The Mikaelsons",
+    "era": "II",
     "dated": "11th–20th c.",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Esther made her husband a vampire too, and he became the thing that hunts them. Mikael fed on vampires rather than people, chased his own children across nine centuries and three continents, and killed Klaus's wolf father, Klaus's hybrids, and eventually — briefly — Klaus.",
     "facts": [
       "Klaus killed Esther after learning the truth about Ansel, and told his siblings Mikael did it. The lie held for a thousand years.",
@@ -823,9 +823,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "five",
     "title": "The Brotherhood of the Five",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "1110",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Not Qetsiyah's own work, though it finishes her argument. In 1110 a dying witch descended from her created five supernatural hunters and burned a map into their skin — a tattoo that grows with every vampire they kill and, when complete, points to Silas and the cure. The point was to get somebody to dig him up and cure him, so he would die and land on the Other Side with her.",
     "facts": [
       "Killing a hunter earns the Hunter's Curse: relentless hallucinations of the people you have killed, until you kill yourself.",
@@ -858,9 +858,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "lucien",
     "title": "Lucien, Tristan & Aurora",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "11th century",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "The first three people the Mikaelsons ever turned: Lucien, a servant in the de Martel household; the nobleman Tristan de Martel; and Tristan's sister Aurora, whom Klaus loved and Rebekah turned against his wishes. Nine hundred years later all three come back at once, and the sireline structure they represent becomes the spine of the whole conflict.",
     "facts": [
       "Tristan took over the Strix — Elijah's own creation — a society of elite vampires that long outlives him and still runs half the world's money.",
@@ -895,9 +895,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "sunmoon",
     "title": "The Curse of the Sun and the Moon",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "centuries",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "A lie, and a very good one. Klaus fabricated an ancient curse binding vampires to the night and werewolves to the moon, and seeded it into Aztec and Viking legend so both species would spend centuries hunting the moonstone and the doppelgänger on his behalf. There is no such curse. There is only his.",
     "facts": [
       "It works for a thousand years. Entire covens and packs die chasing a story he made up.",
@@ -922,9 +922,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "wolfcurse",
     "title": "The Werewolf Bloodlines",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "centuries",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "Packs carried the gene down the centuries: the Crescents and the Malraux around New Orleans, the Lockwoods in Mystic Falls. A wolf who has never killed does not know what they are, which means every werewolf's origin story is also a manslaughter.",
     "facts": [
       "Tyler Lockwood triggers his by a car accident. Jules, Mason, Hayley — all of them have a body somewhere behind them.",
@@ -955,9 +955,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "ayana",
     "title": "Ayana & the Bennett Line",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "10th century →",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "The witch who led the Mikaelsons across the sea and then refused to help Esther cast, calling the spell an abomination against nature. She was right. Her descendants spend the next thousand years cleaning up after it.",
     "facts": [
       "The Bennetts also carry Qetsiyah's blood, which is why Bonnie's power keeps turning out to be structurally necessary to the Other Side.",
@@ -985,9 +985,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "bennett",
     "title": "The Bennett Witches",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "1000 →",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "Ayana, Emily, Sheila \"Grams\", her daughter Abby, Lucy, and Bonnie. The most powerful and most routinely sacrificed family in the franchise. Almost every spell that holds the world together across eleven seasons is either cast by a Bennett or paid for with a Bennett's life.",
     "facts": [
       "Their magic is Spirit magic: drawn from nature, brokered through the dead witches who came before, and withdrawn the moment those witches disapprove.",
@@ -1020,9 +1020,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "katherine",
     "title": "Katerina Petrova",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "1490",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "A Bulgarian girl disgraced by a pregnancy, exiled by her father, and then hunted across Europe by Klaus as the doppelgänger he needed. She turned herself into a vampire specifically to be useless to him — the sacrifice requires a human — and then ran for five hundred years without ever once being caught.",
     "facts": [
       "Her daughter, Nadia Petrova, was taken at birth and spent five centuries looking for her.",
@@ -1061,9 +1061,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "nola",
     "title": "New Orleans",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "1700s",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "Klaus, Elijah and Rebekah arrived in a young colonial port and effectively built it. For two hundred years the Mikaelsons were New Orleans — its power, its rules, its brutality, and the one truce that ever held between vampires, witches and wolves.",
     "facts": [
       "They left in 1919 and did not come back for ninety years. The city did not stop being theirs; it just stopped knowing it.",
@@ -1095,9 +1095,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "marcel",
     "title": "Marcel Gerard",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "1820s →",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Born to an enslaved woman and the man who owned her, taken in by Klaus as a boy and named Marcellus — \"the little warrior.\" Klaus raised him, Rebekah loved him, and in 1919 Klaus abandoned him believing him dead. Marcel took the city instead and held it for a hundred years.",
     "facts": [
       "Half of The Originals is a custody fight between two men who each believe they made New Orleans and each believe they made the other.",
@@ -1132,9 +1132,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "nola1919",
     "title": "1919 — Mikael Comes",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "1919",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Mikael tracked his children to New Orleans and burned the opera house down around them. Klaus ran, Rebekah was daggered for calling her father there, Marcel was left for dead, and the family did not return for ninety years.",
     "facts": [
       "This is also the era Klaus spends in Chicago with Stefan — the \"ripper years\" that resurface, weaponised, in 2011.",
@@ -1167,9 +1167,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "crescent",
     "title": "The Crescent Curse",
-    "era": "III — The Long Middle",
+    "era": "III",
     "dated": "20th century",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "In 1991 — long after the Mikaelsons had left the city — Marcel Gerard had the Crescent pack cursed: the spell cast by the witch Brynne Deveraux, who was unknowingly possessed by Céleste Dubois. Locked in wolf form, with one night a month as humans at the full moon, an exact inversion of what they were. It is broken twenty-one years later.",
     "facts": [
       "Hayley's family — which means the boy Klaus raised cursed the pack of the woman who would later have Klaus's child, two years after she was born.",
@@ -1198,9 +1198,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "founders",
     "title": "The Founders’ Council",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1864",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "Mystic Falls' founding families — Salvatore, Gilbert, Fell, Forbes, Lockwood — organised as a vampire-hunting council, dosed the town's drinks with vervain, and rounded up twenty-seven vampires to burn in a church. Their descendants inherit the Council, the ledger, and a truly world-class capacity for denial.",
     "facts": [
       "The Gilbert device, the vervain supply and half the town's secrets all date from this.",
@@ -1236,9 +1236,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "salvatore",
     "title": "Stefan & Damon, 1864",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1864",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Two brothers in Confederate-era Virginia, both in love with the same houseguest — Katherine Pierce, who was compelling both of them and feeding on both of them and enjoying every minute. Their father shot them for protecting her. With her blood already in their systems, they woke in transition. Damon only completed it because Stefan made him.",
     "facts": [
       "Stefan's first feed was on their father, Giuseppe.",
@@ -1273,9 +1273,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "emily",
     "title": "Emily Bennett & the Tomb",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1864",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "Katherine's handmaiden and a Bennett witch. She faked Katherine's death in the church fire and sealed the other twenty-six vampires beneath it — not killed, just desiccating for 145 years, held under a spell keyed to a comet. It is the errand that brings Damon home in 2009.",
     "facts": [
       "Emily's grimoire and her spells run half the plot of the first season from beyond the grave.",
@@ -1309,9 +1309,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "lily",
     "title": "Lily Salvatore",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1858 →",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Stefan and Damon's mother, officially dead of consumption in 1858. In fact a vampire, and a ripper, shipped off to Europe — and eventually sealed by the Gemini coven into a 1903 prison world with the family she preferred: six siphoner witches she had turned into vampires herself.",
     "facts": [
       "Her sons spend 150 years grieving a woman who chose someone else and then came back to say so.",
@@ -1346,9 +1346,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "gemini",
     "title": "The Gemini Coven",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "centuries",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "A coven built around one horrifying tradition. Every generation produces a set of twins; at a set age they merge, and the stronger absorbs the weaker, who dies. The survivor leads the coven. They also build prison worlds — perfect looping repeats of a single day — and use them as cells.",
     "facts": [
       "Siphoners are Gemini children born without magic of their own who can only draw it out of other magical things. The coven treats them as abominations.",
@@ -1388,9 +1388,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "augustine",
     "title": "Augustine & Whitmore",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1950s →",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "A secret research society at Whitmore College that captured vampires and vivisected them for decades in the name of science. Damon was subject 21051 in 1953. Enzo was there for seventy years. It is the franchise's plainest statement of its own thesis: humans are not the safe species.",
     "facts": [
       "Damon escaped by leaving Enzo to burn, which is a debt the show collects on, at length, twenty years of story later.",
@@ -1417,9 +1417,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "ripper",
     "title": "The Ripper",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1864 →",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Stefan's condition. Human blood turns him into a compulsive, escalating killer who dismembers his victims and then, in remorse, reassembles them. It recurs across the entire series, and it is why he treats his own humanity switch like a loaded weapon he is holding for someone else.",
     "facts": [
       "Lily was a ripper. It runs in the family, which is either genetics or the show's idea of one.",
@@ -1453,9 +1453,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "heretics",
     "title": "The Heretics",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1903 →",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "Siphoners turned into vampires: Valerie, Oscar, Nora, Mary Louise, Beau and Malcolm — Lily's found family. A siphoner vampire is a magic-using vampire, the exact combination the Gemini built prison worlds to prevent, because a vampire is an endless magical battery to siphon from.",
     "facts": [
       "Locked away in 1903, released in 2015, and briefly the most dangerous thing in Virginia.",
@@ -1491,9 +1491,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "prisonworld",
     "title": "Prison Worlds & Kai Parker",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1994 →",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "Gemini cells: one day, repeating forever, alone. Malachai \"Kai\" Parker — a siphoner and a genuine sociopath who murdered four of his siblings at twenty-two — spent 1994 in one, until Bonnie and Damon landed there and he came back out with them. He is the most effective villain the franchise produced.",
     "facts": [
       "Kai's linking spell puts Elena into a coma tied to Bonnie's lifespan, which removes the lead character for two seasons.",
@@ -1535,9 +1535,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "armory",
     "title": "The Armory",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "19th century →",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "A secret society and vault run by the St. John family, holding centuries of supernatural artefacts — and one very old thing sealed in the basement that nobody should have gone looking for. Alaric ends up running the library, which is how the Salvatore School later acquires a research collection.",
     "facts": [
       "Everything the Armory contains eventually becomes either a weapon or a hostage.",
@@ -1565,9 +1565,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "rayna",
     "title": "Rayna Cruz & the Phoenix Stone",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "1800s →",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "A huntress with eight lives, bound to a sword that brands vampires and a stone that traps their souls in bespoke personal hells. Her mark makes every other vampire on Earth compulsively hunt whoever carries it — an elegant way to make one person the problem of an entire species.",
     "facts": [
       "The Phoenix Stone hells are the franchise's first real hint that the afterlife has more than one floor.",
@@ -1597,9 +1597,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "cade",
     "title": "Arcadius & Hell",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "2nd century →",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "A psychic burned at the stake in the second century who refused to stop existing. His consciousness became a dimension that consumes the souls of the guilty. Once the Other Side collapses, Cade's Hell is where dead supernaturals go. He is, functionally, the Devil, and he keeps a ledger.",
     "facts": [
       "He offers deals, not damnation — which makes him the only antagonist in the franchise who never technically lies.",
@@ -1635,9 +1635,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "sirens",
     "title": "Sybil & Seline",
-    "era": "IV — Mystic Falls, 1864",
+    "era": "IV",
     "dated": "antiquity →",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "Two sisters from antiquity, made immortal by Cade and sent out to lure and psychically enslave people and deliver their souls to him. Sealed in the St. John family's Armory vault for centuries, released in 2016. They turn Damon and Stefan into Cade's collectors, which is how the final season earns its stakes.",
     "facts": [
       "A siren's control is total and does not require eye contact, which makes them the only villain compulsion cannot beat.",
@@ -1673,9 +1673,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "elena",
     "title": "Elena Gilbert",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2009",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "Seventeen, newly orphaned, and the last Petrova doppelgänger. Her biological parents are Isobel Flemming — later a vampire — and John Gilbert; she was raised by John's brother Grayson and his wife as their own. Her blood is the key to a thousand-year-old curse, which makes her the most valuable object on Earth before she has any idea vampires exist.",
     "facts": [
       "Her survival of Klaus's ritual is the accident that makes hybrids impossible and drives the next two seasons.",
@@ -1719,9 +1719,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "stefandamon",
     "title": "The Salvatores Return",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2009",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Stefan comes back to Mystic Falls because a girl there has Katherine's face. Damon comes back to open the tomb and get Katherine out. Neither errand survives contact with reality, and the two of them stay for eight years.",
     "facts": [
       "Damon's plan collapses the moment he learns Katherine was never in the tomb and never came looking for him.",
@@ -1756,9 +1756,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "katreturn",
     "title": "Katherine’s Return",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2009–2017",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "She was never in the tomb. Katherine surfaces in 2009, plays every side of every conflict, is eventually forced to take the cure, ages five hundred years in weeks, possesses her own daughter's body to survive it, dies again, and comes back in 2017 as the queen of Hell. She structurally refuses to be finished.",
     "facts": [
       "Nadia, the daughter she lost in 1490, finds her, and dies of a werewolf bite within a season. Katherine's one uncomplicated feeling gets about four episodes.",
@@ -1793,9 +1793,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "klausarrives",
     "title": "Klaus Comes to Mystic Falls",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2010",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "A thousand years of searching ends when the Originals learn a Petrova doppelgänger is alive in Virginia. Klaus arrives, and the series stops being about two brothers and a girl and starts being about a family older than most nations.",
     "facts": [
       "Rebekah, Elijah, Kol and Finn all follow. The show's ceiling goes up by an order of magnitude and never comes back down.",
@@ -1831,9 +1831,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "sacrifice",
     "title": "Breaking the Curse",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2010",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "Klaus's ritual: drain a werewolf, a vampire and the doppelgänger on a full moon with the moonstone. He uses Jules, Jenna Sommers — turned specifically for the purpose — and Elena. It works. He becomes the Original hybrid. Then he discovers he cannot make more, because the doppelgänger did not stay dead.",
     "facts": [
       "Elena survives because John Gilbert trades his life for hers through a Bennett spell.",
@@ -1871,9 +1871,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "bonnie",
     "title": "Bonnie Bennett",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2009–2017",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "The last Bennett. Across eight seasons she dies, becomes the Anchor, becomes the Other Side's load-bearing wall, loses her magic to the Travelers, gets stranded in 1994, has her lifespan tied to Elena's coma, and repeatedly hands over her own life so that other people's plots can proceed. By workload she is the protagonist.",
     "facts": [
       "She destroys Hell in the finale, which is the largest single act of magic anyone performs in the franchise.",
@@ -1914,9 +1914,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "originaldeaths",
     "title": "Killing an Original",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2012",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "White oak, at last. Finn dies in 2012 and takes a whole sireline with him — which is how everybody learns the rule. From that point the entire cast is one stake away from mass extinction, and the question of who sired whose line stops being trivia and becomes a survival problem.",
     "facts": [
       "Kol dies in 2012 by white oak, in Mystic Falls, at Jeremy's hands, and the fallout is enormous.",
@@ -1953,9 +1953,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "curehunt",
     "title": "The Hunt for the Cure",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2012–2013",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "The hunter's map, Professor Shane, an island with a tomb under it, and the slow realisation that the cure comes attached to a two-thousand-year-old immortal who has been feeding Bonnie instructions in the shape of her dead grandmother. Katherine takes the cure. Silas gets loose.",
     "facts": [
       "Every faction wants it for a different reason: Klaus to make Elena human again for hybrid blood, Elijah for Katherine, Damon and Stefan for Elena, Silas to die.",
@@ -1992,9 +1992,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "silasrises",
     "title": "Silas Rises",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2013",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "Desiccated for two thousand years, Silas walks out wearing Stefan's face — because Stefan is his doppelgänger — and starts dismantling the Other Side so he can die and be with Amara. Qetsiyah, calling herself Tessa, comes back to stop him. Both are dead within the year, and the damage they do is permanent.",
     "facts": [
       "Amara is found alive, cured, and dies human within days, having been conscious for two millennia.",
@@ -2029,9 +2029,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "markos",
     "title": "Markos & the Fall of Magic",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2014",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "The Travelers finally get both living doppelgängers into one place and cast. It breaks the curse on them and simultaneously unmakes every other form of magic inside the town's borders — which is why Mystic Falls spends a season as a place where witches cannot cast and vampires cannot heal.",
     "facts": [
       "Vampires who enter the zone start dying of their original cause of death. It is the best single mechanic the show ever built.",
@@ -2067,9 +2067,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "osidefall",
     "title": "The Other Side Collapses",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2014",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "Two thousand years of accumulated damage — Silas, Qetsiyah, the Travelers, and one exhausted Bennett holding it up — and the purgatory disintegrates. A handful of the dead push back through into life. Most are simply unmade. Damon and Bonnie land in a prison world instead of nowhere.",
     "facts": [
       "This is the moment the franchise loses its resurrection button, and it is why Hell has to be invented two seasons later.",
@@ -2106,9 +2106,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "hereticwar",
     "title": "The Heretic War",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2015–2016",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "Lily's siphoner-vampire family takes Mystic Falls, drives the population out and forces the whole cast into a three-year time jump. The town is literally evacuated. It is the strangest structural decision the show ever makes and it works better than it has any right to.",
     "facts": [
       "Alaric returns from the Armory with a wife, twins-in-progress and a research library.",
@@ -2149,9 +2149,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "curetaken",
     "title": "The Cure, Taken",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2015",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "summary": "Elena takes the cure and is human again — and then Kai's linking spell ties her life to Bonnie's: Elena sleeps until Bonnie dies. It costs the show its lead for two seasons, and costs Damon a wait he ultimately does not have to finish.",
     "facts": [
       "Bonnie is handed the choice between her own life and her best friend's consciousness, again, which is the fourth time.",
@@ -2188,9 +2188,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "hellfire",
     "title": "Hellfire",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2017",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "Cade's Hell has a physical anchor beneath Mystic Falls, and the Maxwell bell can pull the fire up through the town — Matt rings it eleven times and lets his dead sister Vicki, sent back by Katherine, ring the twelfth. Katherine is left standing in it. Damon takes the cure out of Stefan's blood and lives. Stefan — human only until he hands the cure on, and a vampire again the moment he does, which is what lets him compel Damon away — walks into the fire to close it, and Bonnie destroys Hell along with him.",
     "facts": [
       "Stefan's last conversation is with Elena, and his last act is giving Damon the human life they both spent 145 years arguing about.",
@@ -2227,9 +2227,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "tvdend",
     "title": "Peace",
-    "era": "V — The Doppelgänger War",
+    "era": "V",
     "dated": "2017 →",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "Hell is gone and the Other Side has been gone for years, so the dead simply find peace. Bonnie breaks the spell and Elena wakes. She and Damon grow old and die of nothing in particular. Stefan and Lexi are waiting. The Salvatore house becomes a school.",
     "facts": [
       "It is the tidiest ending any of the three shows gets, and the only one that closes its afterlife question properly.",
@@ -2262,9 +2262,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "hayley",
     "title": "Hayley Marshall",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2011",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "A werewolf with no idea where she came from, who spends one night with Klaus in the Blue Ridge Mountains and turns up pregnant — which should be impossible, because vampires cannot procreate. It is possible because Klaus was born a werewolf and, technically, is not a vampire the way anyone else is.",
     "facts": [
       "She is the last living heir to the Crescent pack's ruling line, which makes the pregnancy a political event before it is a personal one.",
@@ -2299,9 +2299,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "hope",
     "title": "Hope Mikaelson",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2012 →",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "Born to a werewolf and the Original hybrid: witch by Esther's blood, wolf by Ansel's, vampire by Esther's spell. The first tribrid. Every faction in New Orleans wants her dead or owned before she can walk, and a thousand-year-old bargain has her name on it in advance.",
     "facts": [
       "Her existence is a mathematical consequence of every choice Esther made in era II. The franchise closes its own loop with her.",
@@ -2344,9 +2344,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "quarter",
     "title": "The French Quarter",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2011 →",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "Three powers, one city. Marcel's vampires hold the streets. Nine covens of witches hold the ancestral magic and the cemeteries. The wolves are shut out of both. Klaus comes home in 2011 to take it back, and the next five years are that fight, restarted every season with different weapons.",
     "facts": [
       "The city itself is the show's fourth Mikaelson: everyone claims it, nobody keeps it, and it outlasts all of them.",
@@ -2381,9 +2381,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "ancestors",
     "title": "Ancestral Magic",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "centuries",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "New Orleans witches do not draw on nature or on spirits generally. They draw on their own dead, buried in the city's cemeteries — and the dead have opinions, demands, and the ability to withdraw everything. It gives the covens enormous power and makes them hostage to a committee of ghosts.",
     "facts": [
       "Davina Claire is consecrated, resurrected, and eventually destroys the Ancestors entirely — freeing the witches and removing their power source in the same act.",
@@ -2415,9 +2415,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "dahliareturn",
     "title": "Dahlia Returns",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2015",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "A thousand years late, Esther's sister arrives to collect the firstborn of the next generation: Hope. Freya — the first payment — comes back to help kill her. The family that spent a millennium tearing itself apart holds together for exactly one enemy, and only just.",
     "facts": [
       "Killing Dahlia requires Mikaelson blood, Viking soil and the one thing the family has never managed: cooperation.",
@@ -2452,9 +2452,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "beast",
     "title": "The Prophecy & the Beast",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2016",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "A prophecy: the Mikaelsons will fall — one by friend, one by foe, one by family. Lucien engineers his half of it, refining Esther's original magic into a serum that makes him an upgraded Original whose bite kills even them. Tristan and Aurora take their own runs at it. All three of the first vampires the family ever made come home to bury them.",
     "facts": [
       "Lucien's serum is later used on Marcel, which is how a bite becomes the only non-white-oak way to kill a Mikaelson.",
@@ -2491,9 +2491,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "hollow",
     "title": "The Hollow",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2017",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "Inadu: a witch child of extraordinary power born around 500 AD, killed by her own mother with an axe the elders had charged with their magic. Her own dying spell is the origin of the werewolf curse in the region. What she wants now is a suitable body, and the most powerful child in the world is eight years old and living in New Orleans.",
     "facts": [
       "Her power cannot be destroyed, only divided. The Mikaelsons split her four ways and take a quarter each.",
@@ -2528,9 +2528,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "hollowsplit",
     "title": "Seven Years Apart",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2018–2025",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "Klaus, Elijah, Rebekah and Kol each carry a quarter of the Hollow and can never be in the same room again. Hope grows up mostly without her father, writing him letters. Hayley is killed. The last season of The Originals is a family that finally learned how to be together being forbidden from it.",
     "facts": [
       "It is the cruellest and cleanest thing the writers ever did to these characters, and it is the reason the ending lands.",
@@ -2565,9 +2565,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "hollowend",
     "title": "Klaus & Elijah",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2018",
-    "category": "Vampires",
+    "category": "vamp",
     "summary": "The Hollow ends up inside Hope, and the only way out is to move it into Klaus and then kill him — which would kill his entire sireline unless the killing is done with Marcel's venom instead of white oak. It is done with white oak in the end. Elijah snaps the last stake in half so they can die at the same moment.",
     "facts": [
       "\"Always and forever,\" finally kept, at the only price that ever made it mean anything.",
@@ -2607,9 +2607,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "freyakeelin",
     "title": "What’s Left of the Family",
-    "era": "VI — The Mikaelson Wars",
+    "era": "VI",
     "dated": "2018 →",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "Rebekah takes the cure and a mortal life, with Marcel, and plans to grow old. Kol and Davina leave together. Freya marries Keelin. Hope inherits a fortune, a place at a school in Virginia, and a father she will spend four more seasons trying not to become.",
     "facts": [
       "Rebekah wanted to be human from the first season of The Vampire Diaries. She waits about nine years of screen time for it.",
@@ -2640,9 +2640,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "school",
     "title": "The Salvatore School",
-    "era": "VII — The Legacies",
+    "era": "VII",
     "dated": "2018 →",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "The Salvatore boarding house, funded with Mikaelson money and run by Alaric Saltzman, turned into a school for young witches, vampires and wolves — somewhere supernatural children learn to hide in plain sight rather than be hunted for what they are. Caroline Forbes co-founds it and spends most of Legacies recruiting off-screen.",
     "facts": [
       "It is the franchise's one genuinely optimistic idea: the thing that killed all these people is now a curriculum.",
@@ -2687,9 +2687,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "twins",
     "title": "Josie & Lizzie Saltzman",
-    "era": "VII — The Legacies",
+    "era": "VII",
     "dated": "2014 →",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "Alaric and Caroline's daughters. Conceived from Alaric and Jo's embryos, magically moved into Caroline when Jo was killed, and born Gemini twins — and siphoners, with no magic of their own, able only to draw it out of other magical things.",
     "facts": [
       "Josie siphons; Lizzie is loud, bipolar in the show's own words, and the more sympathetic of the two by a distance.",
@@ -2725,9 +2725,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "merge",
     "title": "The Merge",
-    "era": "VII — The Legacies",
+    "era": "VII",
     "dated": "looms",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "The Gemini tradition, aimed at two teenagers: at twenty-two, Josie and Lizzie must merge, and one of them will die. Alaric spends four seasons trying to break a rule written by a coven that no longer exists. In the end nobody breaks it: Hope kills Lizzie with her humanity off, Lizzie transitions into a vampire, and a vampire is not eligible to merge.",
     "facts": [
       "The coven is dead. The rule is not. Legacies is at its best when it is about inherited obligations nobody alive agreed to.",
@@ -2758,9 +2758,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "malivore",
     "title": "Malivore",
-    "era": "VII — The Legacies",
+    "era": "VII",
     "dated": "ancient →",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "A pit made by a witch, a vampire and a werewolf — the triad — to swallow monsters and erase them from the world entirely. It works: anything Malivore consumes is forgotten by everyone who ever knew it. It has been eating the supernatural for centuries, which is a tidy explanation for why the first two shows never mentioned dragons.",
     "facts": [
       "Every monster Legacies fights is something Malivore already swallowed once and is trying to get back.",
@@ -2794,9 +2794,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "landon",
     "title": "Landon Kirby",
-    "era": "VII — The Legacies",
+    "era": "VII",
     "dated": "2018 →",
-    "category": "Death & Afterlives",
+    "category": "death",
     "summary": "A foster kid with no idea what he is: Malivore's son, and a phoenix — he resurrects every time he dies, which is often. He is what the pit wants back, and he is the show's argument that being a monster is a job description rather than a nature.",
     "facts": [
       "Clarke, his half-brother, is Malivore's other son and considerably worse at being a person.",
@@ -2824,9 +2824,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "tribrid",
     "title": "Hope Becomes the Tribrid",
-    "era": "VII — The Legacies",
+    "era": "VII",
     "dated": "2021",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "summary": "Hope's vampire nature stays dormant until she dies with vampire blood in her system. When she finally activates it she is the first fully-realised tribrid — and because a tribrid's vampire half comes with a humanity switch, briefly the most dangerous thing that has ever existed. Malivore is destroyed. So, nearly, is everyone else.",
     "facts": [
       "The switch is flipped off for a long stretch, and the show finally cashes in a thousand years of Mikaelson temper in one person.",
@@ -2862,9 +2862,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "gods",
     "title": "The Gods Return",
-    "era": "VII — The Legacies",
+    "era": "VII",
     "dated": "2021–2022",
-    "category": "Witches & Magic",
+    "category": "witch",
     "summary": "With Malivore gone, the things it swallowed come back — and a pantheon that had slept through it in sarcophagi wakes up, Ken among them. Aurora de Martel arrives by a different route: Klaus entombed her in a wall, and Lucien let her out. The last season is the oldest characters in the franchise turning up at a high school.",
     "facts": [
       "Aurora appearing in Legacies is the only direct tissue connecting era II to era VII in a single living body.",
@@ -2899,9 +2899,9 @@ export const CAUSAL_MAP: CausalNode[] = [
   {
     "id": "legacyend",
     "title": "How It Ends",
-    "era": "VII — The Legacies",
+    "era": "VII",
     "dated": "2022 →",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "summary": "Josie and Lizzie never have to merge. Hope remains the tribrid, and what the show finally gives her is a life she has to keep living rather than an exit from it. Caroline comes home to run the school. And Klaus's last message to his daughter is the final word in the franchise — a recording Landon retrieves from Limbo, in which Klaus tells her she is his peace and that he regrets none of it.",
     "facts": [
       "Two thousand years from one badly cast immortality spell, and it ends with a school staying open and a father getting a recording through from the other side of death.",

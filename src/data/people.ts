@@ -10,7 +10,7 @@ export const PEOPLE: Person[] = [
     "house": "None",
     "appearsIn": "TVD",
     "group": "ancients",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "oneLine": "The man the whole franchise is a consequence of.",
     "biography": [
       "A warlock of the ancient world, engaged to the most powerful witch alive, who talked her into creating an immortality elixir and then drank it with her handmaiden. Qetsiyah buried him alive on an island with the only cure beside him, so that his only escape would be to become mortal, die, and be trapped on her Other Side forever rather than find peace with Amara.",
@@ -54,7 +54,7 @@ export const PEOPLE: Person[] = [
     "house": "Founder of Spirit magic",
     "appearsIn": "TVD",
     "group": "ancients",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The architect of nearly every rule in this universe.",
     "biography": [
       "The strongest witch of the ancient world and the origin of what later witches call Spirit or Traditional magic. She created the immortality elixir at Silas's request, expecting to drink it with him. When she found out he intended it for her handmaiden, she constructed a revenge with more engineering in it than most religions: she buried him alive with the only cure, built the Other Side as a purgatory designed to hold him, and turned Amara into its living Anchor.",
@@ -98,7 +98,7 @@ export const PEOPLE: Person[] = [
     "house": "Handmaiden to Qetsiyah",
     "appearsIn": "TVD",
     "group": "ancients",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "oneLine": "The face every Petrova wears, and the doorway every dead supernatural walks through.",
     "biography": [
       "Qetsiyah's handmaiden, and the woman Silas chose. She drank the second dose of the elixir. Qetsiyah did not kill her — she made her the Anchor to the Other Side, immortal and conscious, and every supernatural death for the next two thousand years passed physically through her. She was kept in a stone box. Silas was shown a body and allowed to believe she was dead.",
@@ -137,7 +137,7 @@ export const PEOPLE: Person[] = [
     "house": "Hell",
     "appearsIn": "TVD",
     "group": "ancients",
-    "category": "Death & Afterlives",
+    "category": "death",
     "oneLine": "What was underneath the Other Side the whole time.",
     "biography": [
       "A genuine psychic of the deep BC era — the wiki puts his birth before 2200 BC and his burning before 750 BC — killed at the stake by people frightened of what he could see. He did not stop existing. His consciousness became a dimension that consumes the souls of the guilty — functionally Hell, with a proprietor who negotiates rather than damns and who keeps a ledger of everyone who owes him.",
@@ -185,7 +185,7 @@ export const PEOPLE: Person[] = [
     "house": "Cade",
     "appearsIn": "TVD",
     "group": "ancients",
-    "category": "Death & Afterlives",
+    "category": "death",
     "oneLine": "Psychic enslavement with no counter.",
     "biography": [
       "One of two sisters shipwrecked in antiquity, kept alive by Cade and made immortal in exchange for delivering him souls. Sirens lure people psychically, take total control of their minds, and eat. The show does not soften the cannibalism.",
@@ -227,7 +227,7 @@ export const PEOPLE: Person[] = [
     "house": "Cade",
     "appearsIn": "TVD",
     "group": "ancients",
-    "category": "Death & Afterlives",
+    "category": "death",
     "oneLine": "The one who was looking for replacements.",
     "biography": [
       "Sybil's sister, and the more patient of the two. She spent months posing as Josie and Lizzie Saltzman's nanny while grooming them to become the next pair of sirens, so she and Sybil could finally stop working for Cade.",
@@ -269,7 +269,7 @@ export const PEOPLE: Person[] = [
     "house": "The Labonair line’s tribe",
     "appearsIn": "TO",
     "group": "ancients",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The reason werewolves in the region exist at all.",
     "biography": [
       "A witch child of extraordinary power born to a tribe around 500 AD, killed by her own mother with an axe the elders had charged with their magic after she began killing to grow stronger. Her own dying spell created the region's werewolf curse — which is why the wolf line and the Mikaelson story converge at all.",
@@ -311,7 +311,7 @@ export const PEOPLE: Person[] = [
     "house": "The Travelers",
     "appearsIn": "TVD",
     "group": "ancients",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Two thousand years of homelessness, cashed in at once.",
     "biography": [
       "The leader of the witches who took Silas's side against Qetsiyah and were cursed to wander forever. Markos passes his consciousness from body to body across the centuries and finally, in 2014, gets what every Traveler since the beginning has been chasing: both living doppelgängers in one place at one time.",
@@ -349,7 +349,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TVD · TO",
     "group": "mikaelson",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The worst father in a franchise with a lot of competition.",
     "biography": [
       "A warrior of the Old World who despised weakness and made that his children's entire childhood. When Esther's spell made them all vampires, Mikael became the thing that hunts them: he feeds on other vampires rather than on people, and he chased his own children across nine centuries and three continents.",
@@ -400,7 +400,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TVD · TO",
     "group": "mikaelson",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Everything catastrophic in this world is downstream of one decision she made.",
     "biography": [
       "A witch of the Old World, trained alongside Ayana, married to Mikael, and unable to have children until her sister Dahlia made her fertile in exchange for the firstborn of every generation of their line. She paid with Freya and hid the rest. She had an affair with a werewolf named Ansel and bore Niklaus. And when her youngest son Henrik was killed by wolves, she refused to bury another child and cast the immortality spell that created vampires.",
@@ -455,7 +455,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson (by blood)",
     "appearsIn": "TO",
     "group": "mikaelson",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "A thousand-year-old invoice with a newborn’s name on it.",
     "biography": [
       "Esther's elder sister, and by a wide margin the stronger of the two. She gave Esther fertility in exchange for the firstborn of every generation of their bloodline, forever, and collected Freya as the first payment. She sleeps a century between each waking year, sustained by the firstborn magic she takes.",
@@ -493,7 +493,7 @@ export const PEOPLE: Person[] = [
     "house": "The wolf village",
     "appearsIn": "TO",
     "group": "mikaelson",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The father Klaus never knew he had, killed twice.",
     "biography": [
       "A man from the werewolf village next to the Mikaelsons' settlement, and Esther's lover. Niklaus is his son. Mikael found out when Klaus's first kill triggered the wolf gene, and killed Ansel and everyone else in the village that night.",
@@ -531,7 +531,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TO · Legacies",
     "group": "mikaelson",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The only Mikaelson who is still a witch, and the only one who plans.",
     "biography": [
       "The Mikaelsons' true firstborn, handed to Dahlia as payment and reported dead of plague. She was raised as Dahlia's weapon and held in the same cycle — a century's sleep for every year awake — for a thousand years, believing her mother had sold her — which was true — and that her family would not want her, which was not.",
@@ -581,7 +581,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TVD · TO",
     "group": "mikaelson",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The one who never wanted any of it.",
     "biography": [
       "The eldest surviving Mikaelson son, and the only one who considered vampirism an abomination from the first day. Klaus daggered him for roughly nine hundred years. When he woke in 2012 he immediately sided with Esther in her plan to kill the entire family, including himself.",
@@ -623,7 +623,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TVD · TO",
     "group": "mikaelson",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The family’s conscience and its most efficient killer.",
     "biography": [
       "The second Mikaelson son, and the one who invented \"always and forever\" — the promise that the family will stay together no matter what, made over Henrik's body and broken roughly once a season for a thousand years. He loved Tatia, and Katherine, and eventually Hayley, which is a pattern that repeats every five hundred years with the same face.",
@@ -678,7 +678,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TVD · TO · Legacies",
     "group": "mikaelson",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The villain the franchise could not kill and eventually could not do without.",
     "biography": [
       "Esther's son by the werewolf Ansel, raised by a father who despised him and never told him why. His first kill woke his wolf side; his mother bound it to keep Mikael from killing him; he spent a thousand years undoing that binding and inventing a fake curse to make two entire species help him look for the pieces. He killed his mother, blamed his father, and kept his siblings in boxes for centuries at a time as a form of love.",
@@ -754,7 +754,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TVD · TO",
     "group": "mikaelson",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The reckless one, and the only Original who was a witch first.",
     "biography": [
       "The third Mikaelson son and the youngest brother to survive the spell — Henrik was younger — a witch before it and a vampire after it, which left him with a permanent grudge against magic and the people who use it. Klaus kept him daggered for over a century. He is killed in 2012 by Jeremy Gilbert with white oak — burned alive in a kitchen — to advance the hunt for the cure, and his entire sireline dies with him.",
@@ -800,7 +800,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TVD · TO · Legacies",
     "group": "mikaelson",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "A thousand years of wanting an ordinary life.",
     "biography": [
       "The second Mikaelson daughter — Freya was born first and stolen — and the one who says out loud what the family is: a group of people who love each other badly and will not let each other leave. She has wanted to be human since the first season she appears in. Klaus daggered her repeatedly — decades at a time — for loving the wrong people, starting with Marcel in New Orleans in 1919 and continuing for another century.",
@@ -851,7 +851,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson",
     "appearsIn": "TVD · TO (flashback)",
     "group": "mikaelson",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "The most consequential dead child in television.",
     "biography": [
       "The youngest Mikaelson. He wanted to see the wolves change on a full moon, and Niklaus took him out to watch, and a wolf killed him. Esther refused to bury another child and went looking for a spell that would make the rest of her family impossible to kill.",
@@ -884,7 +884,7 @@ export const PEOPLE: Person[] = [
     "house": "Mikaelson · Labonair",
     "appearsIn": "TO · Legacies",
     "group": "mikaelson",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The first tribrid, and the character the whole franchise hands itself to.",
     "biography": [
       "Born in the bayou during a hurricane to a werewolf and the Original hybrid: witch by Esther's blood, wolf by Ansel's, vampire by Esther's spell. Every faction in New Orleans wanted her dead or owned before she could speak, and Dahlia's thousand-year-old bargain had her name on it in advance. She was hidden as an infant, hunted as a toddler, and grew up mostly without her father, writing letters he could not answer in person.",
@@ -947,7 +947,7 @@ export const PEOPLE: Person[] = [
     "house": "Crescent pack · Mikaelson",
     "appearsIn": "TVD · TO",
     "group": "mikaelson",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The last heir of the Crescent line, and the wolves’ actual leader.",
     "biography": [
       "A werewolf with no idea where she came from, who spent one night with Klaus Mikaelson in the Blue Ridge Mountains and turned up pregnant — which should be impossible, and is possible only because Klaus was born a werewolf and is not, technically, dead the way other vampires are. She is in fact Andrea Labonair, the last living heir to the Crescent pack's ruling line, cursed by Klaus himself decades before she was born.",
@@ -990,7 +990,7 @@ export const PEOPLE: Person[] = [
     "house": "New Orleans",
     "appearsIn": "TO · Legacies",
     "group": "mikaelson",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Klaus’s son in everything but blood, and the only man who ever took the city off him.",
     "biography": [
       "Born to an enslaved woman and the man who owned her, taken in by Klaus as a boy and named Marcellus — \"the little warrior.\" Klaus raised him, taught him everything, and turned him. Rebekah loved him. In 1919 Mikael came, Klaus fled, and Marcel was left for dead. He was not dead. He took New Orleans instead and ruled it for ninety years, keeping the witches suppressed by hiding a teenage witch named Davina Claire and using her power against her own covens.",
@@ -1036,7 +1036,7 @@ export const PEOPLE: Person[] = [
     "house": "Petrova line",
     "appearsIn": "TO (flashback)",
     "group": "petrova",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Amara’s first shadow, and the blood in the immortality spell.",
     "biography": [
       "A woman of the Mikaelsons' village whom both Elijah and Niklaus loved, and the first Petrova doppelgänger — Amara's shadow, arriving precisely when the story needed her. She had a child by another man before either brother courted her, which is a pattern the line repeats with Katherine five hundred years later.",
@@ -1078,7 +1078,7 @@ export const PEOPLE: Person[] = [
     "house": "Petrova",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Five hundred years of never being where anyone expected.",
     "biography": [
       "Born Katerina Petrova in Bulgaria in 1473, disgraced by a pregnancy, and thrown out by her father after her daughter was taken at birth. Within months she was in England being courted by a charming lord who intended to drain her on an altar. She found out, stole the moonstone, and ran — and then did the one thing that made her permanently worthless to Klaus: she fed on a vampire's blood and hanged herself, because the ritual requires a human.",
@@ -1134,7 +1134,7 @@ export const PEOPLE: Person[] = [
     "house": "Gilbert · Petrova",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "The most valuable object on Earth before she knew vampires existed.",
     "biography": [
       "Seventeen and newly orphaned when the series starts. Her biological parents are Isobel Flemming — later a vampire — and John Gilbert; she was raised by John's brother Grayson and his wife Miranda, both of whom drowned when their car went off Wickery Bridge. Stefan Salvatore pulled her unconscious from the water because Grayson refused to be saved first, then enrolled in her school because she has Katherine's face.",
@@ -1197,7 +1197,7 @@ export const PEOPLE: Person[] = [
     "house": "Petrova",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Five centuries looking for a mother who did not want to be found.",
     "biography": [
       "Katherine's daughter, taken from her at birth in 1490 and raised by strangers. She spent five hundred years looking for her mother, found her in 2013, and got a handful of episodes with her before dying of a werewolf bite.",
@@ -1230,7 +1230,7 @@ export const PEOPLE: Person[] = [
     "house": "Gilbert (by blood)",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Alaric’s wife, Elena’s mother, and neither for very long.",
     "biography": [
       "A researcher into local vampire folklore who married Alaric Saltzman and then had herself turned by Damon Salvatore, abandoning both her husband and the daughter she had given up at sixteen. She works for Klaus, then for John Gilbert, then for herself, and is never straightforwardly on anyone's side.",
@@ -1267,7 +1267,7 @@ export const PEOPLE: Person[] = [
     "house": "Gilbert · Founders",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "A bad man who does exactly one great thing.",
     "biography": [
       "Elena's biological father, Grayson's brother, and a Founders' Council hardliner who spends most of two seasons trying to kill vampires including the ones his daughter loves. He is manipulative, cruel to Jeremy, and largely correct about the danger, which is what makes him unbearable.",
@@ -1304,7 +1304,7 @@ export const PEOPLE: Person[] = [
     "house": "Gilbert · Founders",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "The father Elena had, and the one she let drown.",
     "biography": [
       "A doctor and a Founders' Council member who raised his brother's daughter as his own and never told her. He also, quietly, experimented on captured vampires in the basement of the hospital — the Gilberts are not a clean family.",
@@ -1341,7 +1341,7 @@ export const PEOPLE: Person[] = [
     "house": "Gilbert · Sommers",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Elena and Jeremy’s mother; Jenna’s sister.",
     "biography": [
       "Jenna Sommers' older sister, married to Grayson Gilbert, and the woman who raised Elena as her own daughter. She died in the Wickery Bridge crash, which is the event the entire first season proceeds from."
@@ -1377,7 +1377,7 @@ export const PEOPLE: Person[] = [
     "house": "Sommers · Gilbert",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Turned into a vampire specifically so she could be killed.",
     "biography": [
       "Elena and Jeremy's aunt, made their guardian at short notice after her sister died, and comprehensively lied to by everyone she loves for two seasons \"for her own protection.\"",
@@ -1419,7 +1419,7 @@ export const PEOPLE: Person[] = [
     "house": "Gilbert · The Five",
     "appearsIn": "TVD · Legacies",
     "group": "petrova",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "A teenager who becomes a supernatural hunter and then a teacher.",
     "biography": [
       "Elena's younger brother, orphaned at fifteen, and one of the last potential members of the Brotherhood of the Five. When Connor Jordan dies, Jeremy's hunter's mark activates and grows with every vampire he kills — a living map to Silas and the cure, burned into his skin.",
@@ -1465,7 +1465,7 @@ export const PEOPLE: Person[] = [
     "house": "Silas’s line",
     "appearsIn": "TVD",
     "group": "petrova",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "oneLine": "Proof that the Silas line is real.",
     "biography": [
       "A paramedic in Atlanta with Stefan Salvatore's face, and the last-born doppelgänger of Silas — younger than Stefan, not older. Enzo snaps his neck to keep the Travelers from using him."
@@ -1497,7 +1497,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore",
     "appearsIn": "TVD · TO",
     "group": "salvatore",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "A hundred and seventy years of white-knuckling it.",
     "biography": [
       "The younger Salvatore brother, turned in 1864 after his father shot him for protecting Katherine Pierce. His first feed was on that father. Human blood switches him into a compulsive, escalating killer who dismembers his victims and then reassembles them out of guilt, and he has spent every decade since managing that with varying success. He is also, coincidentally and not coincidentally at all, Silas's doppelgänger.",
@@ -1561,7 +1561,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore",
     "appearsIn": "TVD",
     "group": "salvatore",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The most destructive person in Mystic Falls, and eventually the point of it.",
     "biography": [
       "The elder Salvatore brother, turned in 1864 only because Stefan made him complete the transition, and furious about it for a hundred and forty-five years. He came back to Mystic Falls in 2009 to open a tomb and get Katherine out, discovered she had never been in it, and stayed.",
@@ -1616,7 +1616,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore · Founders",
     "appearsIn": "TVD (flashback)",
     "group": "salvatore",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Shot both his sons and made two monsters doing it.",
     "biography": [
       "A founding family patriarch and Council member who spiked Stefan's drink with vervain to prove what Katherine was, then shot both his sons for helping her escape the roundup. He is Stefan's first kill, hours later."
@@ -1652,7 +1652,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore · the Heretics",
     "appearsIn": "TVD",
     "group": "salvatore",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Chose a different family and came back to say so.",
     "biography": [
       "Stefan and Damon's mother, officially dead of consumption in 1858 and in fact a vampire — and a ripper, which her younger son inherits in every way that matters. She went to Europe rather than come home as a monster, turned six siphoner witches into vampires, and called them her real family in front of both her sons.",
@@ -1698,7 +1698,7 @@ export const PEOPLE: Person[] = [
     "house": "The Heretics",
     "appearsIn": "TVD",
     "group": "salvatore",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Stefan’s first love, and the one who remembers what it cost.",
     "biography": [
       "A siphoner witch, cast out by the Gemini coven, who met Stefan Salvatore in 1863 and fell in love with him. She was pregnant with his child when Julian beat her; she died and turned with Lily's blood already in her system. She spent a century and a half being told by Lily that Julian would never have done it.",
@@ -1740,7 +1740,7 @@ export const PEOPLE: Person[] = [
     "house": "The Heretics’ circle",
     "appearsIn": "TVD",
     "group": "salvatore",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Lily’s blind spot, and the arc’s real villain.",
     "biography": [
       "The man Lily Salvatore loved, released from the 1903 prison world along with the Heretics. He murdered Valerie's unborn child in 1863 and spent a century and a half being defended by a woman who could not afford to believe it."
@@ -1776,7 +1776,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore",
     "appearsIn": "TVD",
     "group": "salvatore",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "The last human Salvatore, killed in episode five.",
     "biography": [
       "A descendant of the Salvatore line living quietly in the boarding house and growing vervain in the basement, on the understanding that his immortal uncles would leave him alone. Damon snaps his neck five episodes into the series."
@@ -1804,7 +1804,7 @@ export const PEOPLE: Person[] = [
     "house": "Bennett line",
     "appearsIn": "TVD (flashback)",
     "group": "bennett",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Told Esther not to. Was right.",
     "biography": [
       "The witch who led the Mikaelsons across the sea to the New World and then refused to cast Esther's immortality spell, calling it an abomination against nature and warning that the spirits would not stand for it. Esther used Ayana's own talisman and cast it anyway.",
@@ -1837,7 +1837,7 @@ export const PEOPLE: Person[] = [
     "house": "Bennett",
     "appearsIn": "TVD",
     "group": "bennett",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Sealed twenty-six vampires under a church for 145 years.",
     "biography": [
       "Katherine Pierce's handmaiden and a Bennett witch. She faked Katherine's death in the 1864 church fire and sealed the other twenty-six vampires in a tomb beneath it — not dead, just desiccating, under a spell keyed to a comet that would not return for 145 years. The Founders burned her at the stake.",
@@ -1875,7 +1875,7 @@ export const PEOPLE: Person[] = [
     "house": "Bennett",
     "appearsIn": "TVD",
     "group": "bennett",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The first Bennett the Salvatores get killed.",
     "biography": [
       "Bonnie's maternal grandmother — Abby's mother — a professor, and the witch who teaches Bonnie what she is. She dies in 2009 from the strain of opening the tomb — a favour to Damon Salvatore, who wanted Katherine out of it.",
@@ -1912,7 +1912,7 @@ export const PEOPLE: Person[] = [
     "house": "Bennett",
     "appearsIn": "TVD",
     "group": "bennett",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Buried Mikael, abandoned her daughter, lost her magic.",
     "biography": [
       "Sheila Bennett's daughter and Bonnie's mother, who used the last of her power to desiccate Mikael and bury him in the 1990s, then left Bonnie behind and started a new life. She comes back in 2012, is turned into a vampire by Damon to save her life, and loses her magic entirely as a result."
@@ -1948,7 +1948,7 @@ export const PEOPLE: Person[] = [
     "house": "Bennett",
     "appearsIn": "TVD",
     "group": "bennett",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The only Bennett who gets out.",
     "biography": [
       "A Bennett cousin brought to Mystic Falls in 2010 under an obligation to Katherine Pierce. She helps, discovers what Katherine actually is, breaks the debt, warns Bonnie, and leaves. She is never seen again, and she is the only member of the family who ends the story unharmed."
@@ -1976,7 +1976,7 @@ export const PEOPLE: Person[] = [
     "house": "Bennett",
     "appearsIn": "TVD",
     "group": "bennett",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "By workload, the protagonist.",
     "biography": [
       "The last Bennett witch, and — through Ayana and, further back, Qetsiyah — the inheritor of the oldest magical line in the story. Across eight seasons she dies, becomes the Anchor to the Other Side, becomes the load-bearing wall holding that entire dimension up, loses her magic three separate times, is stranded in 1994, and has her lifespan tied to whether her best friend gets to be awake.",
@@ -2039,7 +2039,7 @@ export const PEOPLE: Person[] = [
     "house": "Bennett",
     "appearsIn": "TVD",
     "group": "bennett",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Bonnie’s father, and the mayor of a town he did not understand.",
     "biography": [
       "Bonnie's father — who married into the Bennett line rather than being born to it — and, briefly, the mayor of Mystic Falls — a man determined to run the town on ordinary rules while his daughter held a dimension together. He is killed by Silas."
@@ -2071,7 +2071,7 @@ export const PEOPLE: Person[] = [
     "house": "Forbes · Founders",
     "appearsIn": "TVD · TO · Legacies",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Turned against her will, and became the best version of it anyone manages.",
     "biography": [
       "The sheriff's daughter, insecure and overlooked, used by Damon Salvatore as a food source in the first season and turned into a vampire in the second by Katherine — as a message. What she does with it is the show's most complete character arc: she becomes the most competent, most organised and most morally intact vampire in Mystic Falls, and the person everyone else calls when the plan fails.",
@@ -2130,7 +2130,7 @@ export const PEOPLE: Person[] = [
     "house": "Donovan · Maxwell",
     "appearsIn": "TVD · TO · Legacies",
     "group": "mysticfalls",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "The only one who stays human the whole way through.",
     "biography": [
       "A bartender and eventually a sheriff, and the one main character who never turns, never gets magic, and never asks for any of it. He loses his sister, his girlfriends and most of his twenties to other people's supernatural problems, and stays.",
@@ -2176,7 +2176,7 @@ export const PEOPLE: Person[] = [
     "house": "Lockwood · Founders",
     "appearsIn": "TVD · TO",
     "group": "mysticfalls",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The first werewolf the audience meets, and Klaus’s first hybrid.",
     "biography": [
       "A Founders' son who triggers the Lockwood werewolf gene in a car accident he causes, without knowing the gene exists. He is turned into one of Klaus's hybrids and sire-bonded to him, spends a season working out how to break the bond, and leads the hybrid defection when Elena's blood makes it possible.",
@@ -2222,7 +2222,7 @@ export const PEOPLE: Person[] = [
     "house": "Donovan",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "The first person Damon kills on screen, and a recurring ghost.",
     "biography": [
       "Matt's older sister, turned by Damon in the first season on a whim and killed by Stefan days later when she cannot control it. She keeps coming back — through the Other Side, and again in the final season working for Cade to ring the bell that would destroy the town."
@@ -2262,7 +2262,7 @@ export const PEOPLE: Person[] = [
     "house": "Saltzman · Salvatore School",
     "appearsIn": "TVD · TO · Legacies",
     "group": "mysticfalls",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "History teacher, vampire hunter, headmaster.",
     "biography": [
       "He came to Mystic Falls hunting the vampire who took his wife Isobel and stayed as a history teacher, a drinking companion and the closest thing the teenagers have to a functional adult. He is killed and resurrected repeatedly by a Gilbert ring, which slowly breaks his mind, and in 2012 Esther turns him into an Enhanced Original Vampire — a vampire engineered to wipe out vampires, briefly the most dangerous being alive, undone by the fact that his life is linked to Elena's.",
@@ -2320,7 +2320,7 @@ export const PEOPLE: Person[] = [
     "house": "Forbes · Founders",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Ran a vampire-hunting council while her daughter was a vampire.",
     "biography": [
       "Sheriff of Mystic Falls and head of the Founders' Council, which spends decades hunting vampires. When she finds out Caroline is one, she chooses her daughter, and the town's whole security apparatus quietly becomes something else. She dies of cancer in 2015, which is the only ordinary death anyone in this show gets."
@@ -2357,7 +2357,7 @@ export const PEOPLE: Person[] = [
     "house": "None",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Spent decades pulling Stefan back and got four episodes for it.",
     "biography": [
       "Stefan's oldest friend, 350 years old, and the person who repeatedly dragged him out of ripper phases across the 20th century. She arrives in Mystic Falls for his birthday and Damon stakes her in public to protect his own cover.",
@@ -2386,7 +2386,7 @@ export const PEOPLE: Person[] = [
     "house": "Augustine · the Armory",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Seventy years in a cage, and a very long memory.",
     "biography": [
       "Captured by the Augustine society and held for seventy years, bled and cut open as research alongside Damon Salvatore. Damon escaped in 1958 and left him in a burning building. Enzo survived, stayed in captivity for another half-century, and came out with a plan for exactly what he would say.",
@@ -2427,7 +2427,7 @@ export const PEOPLE: Person[] = [
     "house": "Lockwood",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The first werewolf on screen, and Katherine’s tool.",
     "biography": [
       "Tyler's uncle, who triggered the Lockwood gene by causing a death and came back to Mystic Falls to find the moonstone. Katherine used him for it, and Damon tortured and killed him for it."
@@ -2463,7 +2463,7 @@ export const PEOPLE: Person[] = [
     "house": "A wolf pack",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The werewolf in Klaus’s sacrifice.",
     "biography": [
       "A werewolf who comes to Mystic Falls looking for Mason and ends up on Klaus's altar as the werewolf component of the ritual that breaks his curse."
@@ -2495,7 +2495,7 @@ export const PEOPLE: Person[] = [
     "house": "Lockwood · Founders",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Mayor of a town she was lying to.",
     "biography": [
       "Tyler's mother and mayor of Mystic Falls, a Founders' Council member who does not know her own family carries the werewolf gene until the Gilbert device incapacitates her son. She is drowned by Klaus as a message to Tyler."
@@ -2527,7 +2527,7 @@ export const PEOPLE: Person[] = [
     "house": "The tomb vampires",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "One of the twenty-six under the church.",
     "biography": [
       "A vampire sealed in the tomb by Emily Bennett in 1864 and released 145 years later, along with her daughter Anna. She wants to rebuild a life in Mystic Falls and is staked by John Gilbert within weeks of getting out."
@@ -2563,7 +2563,7 @@ export const PEOPLE: Person[] = [
     "house": "The tomb vampires",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Waited 145 years to open a tomb her mother was in.",
     "biography": [
       "Pearl's daughter, who spent a century and a half working out how to open the tomb her mother was sealed in, and who falls in love with Jeremy Gilbert while doing it. She is killed by John Gilbert and returns repeatedly as a ghost."
@@ -2595,7 +2595,7 @@ export const PEOPLE: Person[] = [
     "house": "Silas’s cult",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Origins & Immortals",
+    "category": "origin",
     "oneLine": "Orchestrated the cure hunt to get his dead wife back.",
     "biography": [
       "An occult studies professor at Whitmore who engineers the entire expedition to Silas's island — twelve human sacrifices, twelve vampires, twelve hybrids — while pretending to be a helpful academic. He is working for Silas, who has promised to raise his dead wife and son when the Other Side falls."
@@ -2631,7 +2631,7 @@ export const PEOPLE: Person[] = [
     "house": "The Five",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The hunter whose death activates Jeremy.",
     "biography": [
       "A member of the Brotherhood of the Five who arrives in Mystic Falls in 2012 with a growing tattoo nobody else can see. Elena kills him, which inflicts the Hunter's Curse on her, and his death activates Jeremy Gilbert as the next hunter."
@@ -2663,7 +2663,7 @@ export const PEOPLE: Person[] = [
     "house": "The Five",
     "appearsIn": "TVD (flashback)",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The hunter who daggered the Mikaelsons — all but Klaus.",
     "biography": [
       "One of the original Brotherhood, who befriended Rebekah Mikaelson, learned everything about her family, and then daggered every Mikaelson except Klaus at a dinner he had arranged in 1114 — the daggers do not work on a hybrid, so Klaus woke and killed all five hunters. Rebekah has not forgotten it."
@@ -2695,7 +2695,7 @@ export const PEOPLE: Person[] = [
     "house": "The Five",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The last of the Five, and the first to the island.",
     "biography": [
       "A Scottish hunter and the last surviving member of the brotherhood, who reaches Silas's tomb ahead of everyone else and understands, better than the rest, exactly what is buried there."
@@ -2727,7 +2727,7 @@ export const PEOPLE: Person[] = [
     "house": "The Everlasting",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "A sword, a stone, and eight chances.",
     "biography": [
       "The daughter of Vicente Cruz, a hunter of the Brotherhood of the Five, given eight lives by the shamans who died to make her sword. Her blade brands a vampire, and the mark makes every other vampire on Earth hunt whoever carries it. Her Phoenix Stone traps vampire souls in bespoke hells built out of their own worst memories.",
@@ -2765,7 +2765,7 @@ export const PEOPLE: Person[] = [
     "house": "Gemini coven",
     "appearsIn": "TVD",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Would sacrifice any of his children to the tradition.",
     "biography": [
       "Leader of the Gemini coven, and the man who sealed his own son into a prison world and raised two more sets of twins knowing what the Merge would do to them. The coven's lives are linked to whoever leads it. Kai takes the leadership by winning the Merge — and then cuts his own throat, and every Gemini witch on Earth, Joshua included, dies with him."
@@ -2805,7 +2805,7 @@ export const PEOPLE: Person[] = [
     "house": "Gemini coven",
     "appearsIn": "TVD · Legacies",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The most effective villain in the franchise.",
     "biography": [
       "A siphoner born to the Gemini coven with no magic of his own, treated as an abomination by his own father, and a genuine sociopath who murdered four of his siblings at twenty-two. He was sealed in a 1994 prison world for eighteen years until Bonnie Bennett and Damon Salvatore landed there and he came back out with them.",
@@ -2859,7 +2859,7 @@ export const PEOPLE: Person[] = [
     "house": "Gemini coven",
     "appearsIn": "TVD · Legacies",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Hid from her own coven, and died at her wedding.",
     "biography": [
       "Kai's twin sister, who buried her own magic in a knife rather than merge with him, and lived for twenty years as an ordinary doctor. She marries Alaric Saltzman and is murdered by Kai at the reception while pregnant with their twins.",
@@ -2900,7 +2900,7 @@ export const PEOPLE: Person[] = [
     "house": "Gemini coven",
     "appearsIn": "TVD",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Merged with Kai so his sister would not have to.",
     "biography": [
       "One of Joshua Parker's younger twins, who takes Jo's place in the Merge against Kai and loses. It is a deliberate sacrifice and the show treats it as one."
@@ -2932,7 +2932,7 @@ export const PEOPLE: Person[] = [
     "house": "Gemini coven",
     "appearsIn": "TVD",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Survived the Merge and did not want to.",
     "biography": [
       "Luke's twin, who spends a season being told she must either kill her brother or die, and then loses him anyway. She dies shortly afterwards helping Tyler Lockwood."
@@ -2964,7 +2964,7 @@ export const PEOPLE: Person[] = [
     "house": "Saltzman · Gemini",
     "appearsIn": "Legacies",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The accommodating twin, which nearly kills everyone.",
     "biography": [
       "Alaric and Jo's daughter, carried by Caroline Forbes, and named for a mother she never met. A siphoner: no magic of her own, only what she can draw out of other magical things. She spends her childhood being the easy one, absorbing everyone else's needs, and in her teens absorbs an enormous amount of dark magic and nearly destroys the school.",
@@ -3013,7 +3013,7 @@ export const PEOPLE: Person[] = [
     "house": "Saltzman · Gemini",
     "appearsIn": "Legacies",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The loud twin, told she is the problem until she believes it.",
     "biography": [
       "Josie's twin, named for Elizabeth Forbes. Louder, angrier, and openly struggling in a way the school has no idea how to handle — the show names her bipolar disorder plainly and does not use it as a punchline.",
@@ -3062,7 +3062,7 @@ export const PEOPLE: Person[] = [
     "house": "The Heretics",
     "appearsIn": "TVD",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "A century-long relationship in the middle of a war.",
     "biography": [
       "One of Lily Salvatore's Heretics, and half of the most stable relationship in the arc: she and Mary Louise have been together for over a hundred years, and the show treats it as the only genuinely settled thing about any of them."
@@ -3094,7 +3094,7 @@ export const PEOPLE: Person[] = [
     "house": "The Heretics",
     "appearsIn": "TVD",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The most dangerous of the Heretics, and the most loyal.",
     "biography": [
       "Nora's partner of a century, and Lily's fiercest defender. She is the one who most resents the Salvatores for turning up and reclaiming a mother she considers hers."
@@ -3126,7 +3126,7 @@ export const PEOPLE: Person[] = [
     "house": "The Heretics",
     "appearsIn": "TVD",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "An opera singer with no voice left.",
     "biography": [
       "An opera singer before he turned, whose vocal cords were cut by Rayna Cruz's blade. He cannot speak and never does; everything he communicates is gesture, presence and magic."
@@ -3158,7 +3158,7 @@ export const PEOPLE: Person[] = [
     "house": "The Heretics",
     "appearsIn": "TVD",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The first Heretic to die, and the reason the war starts.",
     "biography": [
       "Lily's eldest Heretic, killed by Damon shortly after the family is released. His death is what turns Lily against her sons permanently."
@@ -3186,7 +3186,7 @@ export const PEOPLE: Person[] = [
     "house": "New Orleans covens",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "A teenager with more raw power than any coven, used by everyone.",
     "biography": [
       "One of four girls chosen for the Harvest — a ritual in which the coven sacrifices four of its own to renew its connection to the Ancestors. Three died; Marcel's vampires carried her off before her throat was cut and was hidden by Marcel Gerard in an attic, where he used her power to suppress the very covens she came from.",
@@ -3228,7 +3228,7 @@ export const PEOPLE: Person[] = [
     "house": "O’Connell · the human faction",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "A psychologist who says the obvious thing out loud.",
     "biography": [
       "A graduate student in psychology who ends up as the human faction's representative and, more importantly, as the one person willing to tell Klaus Mikaelson exactly what is wrong with him to his face. She is compelled, used, and lied to repeatedly and keeps coming back on her own terms.",
@@ -3269,7 +3269,7 @@ export const PEOPLE: Person[] = [
     "house": "Marcel’s vampires",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "An ordinary person turned into a soldier in someone else’s war.",
     "biography": [
       "A young man turned by Marcel's vampires and immediately compelled by Klaus into spying on Marcel, because Klaus is a great deal better at compulsion than anyone Josh knows. He becomes Davina's closest friend and one of the few characters in New Orleans with no ambitions at all beyond surviving and having a life."
@@ -3301,7 +3301,7 @@ export const PEOPLE: Person[] = [
     "house": "New Orleans covens",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The only New Orleans witch who consistently refuses to be used.",
     "biography": [
       "A powerful witch who was possessed by Finn Mikaelson, forced to serve the Ancestors as Regent, and who spends the rest of the series trying to build a version of New Orleans witchcraft that does not run on child sacrifice and dead people's demands.",
@@ -3342,7 +3342,7 @@ export const PEOPLE: Person[] = [
     "house": "French Quarter coven",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The witch who starts the entire series.",
     "biography": [
       "A New Orleans witch who links her own life to Hayley Marshall's and uses the pregnancy as leverage to force Klaus back to the city. Everything in The Originals proceeds from her gamble."
@@ -3378,7 +3378,7 @@ export const PEOPLE: Person[] = [
     "house": "French Quarter coven",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "A Harvest girl who came back believing the Ancestors.",
     "biography": [
       "One of the four Harvest girls, resurrected by the completed ritual and entirely committed to the Ancestors' agenda, including killing the Mikaelson child. She is the argument against the covens' whole theology, delivered by a teenager."
@@ -3410,7 +3410,7 @@ export const PEOPLE: Person[] = [
     "house": "French Quarter coven",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "A century of resentment, resurrected.",
     "biography": [
       "A witch who died of plague in 1919 after Rebekah betrayed her, brought back a century later by Céleste Dubois with power stolen from the Harvest, with a very long memory and a strong interest in making Klaus's life worse."
@@ -3442,7 +3442,7 @@ export const PEOPLE: Person[] = [
     "house": "French Quarter coven",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Body-hops for a century, and casts the Crescent curse from inside someone else.",
     "biography": [
       "Elijah Mikaelson's lover in the 19th century, killed in a riot he indirectly caused. She survives by moving from body to body for a century, and in 1991 — possessing the witch Brynne Deveraux — casts the curse that traps the Crescent pack in wolf form."
@@ -3474,7 +3474,7 @@ export const PEOPLE: Person[] = [
     "house": "Malraux pack",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The last of the Malraux line, and Freya’s wife.",
     "biography": [
       "A doctor and the last surviving member of the Malraux werewolf pack, held captive by Freya Mikaelson so her venom could be made into an antidote to Marcel's bite, and then, improbably and slowly, the person Freya marries. They get the least complicated ending in the family."
@@ -3506,7 +3506,7 @@ export const PEOPLE: Person[] = [
     "house": "Crescent pack",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The Crescent alpha who married Hayley to free the pack.",
     "biography": [
       "The rightful alpha of the Crescent wolves, betrothed to Hayley by an arrangement made before either of them was born, and the man who marries her in a unification ritual that gives the whole pack the ability to turn at will and keep their minds.",
@@ -3543,7 +3543,7 @@ export const PEOPLE: Person[] = [
     "house": "The human faction",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "The priest who held the compact.",
     "biography": [
       "Cami's uncle, a Catholic priest, and the human faction's representative in the compact that keeps New Orleans from open war. He knows exactly what the city is and negotiates with it anyway."
@@ -3575,7 +3575,7 @@ export const PEOPLE: Person[] = [
     "house": "Klaus’s sireline",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The first vampire the Mikaelsons ever made.",
     "biography": [
       "A servant of the de Martel household in the 11th century, turned by Klaus and then compelled by Elijah to believe he was Klaus — a decoy while the family hid from Mikael, and then left behind. Nine hundred years of being underestimated later, he engineers the prophecy that will destroy the family, refines Esther's original magic into a serum, and makes himself stronger than the Originals — a Beast whose bite kills them."
@@ -3616,7 +3616,7 @@ export const PEOPLE: Person[] = [
     "house": "Elijah’s sireline · the Strix",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Seized the Strix from Elijah. Ends up in a box at the bottom of the sea.",
     "biography": [
       "A nobleman turned by Elijah Mikaelson in the 11th century, who seized command of the Strix — Elijah's own creation — a society of elite vampires that outlives him by centuries and quietly runs a great deal of the world's money. Elijah once punished him by compelling him to walk into the sea over and over.",
@@ -3653,7 +3653,7 @@ export const PEOPLE: Person[] = [
     "house": "Rebekah’s sireline",
     "appearsIn": "TO · Legacies",
     "group": "nola",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The only character on screen who remembers the world before vampires.",
     "biography": [
       "Tristan's sister, whom Klaus loved in the 11th century and Rebekah turned against his explicit wishes. She is arguably the first vampire genuinely driven mad by immortality, and she has had a thousand years to become very good at it.",
@@ -3699,7 +3699,7 @@ export const PEOPLE: Person[] = [
     "house": "A rival coven",
     "appearsIn": "TO",
     "group": "nola",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "A blade that holds a century of agony.",
     "biography": [
       "A witch who came to New Orleans in the early 20th century to take the city and was destroyed by the Mikaelsons. His power was bound into a blade that inflicts unbearable pain on anything it stabs, including an Original, and the blade circulates for decades afterwards."
@@ -3731,7 +3731,7 @@ export const PEOPLE: Person[] = [
     "house": "Malivore",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Death & Afterlives",
+    "category": "death",
     "oneLine": "Dies constantly. Keeps coming back.",
     "biography": [
       "A foster kid with no idea what he is, who turns out to be the son of Malivore — the pit built to erase monsters from the world — and a phoenix, which means he resurrects every time he is killed, and he is killed a lot.",
@@ -3773,7 +3773,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore School",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "Triggered the curse in a car accident, like Tyler before him.",
     "biography": [
       "Landon's foster brother, who triggers the werewolf gene in a crash that kills his girlfriend and arrives at the Salvatore School with no idea such a place exists. He is the school's wolf pack leader in everything but title."
@@ -3805,7 +3805,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore School",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "A ripper who reads comics.",
     "biography": [
       "A vampire student, a comic-book obsessive, and — because the franchise cannot help itself — a ripper, whose blood urges are far worse than anyone at the school realises. He is the most decent person in the building and spends four seasons being afraid of himself."
@@ -3841,7 +3841,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore School",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Malivore wore him for a while, and he came out of it.",
     "biography": [
       "A vampire student who is briefly Malivore's host — and briefly part dragon because of it. He is the school's most self-possessed student and the one most often used as a vessel by things older than the building."
@@ -3873,7 +3873,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore School",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Wolves & Hybrids",
+    "category": "wolf",
     "oneLine": "The school’s alpha, and the school’s best late-arriving character.",
     "biography": [
       "Leader of the Salvatore School wolf pack, introduced as a bully and gradually revealed as the most emotionally honest student in the building."
@@ -3901,7 +3901,7 @@ export const PEOPLE: Person[] = [
     "house": "Malivore",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Death & Afterlives",
+    "category": "death",
     "oneLine": "Landon’s half-brother, and a much worse person.",
     "biography": [
       "Malivore's other son, sent to retrieve Landon and the golden urn, and considerably more committed to his father's project. He is the franchise's most enjoyable mid-tier villain because he is entirely honest about what he wants."
@@ -3933,7 +3933,7 @@ export const PEOPLE: Person[] = [
     "house": "Malivore’s escapees",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Death & Afterlives",
+    "category": "death",
     "oneLine": "Raises the dead, badly, and enjoys it enormously.",
     "biography": [
       "An ancient sorcerer swallowed by Malivore and released, who can resurrect the dead and mostly uses the power for petty theatre. He is the comic register of the show and occasionally its most genuinely unsettling element."
@@ -3965,7 +3965,7 @@ export const PEOPLE: Person[] = [
     "house": "The pantheon",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "A god who was erased and came back for the world.",
     "biography": [
       "A god who was never eaten at all. Malivore could erase gods, so Ken's daughter Jen built magical sarcophagi and put the family to sleep until the pit was gone. He wakes when it is destroyed and sets about reclaiming a world that has entirely forgotten he existed. He is the last major antagonist of the franchise."
@@ -4001,7 +4001,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore School",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "Her power is inspiration itself.",
     "biography": [
       "One of the original muses, swallowed by Malivore and released, who arrives at the Salvatore School as a student and turns out to be the most interesting new idea the show has: a person whose power is the ability to inspire, which is both a gift and a way to make anyone do anything."
@@ -4033,7 +4033,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore School",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "A witch with a grudge and a stolen ascendant.",
     "biography": [
       "A Salvatore School student expelled and then readmitted, who links two ascendants together and banishes Alaric and the twins into the Gemini coven's old 2018 prison world. She is proof the Gemini technology outlived the Gemini."
@@ -4065,7 +4065,7 @@ export const PEOPLE: Person[] = [
     "house": "Mystic Falls",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "An ordinary Mystic Falls teenager, which never lasts.",
     "biography": [
       "A human student from the town who finds out what the school actually is, is turned into a Pukwudgie by Malivore, and ends the series dead and at peace as a spirit."
@@ -4093,7 +4093,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore School",
     "appearsIn": "TVD · Legacies",
     "group": "legacies",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "Runs the library, which in this franchise is a combat role.",
     "biography": [
       "Alaric's colleague from the Armory era who becomes the Salvatore School's librarian and researcher, and one of very few humans on staff who knows exactly what he signed up for."
@@ -4125,7 +4125,7 @@ export const PEOPLE: Person[] = [
     "house": "Salvatore School",
     "appearsIn": "Legacies",
     "group": "legacies",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "School counsellor, and the only adult asking how anyone feels.",
     "biography": [
       "A witch and the school's counsellor, and the person who most consistently points out that these children are traumatised rather than merely powerful. Given the franchise's history, this is close to revolutionary."
@@ -4157,7 +4157,7 @@ export const PEOPLE: Person[] = [
     "house": "None",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Helped Katherine escape in 1492 and ran for five hundred years.",
     "biography": [
       "A vampire who, with Trevor, helped Katerina Petrova escape Klaus in 1492 — and then spent five centuries running from the Mikaelsons for it. She hands Elena over to Elijah in 2010 hoping to buy her own freedom, changes her mind, and dies of a werewolf bite in Damon Salvatore's care days later."
@@ -4193,7 +4193,7 @@ export const PEOPLE: Person[] = [
     "house": "None",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "Beheaded by Elijah five hundred years late.",
     "biography": [
       "The vampire who fell for Katerina Petrova and gave her the escape route. It was Rose's blood, not his, that she turned on — but Elijah hunted them both for five centuries all the same. Elijah beheads him in 2010 the moment the debt is finally called in."
@@ -4225,7 +4225,7 @@ export const PEOPLE: Person[] = [
     "house": "Klaus’s circle",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The witch who performed Klaus’s sacrifice.",
     "biography": [
       "A witch who chose Klaus's side against her own family and cast the ritual that broke the hybrid curse in 2010 — the fire circles, the altar, all of it. Damon kills her in the chaos at the end of it and carries Elena's body away."
@@ -4261,7 +4261,7 @@ export const PEOPLE: Person[] = [
     "house": "Fell · Founders",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Bloodlines & Houses",
+    "category": "house",
     "oneLine": "A doctor who treats vampire blood as a medicine.",
     "biography": [
       "A Mystic Falls doctor and Founders' family descendant who quietly uses vampire blood to save patients who would otherwise die — the only person in town with a genuinely practical attitude to the supernatural. She sedates Alaric as he dies rather than let him turn, and later moves to Alaska."
@@ -4293,7 +4293,7 @@ export const PEOPLE: Person[] = [
     "house": "The Heretics",
     "appearsIn": "TVD",
     "group": "gemini",
-    "category": "Witches & Magic",
+    "category": "witch",
     "oneLine": "The sixth Heretic, and the one nobody counts.",
     "biography": [
       "A Gemini siphoner cast out by his own coven, turned by Lily Salvatore, and sealed into the 1903 prison world with the rest of her found family. He is the first of them sent back out into the modern world to fetch the ascendant, and he never makes it home — Valerie kills him to keep Lily from getting her family back intact."
@@ -4329,7 +4329,7 @@ export const PEOPLE: Person[] = [
     "house": "Klaus’s sireline",
     "appearsIn": "TVD",
     "group": "mysticfalls",
-    "category": "Vampires",
+    "category": "vamp",
     "oneLine": "The link that puts the entire main cast in Klaus’s bloodline.",
     "biography": [
       "An old vampire turned by Klaus, and the one who turned Rose-Marie. That makes the chain Klaus → Mary → Rose → Katherine → Stefan and Damon — which is how the Salvatores discover, in the middle of the hunt for the cure, that killing Klaus would kill almost everyone they know. Silas kills her for the information."

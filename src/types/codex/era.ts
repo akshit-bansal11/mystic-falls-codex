@@ -11,6 +11,8 @@ export interface EraNarrativeSection {
   /** Null for the opening section, which runs under the era heading itself. */
   heading: string | null
   paragraphs: string[]
+  /** Pull-quote. Set on 6 of the 40 sections; null on the rest. */
+  keyPoint: string | null
 }
 
 export interface EraNarrative {
