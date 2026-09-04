@@ -17,4 +17,8 @@ export interface CausalNode {
   facts: string[]
   peopleInvolved: string[]
   leadsTo: CausalLink[]
+  /** Row within the node's era band. */
+  row: number
+  /** Column across the map, 0-4. */
+  col: number
 }

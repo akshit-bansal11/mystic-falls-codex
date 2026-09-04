@@ -42,7 +42,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "doppel",
         "relation": "provoked"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 0
   },
   {
     "id": "amara",
@@ -73,7 +75,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "doppel",
         "relation": "source of"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 2
   },
   {
     "id": "balance",
@@ -102,7 +106,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "weakness",
         "relation": "charged"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 4
   },
   {
     "id": "cure",
@@ -141,7 +147,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "curetaken",
         "relation": "used"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 0
   },
   {
     "id": "otherside",
@@ -176,7 +184,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "cade",
         "relation": "replaced by"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 1
   },
   {
     "id": "anchor",
@@ -209,7 +219,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "osidefall",
         "relation": "failed with"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 2
   },
   {
     "id": "doppel",
@@ -252,7 +264,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "travelers",
         "relation": "hunted by"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 3
   },
   {
     "id": "travelers",
@@ -283,7 +297,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "doppel",
         "relation": "hunts"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 4
   },
   {
     "id": "esther",
@@ -318,7 +334,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "spell",
         "relation": "cast"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 0
   },
   {
     "id": "dahlia",
@@ -353,7 +371,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hope",
         "relation": "targets"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 1
   },
   {
     "id": "freya",
@@ -389,7 +409,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "freyakeelin",
         "relation": "survived to"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 0
   },
   {
     "id": "newworld",
@@ -424,7 +446,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "henrik",
         "relation": "undone by"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 3
   },
   {
     "id": "wolves",
@@ -461,7 +485,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "wolfcurse",
         "relation": "continued as"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 4
   },
   {
     "id": "ansel",
@@ -491,7 +517,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "originals",
         "relation": "father of Klaus"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 2
   },
   {
     "id": "henrik",
@@ -516,7 +544,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "spell",
         "relation": "caused"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 3
   },
   {
     "id": "tatia",
@@ -552,7 +582,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hybridcurse",
         "relation": "blood used in"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 4
   },
   {
     "id": "whiteoak",
@@ -590,7 +622,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "sirelines",
         "relation": "threatens"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 1
   },
   {
     "id": "spell",
@@ -630,7 +664,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "sirelines",
         "relation": "began"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 2
   },
   {
     "id": "originals",
@@ -673,7 +709,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "klausarrives",
         "relation": "come to Mystic Falls"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 3
   },
   {
     "id": "weakness",
@@ -707,7 +745,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "ripper",
         "relation": "worsens"
       }
-    ]
+    ],
+    "row": 3,
+    "col": 0
   },
   {
     "id": "hybridcurse",
@@ -746,7 +786,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "tatia",
         "relation": "bound with"
       }
-    ]
+    ],
+    "row": 3,
+    "col": 1
   },
   {
     "id": "sirelines",
@@ -786,7 +828,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hollowend",
         "relation": "ends with"
       }
-    ]
+    ],
+    "row": 3,
+    "col": 3
   },
   {
     "id": "mikaelhunt",
@@ -818,7 +862,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "originals",
         "relation": "hunts"
       }
-    ]
+    ],
+    "row": 3,
+    "col": 4
   },
   {
     "id": "five",
@@ -853,7 +899,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "curehunt",
         "relation": "drives"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 0
   },
   {
     "id": "lucien",
@@ -890,7 +938,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "gods",
         "relation": "returns in"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 1
   },
   {
     "id": "sunmoon",
@@ -917,7 +967,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hybridcurse",
         "relation": "covers for"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 3
   },
   {
     "id": "wolfcurse",
@@ -950,7 +1002,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hayley",
         "relation": "of the Crescents"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 4
   },
   {
     "id": "ayana",
@@ -980,7 +1034,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "emily",
         "relation": "ancestor of"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 0
   },
   {
     "id": "bennett",
@@ -1015,7 +1071,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "bonnie",
         "relation": "ends at"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 1
   },
   {
     "id": "katherine",
@@ -1056,7 +1114,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "salvatore",
         "relation": "turned"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 2
   },
   {
     "id": "nola",
@@ -1090,7 +1150,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "nola1919",
         "relation": "ended by"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 3
   },
   {
     "id": "marcel",
@@ -1127,7 +1189,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hollowend",
         "relation": "venom used in"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 4
   },
   {
     "id": "nola1919",
@@ -1162,7 +1226,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "quarter",
         "relation": "emptied"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 3
   },
   {
     "id": "crescent",
@@ -1193,7 +1259,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "wolfcurse",
         "relation": "inverted"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 4
   },
   {
     "id": "founders",
@@ -1231,7 +1299,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "elena",
         "relation": "descends to"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 0
   },
   {
     "id": "salvatore",
@@ -1268,7 +1338,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "stefandamon",
         "relation": "return in 2009"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 1
   },
   {
     "id": "emily",
@@ -1304,7 +1376,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "stefandamon",
         "relation": "draws home"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 2
   },
   {
     "id": "lily",
@@ -1341,7 +1415,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hereticwar",
         "relation": "causes"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 3
   },
   {
     "id": "gemini",
@@ -1383,7 +1459,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "merge",
         "relation": "demands"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 4
   },
   {
     "id": "augustine",
@@ -1412,7 +1490,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hereticwar",
         "relation": "Enzo from"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 0
   },
   {
     "id": "ripper",
@@ -1448,7 +1528,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "weakness",
         "relation": "extreme of"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 1
   },
   {
     "id": "heretics",
@@ -1486,7 +1568,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "lily",
         "relation": "family of"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 3
   },
   {
     "id": "prisonworld",
@@ -1530,7 +1614,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "osidefall",
         "relation": "escape route from"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 4
   },
   {
     "id": "armory",
@@ -1560,7 +1646,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "school",
         "relation": "stocks"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 0
   },
   {
     "id": "rayna",
@@ -1592,7 +1680,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hereticwar",
         "relation": "during"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 1
   },
   {
     "id": "cade",
@@ -1630,7 +1720,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hellfire",
         "relation": "ended by"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 2
   },
   {
     "id": "sirens",
@@ -1668,7 +1760,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "twins",
         "relation": "targeted"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 3
   },
   {
     "id": "elena",
@@ -1714,7 +1808,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "stefandamon",
         "relation": "loved by"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 0
   },
   {
     "id": "stefandamon",
@@ -1751,7 +1847,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "tvdend",
         "relation": "ends in"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 1
   },
   {
     "id": "katreturn",
@@ -1788,7 +1886,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "cure",
         "relation": "took"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 2
   },
   {
     "id": "klausarrives",
@@ -1826,7 +1926,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "nola",
         "relation": "later leaves for"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 3
   },
   {
     "id": "sacrifice",
@@ -1866,7 +1968,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "originaldeaths",
         "relation": "provokes"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 4
   },
   {
     "id": "bonnie",
@@ -1909,7 +2013,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "curetaken",
         "relation": "linked to"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 0
   },
   {
     "id": "originaldeaths",
@@ -1948,7 +2054,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "curehunt",
         "relation": "triggers"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 1
   },
   {
     "id": "curehunt",
@@ -1987,7 +2095,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "silasrises",
         "relation": "frees"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 2
   },
   {
     "id": "silasrises",
@@ -2024,7 +2134,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "osidefall",
         "relation": "begins"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 3
   },
   {
     "id": "markos",
@@ -2062,7 +2174,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "osidefall",
         "relation": "coincides with"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 4
   },
   {
     "id": "osidefall",
@@ -2101,7 +2215,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "prisonworld",
         "relation": "strands them in"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 0
   },
   {
     "id": "hereticwar",
@@ -2144,7 +2260,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "school",
         "relation": "clears way for"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 1
   },
   {
     "id": "curetaken",
@@ -2183,7 +2301,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "tvdend",
         "relation": "undone at"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 2
   },
   {
     "id": "hellfire",
@@ -2222,7 +2342,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "tvdend",
         "relation": "leads to"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 3
   },
   {
     "id": "tvdend",
@@ -2257,7 +2379,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "bonnie",
         "relation": "freed by"
       }
-    ]
+    ],
+    "row": 2,
+    "col": 4
   },
   {
     "id": "hayley",
@@ -2294,7 +2418,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hollowsplit",
         "relation": "dies in"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 0
   },
   {
     "id": "hope",
@@ -2339,7 +2465,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "school",
         "relation": "sent to"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 1
   },
   {
     "id": "quarter",
@@ -2376,7 +2504,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "nola",
         "relation": "continues"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 2
   },
   {
     "id": "ancestors",
@@ -2410,7 +2540,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hollow",
         "relation": "hid among"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 3
   },
   {
     "id": "dahliareturn",
@@ -2447,7 +2579,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hope",
         "relation": "hunts"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 4
   },
   {
     "id": "beast",
@@ -2486,7 +2620,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hollow",
         "relation": "sets up"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 0
   },
   {
     "id": "hollow",
@@ -2523,7 +2659,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hope",
         "relation": "wants"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 1
   },
   {
     "id": "hollowsplit",
@@ -2560,7 +2698,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "hayley",
         "relation": "kills"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 2
   },
   {
     "id": "hollowend",
@@ -2602,7 +2742,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "freyakeelin",
         "relation": "leaves behind"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 3
   },
   {
     "id": "freyakeelin",
@@ -2635,7 +2777,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "freya",
         "relation": "includes"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 4
   },
   {
     "id": "school",
@@ -2682,7 +2826,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "freyakeelin",
         "relation": "funded by"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 0
   },
   {
     "id": "twins",
@@ -2720,7 +2866,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "school",
         "relation": "attend"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 1
   },
   {
     "id": "merge",
@@ -2753,7 +2901,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "legacyend",
         "relation": "broken at"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 2
   },
   {
     "id": "malivore",
@@ -2789,7 +2939,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "tribrid",
         "relation": "destroyed by"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 3
   },
   {
     "id": "landon",
@@ -2819,7 +2971,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "tribrid",
         "relation": "dies for"
       }
-    ]
+    ],
+    "row": 0,
+    "col": 4
   },
   {
     "id": "tribrid",
@@ -2857,7 +3011,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "legacyend",
         "relation": "gives up at"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 0
   },
   {
     "id": "gods",
@@ -2894,7 +3050,9 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "legacyend",
         "relation": "fought at"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 1
   },
   {
     "id": "legacyend",
@@ -2933,6 +3091,8 @@ export const CAUSAL_MAP: CausalNode[] = [
         "node": "school",
         "relation": "continues"
       }
-    ]
+    ],
+    "row": 1,
+    "col": 2
   }
 ]
