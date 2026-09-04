@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "check": "biome check . && eslint . && stylelint \"src/**/*.css\" && tsc --noEmit",
-    "check:fix": "biome check --write . && eslint . --fix"
+    "check:fix": "biome check --write . && eslint . --fix && stylelint \"src/**/*.css\" --fix"
   },
   "dependencies": {
     "next": "16.3.4",
