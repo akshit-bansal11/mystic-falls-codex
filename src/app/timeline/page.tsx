@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { StrandDot } from '@/components/codex/strand-dot'
+import { SectionIndex } from '@/components/layout/section-index'
 import { TIMELINE } from '@/data/timeline'
 import { CATEGORY_BY_KEY } from '@/lib/codex/category-index'
 
@@ -10,6 +11,15 @@ export const metadata: Metadata = {
   alternates: { canonical: '/timeline' },
 }
 
+/** The source keys timeline sections by their title alone, so anchors are derived. */
+const sectionId = (title: string) =>
+  title
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+
 export default function TimelinePage() {
   return (
     <>
@@ -19,9 +29,17 @@ export default function TimelinePage() {
         School.
       </p>
 
+      <SectionIndex
+        label="Periods on this page"
+        items={TIMELINE.map((section) => ({
+          href: `#${sectionId(section.section)}`,
+          label: section.section,
+        }))}
+      />
+
       <div className="space-y-12">
         {TIMELINE.map((section) => (
-          <section key={section.section}>
+          <section key={section.section} id={sectionId(section.section)} className="scroll-mt-8">
             <h3 className="text-primary border-subtle border-b pb-2 font-display text-h2">
               {section.section}
             </h3>

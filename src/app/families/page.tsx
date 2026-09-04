@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SectionIndex } from '@/components/layout/section-index'
 import { FAMILY_TREES } from '@/data/family-trees'
 import { LINK_STYLE, linkPath, placeMember, TREE, treeSize } from '@/lib/codex/family-layout'
 import { PERSON_BY_ID } from '@/lib/codex/person-index'
@@ -18,6 +19,11 @@ export default function FamiliesPage() {
         Eleven trees. Solid lines are blood, level lines are marriages, dashed lines are sirelines:
         the vampire equivalent of descent.
       </p>
+
+      <SectionIndex
+        label="Trees on this page"
+        items={FAMILY_TREES.map((family) => ({ href: `#${family.id}`, label: family.name }))}
+      />
 
       <div className="space-y-16">
         {FAMILY_TREES.map((family) => {

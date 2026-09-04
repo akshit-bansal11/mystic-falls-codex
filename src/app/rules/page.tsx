@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SectionIndex } from '@/components/layout/section-index'
 import { RULES } from '@/data/rules'
 
 export const metadata: Metadata = {
@@ -16,6 +17,11 @@ export default function RulesPage() {
         Eight mechanics the plot obeys. Every reversal in the franchise is one of these being
         applied, or exploited.
       </p>
+
+      <SectionIndex
+        label="Rules on this page"
+        items={RULES.map((rule) => ({ href: `#${rule.id}`, label: rule.name }))}
+      />
 
       <div className="space-y-12">
         {RULES.map((rule) => (

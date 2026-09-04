@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SectionIndex } from '@/components/layout/section-index'
 import { ERA_NARRATIVES } from '@/data/era-narratives'
 
 export const metadata: Metadata = {
@@ -16,6 +17,14 @@ export default function ErasPage() {
         Seven ages, in order. The flashbacks in the shows arrive out of sequence; this is the
         sequence.
       </p>
+
+      <SectionIndex
+        label="Eras on this page"
+        items={ERA_NARRATIVES.map((era) => ({
+          href: `#${era.id}`,
+          label: `${era.num}. ${era.name}`,
+        }))}
+      />
 
       {ERA_NARRATIVES.map((era) => (
         <section key={era.id} id={era.id} className="border-subtle mb-14 scroll-mt-8 border-t pt-8">

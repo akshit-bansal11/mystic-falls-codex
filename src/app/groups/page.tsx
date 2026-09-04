@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { SectionIndex } from '@/components/layout/section-index'
 import { GROUPS } from '@/data/groups'
 import { PERSON_BY_ID } from '@/lib/codex/person-index'
 
@@ -18,6 +19,11 @@ export default function GroupsPage() {
         Nineteen groups. Rosters are labelled by relationship, not membership: the people a faction
         hunted are not the people who belonged to it.
       </p>
+
+      <SectionIndex
+        label="Factions on this page"
+        items={GROUPS.map((group) => ({ href: `#${group.id}`, label: group.name }))}
+      />
 
       <div className="space-y-12">
         {GROUPS.map((group) => (
