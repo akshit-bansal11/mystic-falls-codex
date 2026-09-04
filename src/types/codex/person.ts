@@ -25,3 +25,20 @@ export interface Person {
   facts: string[]
   connections: PersonConnection[]
 }
+
+/**
+ * The fields the directory needs to search and render a card.
+ *
+ * The full PEOPLE module is 148 KB. A client-side search that imported it
+ * would ship all of it to the browser, including 110 full biographies that the
+ * list never renders, so the server projects this down first.
+ */
+export interface PersonSummary {
+  id: string
+  name: string
+  alsoKnownAs: string
+  kind: string
+  lived: string
+  category: CategoryKey
+  oneLine: string
+}
