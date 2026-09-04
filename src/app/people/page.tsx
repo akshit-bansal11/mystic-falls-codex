@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'People',
   description:
     'One hundred and ten biographies from The Vampire Diaries, The Originals and Legacies, searchable and grouped by strand.',
+  alternates: { canonical: '/people' },
 }
 
 export default function PeoplePage() {

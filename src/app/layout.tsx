@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 import { SiteFooter } from '@/components/layout/site-footer'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SkipLink } from '@/components/layout/skip-link'
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/config/site'
 import './globals.css'
 
 const bodoni = Bodoni_Moda({
@@ -29,12 +30,22 @@ const plexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
+  // Makes every canonical and card URL absolute on the canonical host (SEO-02).
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'The Mystic Falls Codex',
-    template: '%s — The Mystic Falls Codex',
+    default: SITE_NAME,
+    template: `%s — ${SITE_NAME}`,
   },
-  description:
-    'An interactive encyclopedia of the in-universe history of The Vampire Diaries, The Originals and Legacies: a causal map, family trees, 110 character biographies, factions, rules, timeline and watch order.',
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: '/',
+  },
+  twitter: { card: 'summary_large_image' },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

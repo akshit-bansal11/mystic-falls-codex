@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Breadcrumbs } from '@/components/layout/breadcrumbs'
 import { CAUSAL_MAP } from '@/data/causal-map'
 import { CATEGORY_BY_KEY, CATEGORY_TEXT_CLASS } from '@/lib/codex/category-index'
 import { ERA_BY_NUM } from '@/lib/codex/era-index'
@@ -19,7 +20,16 @@ export async function generateMetadata({ params }: NodePageProps): Promise<Metad
   const { slug } = await params
   const node = NODE_BY_ID.get(slug)
   if (!node) return {}
-  return { title: node.title, description: node.summary.slice(0, 160) }
+  return {
+    title: node.title,
+    description: node.summary.slice(0, 160),
+    alternates: { canonical: `/node/${node.id}` },
+    openGraph: {
+      title: node.title,
+      description: node.summary.slice(0, 160),
+      url: `/node/${node.id}`,
+    },
+  }
 }
 
 export default async function NodePage({ params }: NodePageProps) {
@@ -42,6 +52,7 @@ export default async function NodePage({ params }: NodePageProps) {
 
   return (
     <article className="max-w-3xl">
+      <Breadcrumbs trail={[{ href: '/', label: 'The Map' }]} current={node.title} />
       <p className={`font-mono text-eyebrow uppercase ${strandClass}`}>
         {category?.name} &middot; Era {node.era}
         {era ? ` — ${era.name}` : ''}

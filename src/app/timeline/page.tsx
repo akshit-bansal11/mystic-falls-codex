@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Timeline',
   description:
     'Roughly one hundred dated events from c. 100 BC to 2028, in order, across The Vampire Diaries, The Originals and Legacies.',
+  alternates: { canonical: '/timeline' },
 }
 
 export default function TimelinePage() {

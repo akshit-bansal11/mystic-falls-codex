@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Rules',
   description:
     'How the supernatural actually works: becoming a vampire or werewolf, how magic and death operate, killing an Original, compulsion, doppelgangers and sirelines.',
+  alternates: { canonical: '/rules' },
 }
 
 export default function RulesPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Eras',
   description:
     'The chronicle told in order, era by era, from the first immortals of the ancient world to the last class at the Salvatore School.',
+  alternates: { canonical: '/eras' },
 }
 
 export default function ErasPage() {

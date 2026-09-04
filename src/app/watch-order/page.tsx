@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Watch Order',
   description:
     'Broadcast order, with the alternating schedule for the three years The Vampire Diaries and The Originals ran concurrently, plus every crossover episode.',
+  alternates: { canonical: '/watch-order' },
 }
 
 export default function WatchOrderPage() {

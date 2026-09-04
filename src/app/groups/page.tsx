@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Factions',
   description:
     'Nineteen covens, councils, packs and orders, with every roster labelled by relationship rather than listed flat.',
+  alternates: { canonical: '/groups' },
 }
 
 export default function GroupsPage() {

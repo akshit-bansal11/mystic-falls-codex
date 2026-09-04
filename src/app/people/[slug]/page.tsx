@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Breadcrumbs } from '@/components/layout/breadcrumbs'
 import { PEOPLE } from '@/data/people'
 import { CATEGORY_BY_KEY, CATEGORY_TEXT_CLASS } from '@/lib/codex/category-index'
 import { NODE_BY_ID } from '@/lib/codex/node-index'
@@ -22,6 +23,12 @@ export async function generateMetadata({ params }: PersonPageProps): Promise<Met
   return {
     title: person.name,
     description: person.oneLine,
+    alternates: { canonical: `/people/${person.id}` },
+    openGraph: {
+      title: person.name,
+      description: person.oneLine,
+      url: `/people/${person.id}`,
+    },
   }
 }
 
@@ -35,6 +42,7 @@ export default async function PersonPage({ params }: PersonPageProps) {
 
   return (
     <article className="max-w-3xl">
+      <Breadcrumbs trail={[{ href: '/people', label: 'People' }]} current={person.name} />
       <p className={`text-eyebrow uppercase ${strandClass}`}>{category?.name}</p>
       <h2 className="text-primary mt-1 font-display text-display">{person.name}</h2>
       {person.alsoKnownAs ? (

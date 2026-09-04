@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Families',
   description:
     'Eleven family trees and sirelines: the Mikaelsons, the doppelgangers, the Salvatores, the Bennett witches, the Gemini coven and more.',
+  alternates: { canonical: '/families' },
 }
 
 export default function FamiliesPage() {
