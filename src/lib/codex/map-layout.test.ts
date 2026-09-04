@@ -1,0 +1,160 @@
+import { describe, expect, it } from 'vitest'
+import { buildMapEdges, buildMapLayout } from '@/lib/codex/map-layout'
+import type { CausalNode } from '@/types/codex/causal-node'
+import type { Era, EraNum } from '@/types/codex/era'
+
+function buildNode(overrides: Partial<CausalNode> & { id: string }): CausalNode {
+  return {
+    title: 'A node',
+    era: 'I',
+    dated: 'c. 100 BC',
+    category: 'origin',
+    summary: '',
+    facts: [],
+    peopleInvolved: [],
+    leadsTo: [],
+    row: 0,
+    col: 0,
+    ...overrides,
+  }
+}
+
+function buildEra(num: EraNum): Era {
+  return { num, name: `Era ${num}`, when: 'sometime' }
+}
+
+describe('buildMapLayout', () => {
+  it('places a node at its column pitch from the origin', () => {
+    const nodes = [buildNode({ id: 'a', col: 2 })]
+
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    // originX 88 + col 2 * colPitch 214
+    expect(placed[0].x).toBe(516)
+  })
+
+  it('offsets a node below its band header by the row pitch', () => {
+    const nodes = [buildNode({ id: 'a', row: 2 })]
+
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    // band top 0 + bandHeader 48 + row 2 * rowPitch 110
+    expect(placed[0].y).toBe(268)
+  })
+
+  it('sizes an era band from the number of rows it contains', () => {
+    const nodes = [buildNode({ id: 'a', row: 0 }), buildNode({ id: 'b', row: 1 })]
+
+    const { bands } = buildMapLayout(nodes, [buildEra('I')])
+
+    // bandHeader 48 + 2 rows * rowPitch 110 + bandPadding 30
+    expect(bands[0].height).toBe(298)
+  })
+
+  it('stacks the second era band below the height of the first', () => {
+    const nodes = [
+      buildNode({ id: 'a', era: 'I', row: 0 }),
+      buildNode({ id: 'b', era: 'II', row: 0 }),
+    ]
+
+    const { bands } = buildMapLayout(nodes, [buildEra('I'), buildEra('II')])
+
+    // first band is 48 + 1 * 110 + 30 = 188
+    expect(bands[1].top).toBe(188)
+  })
+
+  it('gives an era with no nodes a single-row band rather than a zero-height one', () => {
+    const nodes = [buildNode({ id: 'a', era: 'II' })]
+
+    const { bands } = buildMapLayout(nodes, [buildEra('I'), buildEra('II')])
+
+    expect(bands[0].rowCount).toBe(1)
+  })
+})
+
+describe('buildMapEdges', () => {
+  it('draws one edge between two nodes that link to each other', () => {
+    const nodes = [
+      buildNode({ id: 'a', col: 0, leadsTo: [{ node: 'b', relation: 'causes' }] }),
+      buildNode({ id: 'b', col: 2, leadsTo: [{ node: 'a', relation: 'caused by' }] }),
+    ]
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    const edges = buildMapEdges(placed)
+
+    expect(edges).toHaveLength(1)
+  })
+
+  it('ignores a link pointing at a node that is not on the map', () => {
+    const nodes = [buildNode({ id: 'a', leadsTo: [{ node: 'ghost', relation: 'causes' }] })]
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    const edges = buildMapEdges(placed)
+
+    expect(edges).toHaveLength(0)
+  })
+
+  it('carries the relation from the source node onto the edge', () => {
+    const nodes = [
+      buildNode({ id: 'a', col: 0, leadsTo: [{ node: 'b', relation: 'sets in motion' }] }),
+      buildNode({ id: 'b', col: 3 }),
+    ]
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    const edges = buildMapEdges(placed)
+
+    expect(edges[0].relation).toBe('sets in motion')
+  })
+
+  it('starts the path at the edge of the source box rather than its centre', () => {
+    const nodes = [
+      buildNode({ id: 'a', col: 0, leadsTo: [{ node: 'b', relation: 'causes' }] }),
+      buildNode({ id: 'b', col: 2 }),
+    ]
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    const edges = buildMapEdges(placed)
+
+    // centre 88 + 98 = 186; the anchor sits half a box plus 5 to the right
+    expect(edges[0].path.startsWith('M289 ')).toBe(true)
+  })
+
+  it('bows the path vertically when the nodes are further apart down than across', () => {
+    const nodes = [
+      buildNode({ id: 'a', row: 0, col: 0, leadsTo: [{ node: 'b', relation: 'causes' }] }),
+      buildNode({ id: 'b', row: 3, col: 0 }),
+    ]
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    const edges = buildMapEdges(placed)
+
+    expect(edges[0].path.startsWith('M186 125 C 186 ')).toBe(true)
+  })
+
+  it('bows the path horizontally when the nodes are further apart across than down', () => {
+    const nodes = [
+      buildNode({ id: 'a', row: 0, col: 0, leadsTo: [{ node: 'b', relation: 'causes' }] }),
+      buildNode({ id: 'b', row: 0, col: 4 }),
+    ]
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    const edges = buildMapEdges(placed)
+
+    // anchors at x 289 and x 939; k = max(28, 650 * 0.42) = 273
+    expect(edges[0].path).toBe('M289 84 C 562 84, 666 84, 939 84')
+  })
+
+  it('falls back to the vertical bow when two nodes share a position', () => {
+    const nodes = [
+      buildNode({ id: 'a', row: 0, col: 0, leadsTo: [{ node: 'b', relation: 'causes' }] }),
+      buildNode({ id: 'b', row: 0, col: 0 }),
+    ]
+    const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
+
+    const edges = buildMapEdges(placed)
+
+    // both anchors collapse to the centre, and dy >= dx is 0 >= 0, so the
+    // vertical branch is taken with the minimum bow of 28
+    expect(edges[0].path).toBe('M186 84 C 186 112, 186 56, 186 84')
+  })
+})

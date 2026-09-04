@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "check": "biome check . && eslint . && stylelint \"src/**/*.css\" && tsc --noEmit",
-    "check:fix": "biome check --write . && eslint . --fix && stylelint \"src/**/*.css\" --fix"
+    "check:fix": "biome check --write . && eslint . --fix && stylelint \"src/**/*.css\" --fix",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "next": "16.3.4",
@@ -20,12 +22,14 @@
     "@types/node": "^24.13.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^5.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.0.0"
   },
   "engines": {
     "node": ">=24"
