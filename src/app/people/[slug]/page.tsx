@@ -87,7 +87,7 @@ export default async function PersonPage({ params }: PersonPageProps) {
               const node = target ? null : NODE_BY_ID.get(connection.id)
               if (!target && !node) return null
 
-              const href = target ? `/people/${target.id}` : `/?node=${connection.id}`
+              const href = target ? `/people/${target.id}` : `/node/${connection.id}`
               const label = target ? target.name : (node?.title ?? '')
 
               return (

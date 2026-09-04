@@ -276,3 +276,25 @@ body {
   outline-offset: 2px;
   border-radius: var(--radius-control);
 }
+
+/* Causal-map strand filter. Selecting a strand sets a data attribute on the
+   scroll container and CSS does the dimming, so filtering ships no node data to
+   the browser. Written out per strand because a selector cannot be built from a
+   variable. Low-specificity rules come first so specificity ascends. */
+[data-strand],
+[data-edge] {
+  transition: opacity var(--duration-base) var(--ease-standard);
+}
+
+[data-strand-filter]:not([data-strand-filter="all"]) [data-edge] {
+  opacity: 0.16;
+}
+
+[data-strand-filter="origin"] [data-strand]:not([data-strand="origin"]),
+[data-strand-filter="vamp"] [data-strand]:not([data-strand="vamp"]),
+[data-strand-filter="wolf"] [data-strand]:not([data-strand="wolf"]),
+[data-strand-filter="witch"] [data-strand]:not([data-strand="witch"]),
+[data-strand-filter="death"] [data-strand]:not([data-strand="death"]),
+[data-strand-filter="house"] [data-strand]:not([data-strand="house"]) {
+  opacity: 0.14;
+}
