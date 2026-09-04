@@ -14,7 +14,7 @@ export const MAP = {
   colPitch: 214,
   originX: 88,
   rowPitch: 110,
-  bandHeader: 48,
+  bandHeader: 68,
   bandPadding: 30,
   columns: 5,
 } as const

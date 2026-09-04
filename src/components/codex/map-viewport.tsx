@@ -17,6 +17,17 @@ const MIN_ZOOM = 0.4
 const MAX_ZOOM = 1.6
 
 /**
+ * The chart reads better a fifth larger than its authored size, so 100% on the
+ * control means 1.2x the canvas. The control shows the reader's zoom, not the
+ * transform.
+ */
+const BASE_SCALE = 1.2
+
+/** Below this the labels stop being readable; above it the chart just floats. */
+const MIN_FIT = 0.55
+const MAX_FIT = 1.5
+
+/**
  * Pan, zoom, strand filtering and relationship highlighting for the causal map.
  *
  * The scroll container is a real scrolling region, so panning works with the
@@ -30,9 +41,27 @@ const MAX_ZOOM = 1.6
  */
 export function MapViewport({ categories, children, canvasWidth, canvasHeight }: MapViewportProps) {
   const [zoom, setZoom] = useState(1)
+  const [fit, setFit] = useState(1)
   const [strand, setStrand] = useState<CategoryKey | 'all'>('all')
   const scrollRef = useRef<HTMLDivElement>(null)
   const drag = useRef<{ x: number; y: number; left: number; top: number } | null>(null)
+
+  // The canvas is authored at a fixed width, so it is scaled to whatever width
+  // the device actually gives it rather than assuming a desktop.
+  useEffect(() => {
+    const root = scrollRef.current
+    if (!root) return
+
+    const observer = new ResizeObserver(([entry]) => {
+      const available = entry.contentRect.width
+      if (!available) return
+      setFit(Math.min(MAX_FIT, Math.max(MIN_FIT, available / canvasWidth)))
+    })
+    observer.observe(root)
+    return () => observer.disconnect()
+  }, [canvasWidth])
+
+  const scale = fit * BASE_SCALE * zoom
 
   const highlight = useCallback((id: string | null) => {
     const root = scrollRef.current
@@ -211,12 +240,12 @@ export function MapViewport({ categories, children, canvasWidth, canvasHeight }:
         }}
         className="bg-sunk border-subtle no-scrollbar h-[82dvh] min-h-[32rem] w-screen mx-[calc(50%-50vw)] overflow-auto border-y"
       >
-        <div style={{ width: canvasWidth * zoom, height: canvasHeight * zoom }}>
+        <div style={{ width: canvasWidth * scale, height: canvasHeight * scale }}>
           <div
             style={{
               width: canvasWidth,
               height: canvasHeight,
-              transform: `scale(${zoom})`,
+              transform: `scale(${scale})`,
               transformOrigin: '0 0',
             }}
           >

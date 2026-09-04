@@ -38,8 +38,8 @@ describe('buildMapLayout', () => {
 
     const { nodes: placed } = buildMapLayout(nodes, [buildEra('I')])
 
-    // band top 0 + bandHeader 48 + row 2 * rowPitch 110
-    expect(placed[0].y).toBe(268)
+    // band top 0 + bandHeader 68 + row 2 * rowPitch 110
+    expect(placed[0].y).toBe(288)
   })
 
   it('sizes an era band from the number of rows it contains', () => {
@@ -47,8 +47,8 @@ describe('buildMapLayout', () => {
 
     const { bands } = buildMapLayout(nodes, [buildEra('I')])
 
-    // bandHeader 48 + 2 rows * rowPitch 110 + bandPadding 30
-    expect(bands[0].height).toBe(298)
+    // bandHeader 68 + 2 rows * rowPitch 110 + bandPadding 30
+    expect(bands[0].height).toBe(318)
   })
 
   it('stacks the second era band below the height of the first', () => {
@@ -59,8 +59,8 @@ describe('buildMapLayout', () => {
 
     const { bands } = buildMapLayout(nodes, [buildEra('I'), buildEra('II')])
 
-    // first band is 48 + 1 * 110 + 30 = 188
-    expect(bands[1].top).toBe(188)
+    // first band is 68 + 1 * 110 + 30 = 208
+    expect(bands[1].top).toBe(208)
   })
 
   it('gives an era with no nodes a single-row band rather than a zero-height one', () => {
@@ -128,7 +128,7 @@ describe('buildMapEdges', () => {
 
     const edges = buildMapEdges(placed)
 
-    expect(edges[0].path.startsWith('M186 125 C 186 ')).toBe(true)
+    expect(edges[0].path.startsWith('M186 145 C 186 ')).toBe(true)
   })
 
   it('bows the path horizontally when the nodes are further apart across than down', () => {
@@ -141,7 +141,7 @@ describe('buildMapEdges', () => {
     const edges = buildMapEdges(placed)
 
     // anchors at x 289 and x 939; k = max(28, 650 * 0.42) = 273
-    expect(edges[0].path).toBe('M289 84 C 562 84, 666 84, 939 84')
+    expect(edges[0].path).toBe('M289 104 C 562 104, 666 104, 939 104')
   })
 
   it('falls back to the vertical bow when two nodes share a position', () => {
@@ -155,7 +155,7 @@ describe('buildMapEdges', () => {
 
     // both anchors collapse to the centre, and dy >= dx is 0 >= 0, so the
     // vertical branch is taken with the minimum bow of 28
-    expect(edges[0].path).toBe('M186 84 C 186 112, 186 56, 186 84')
+    expect(edges[0].path).toBe('M186 104 C 186 132, 186 76, 186 104')
   })
 })
 

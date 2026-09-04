@@ -78,7 +78,7 @@ export default function MapPage() {
                 <tspan className="fill-[var(--text-faint)] font-mono text-[11px] tracking-wider">
                   Era {band.era.num}
                 </tspan>
-                <tspan dx={14} className="fill-[var(--text-primary)] text-[15px]">
+                <tspan dx={30} className="fill-[var(--text-primary)] text-[15px]">
                   {band.era.name}
                 </tspan>
               </text>
@@ -128,17 +128,8 @@ export default function MapPage() {
                   height={MAP.nodeHeight}
                   rx={2}
                   fill="var(--bg-surface)"
-                  strokeWidth={1.5}
+                  strokeWidth={2}
                   className={STRAND_STROKE[node.category]}
-                />
-                {/* The rail carries the strand at full strength; the border
-                    carries it at reading weight. Both are marks, not text. */}
-                <rect
-                  x={node.x}
-                  y={node.y}
-                  width={3}
-                  height={MAP.nodeHeight}
-                  className={STRAND_FILL[node.category]}
                 />
                 <text
                   x={node.x + 13}
