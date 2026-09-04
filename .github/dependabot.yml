@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # Grouped so the bot produces reviewable batches rather than noise that
+    # gets muted (CI-D06).
+    open-pull-requests-limit: 5
+    groups:
+      next:
+        patterns: ['next', 'eslint-config-next', '@next/*']
+      react:
+        patterns: ['react', 'react-dom', '@types/react', '@types/react-dom']
+      tooling:
+        patterns: ['@biomejs/*', 'stylelint*', 'eslint*', 'vitest', '@vitest/*', 'typescript']
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
