@@ -647,20 +647,21 @@ body {
   transform: rotateY(180deg);
 }
 
-/* The running head on an opener already reads "Era III - 12th-19th century -
-   Europe, Bulgaria, New Orleans", so the era number and dates below it are the
-   same facts a second time, in a third typeface. They belong to the flowing
-   layout, where there is no running head to carry them. */
-.codex-book[data-book="on"] .codex-page-eyebrow,
-.codex-book[data-book="on"] .codex-page-when {
-  display: none;
-}
-
 /* A page is one narrow column whatever the reading layout does elsewhere. */
 .codex-book[data-book="on"] .codex-columns {
   column-count: 1;
   column-rule: none;
   max-height: none;
+}
+
+/* The probe. It has to lay out for real to be worth measuring - same width,
+   same face, same padding as a page - so it is hidden by `visibility`, which
+   still takes layout, and never by `display: none`, which does not. It is
+   pulled out of the paint order and cannot be reached or clicked. */
+.codex-book[data-book="on"] .codex-book-probe {
+  transform: none;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* ---- the page, in book mode ---------------------------------------------- */
@@ -670,104 +671,227 @@ body {
   flex-direction: column;
   height: 100%;
 
-  /* The hand runs about a third smaller on the body than a serif at the same
-     size - Caveat's x-height is short and its ascenders are long - so the page
-     is set larger than the interface would be and leaded loosely, which is
-     also how a hand actually fills a ruled page. */
-  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
-  font-size: clamp(0.95rem, 1.5cqw, 1.5rem);
-  line-height: 1.42;
+  /* Set for a measure of roughly 55 characters, which is what the width of a
+     page at this scale gives at this size - the range a book text face is cut
+     for. The size is up by about a fifth on the hand it replaced, and reads
+     larger again because Garamond carries far more x-height per em. */
+  color: var(--book-ink);
+  font-family: var(--font-garamond), ui-serif, georgia, serif;
+  font-size: clamp(1rem, 1.45cqw, 1.6rem);
+  line-height: 1.5;
 }
 
-/* The furniture is in the same hand as the body. A monospace running head and
-   a Bodoni chapter title on a page of cursive would read as three people
-   writing in one book. */
+/* Running heads sit on the outer edge and say different things on each side,
+   which is the convention: the book's own title on the verso, the chapter's on
+   the recto. Both together tell a reader where they are in what. */
 .codex-book[data-book="on"] .codex-page-head {
   display: block;
   border-bottom: 1px solid var(--book-rule);
   padding-bottom: 0.5em;
   color: var(--book-ink-muted);
-  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
-  font-size: 0.85em;
-  letter-spacing: 0.04em;
+  font-size: 0.72em;
+  font-style: italic;
+  letter-spacing: 0.06em;
   text-transform: none;
 }
 
-.codex-book[data-book="on"] .codex-page-title {
-  margin-top: 0.5em;
-  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
-  font-size: 1.9em;
-  line-height: 1.1;
-  font-weight: 500;
+.codex-book[data-book="on"] .codex-book-face-front .codex-page-head {
+  text-align: right;
 }
 
-.codex-book[data-book="on"] .codex-page-title,
-.codex-book[data-book="on"] .codex-page-prose p,
-.codex-book[data-book="on"] .codex-page-prose {
-  color: var(--book-ink);
+.codex-book[data-book="on"] .codex-book-face-back .codex-page-head {
+  text-align: left;
 }
+
+/* ---- the chapter opening -------------------------------------------------- */
+
+/* Padding, never margin, on every block the pagination measures. A margin
+   collapses out through the probe's wrapper and would be missing from the
+   measured height, so pages would be packed a little too full - and the error
+   would grow with the number of blocks on the page. */
+.codex-book[data-book="on"] .codex-chapter {
+  padding: 1.2em 0 1.1em;
+  text-align: center;
+}
+
+.codex-book[data-book="on"] .codex-chapter-kicker {
+  color: var(--book-ink-muted);
+  font-size: 0.78em;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  text-transform: uppercase;
+}
+
+.codex-book[data-book="on"] .codex-chapter-title {
+  margin-top: 0.32em;
+  font-family: var(--font-display), ui-serif, georgia, serif;
+  font-size: 2.1em;
+  line-height: 1.06;
+  font-weight: 600;
+}
+
+.codex-book[data-book="on"] .codex-chapter-subtitle {
+  margin-top: 0.5em;
+  color: var(--book-ink-muted);
+  font-size: 0.82em;
+  font-style: italic;
+}
+
+/* ---- the text ------------------------------------------------------------- */
 
 .codex-book[data-book="on"] .codex-page-prose {
   flex: 1 1 auto;
-  margin-top: 0.8em;
   overflow: hidden;
+  text-align: justify;
 
-  /* Ragged right, and no hyphenation. Justification was right for the serif
-     and is wrong for a hand: nobody writing with a pen stretches a line to
-     meet the margin, and a hyphenated break in cursive reads as a mistake. */
-  text-align: left;
-  hyphens: manual;
+  /* A book hyphenates. Justified text without it opens rivers of white space
+     at this measure, which is the thing that makes justification look wrong. */
+  hyphens: auto;
 }
 
-/* The pen varies. Alternating a hair of weight and slant between paragraphs
-   stops forty pages of one font from reading as a typeface again - it is the
-   evenness that gives a handwriting face away, not the letterforms. */
-.codex-book[data-book="on"] .codex-page-prose > p:nth-child(odd) {
-  transform: rotate(-0.12deg);
-  font-weight: 400;
+/* Paragraphs are separated by an indent and nothing else. No blank line
+   between them - that is a web convention, and it is most of why the page did
+   not read as a book. It also makes the pagination exact: with no vertical
+   margin anywhere, a page's used height is the plain sum of its blocks. */
+.codex-book[data-book="on"] .codex-page-prose p {
+  margin: 0;
+  text-indent: 1.35em;
 }
 
-.codex-book[data-book="on"] .codex-page-prose > p:nth-child(even) {
-  transform: rotate(0.1deg);
-  font-weight: 500;
+/* The first paragraph of a chapter, and the first after any subheading, sets
+   flush. There is nothing above it for an indent to distinguish it from. */
+.codex-book[data-book="on"] .codex-page-prose p[data-flush],
+.codex-book[data-book="on"] .codex-page-prose p[data-first] {
+  text-indent: 0;
 }
 
-/* The opening letter, three lines deep, the way a chapter opens. Applied only
-   to the first paragraph of a page: on every paragraph it would be a texture
-   rather than an opening. */
-.codex-book[data-book="on"] .codex-page-opener .codex-page-prose > p:first-child::first-letter {
+.codex-book[data-book="on"] .codex-subhead {
+  padding: 1.15em 0 0.5em;
+  font-family: var(--font-garamond), ui-serif, georgia, serif;
+  font-size: 0.82em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-indent: 0;
+  text-transform: uppercase;
+}
+
+.codex-book[data-book="on"] .codex-pull {
+  padding: 0.85em 1.7em;
+  color: var(--book-ink-muted);
+  font-size: 1.02em;
+  font-style: italic;
+  text-align: center;
+  text-indent: 0;
+}
+
+/* The opening letter, sunk two lines, the way a chapter opens. Only on the
+   chapter's first paragraph: on every page it would be a texture rather than
+   an opening. */
+.codex-book[data-book="on"] .codex-page-prose p[data-first]::first-letter {
   float: left;
-  padding-right: 0.08em;
-  color: var(--book-ink);
-  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
-  font-size: 2.7em;
-  line-height: 0.9;
+  padding-right: 0.06em;
+  font-family: var(--font-display), ui-serif, georgia, serif;
+  font-size: 3.1em;
+  line-height: 0.86;
 }
 
 .codex-book[data-book="on"] .codex-page-folio {
   display: block;
-  margin-top: 0.7em;
+  padding-top: 0.8em;
   color: var(--book-ink-muted);
-  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
-  font-size: 0.85em;
-  text-align: center;
+  font-size: 0.78em;
+}
+
+.codex-book[data-book="on"] .codex-book-face-front .codex-page-folio {
+  text-align: right;
+}
+
+.codex-book[data-book="on"] .codex-book-face-back .codex-page-folio {
+  text-align: left;
 }
 
 /* ---- the same markup, flowing --------------------------------------------- */
 
-.codex-book[data-book="off"] .codex-book-leaf {
-  display: contents;
-}
-
 .codex-book[data-book="off"] .codex-page {
   display: block;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.codex-book[data-book="off"] .codex-chapter {
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.codex-book[data-book="off"] .codex-chapter-kicker {
+  color: var(--text-faint);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.codex-book[data-book="off"] .codex-chapter-title {
+  color: var(--text-primary);
+  font-family: var(--font-display), ui-serif, georgia, serif;
+  font-size: var(--text-h1);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.codex-book[data-book="off"] .codex-chapter-subtitle {
+  color: var(--text-muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--text-meta);
+}
+
+.codex-book[data-book="off"] .codex-subhead {
+  color: var(--text-primary);
+  font-family: var(--font-display), ui-serif, georgia, serif;
+  font-size: var(--text-h3);
+  font-weight: 600;
+  padding: 1.2rem 0 0.4rem;
+}
+
+.codex-book[data-book="off"] .codex-page-prose p {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.codex-book[data-book="off"] .codex-pull {
+  border-left: 2px solid var(--accent);
+  color: var(--text-primary);
+  font-style: italic;
+  padding: 0.25rem 0 0.25rem 1rem;
 }
 
 /* The running head and the folio are the book's furniture, not the chronicle's.
-   In flow they would be a page number on a page that does not exist. */
-.codex-book[data-book="off"] .codex-page-head,
-.codex-book[data-book="off"] .codex-page-folio {
+   In flow they would be a page number on a page that does not exist.
+
+   Matched through `.codex-page` rather than directly, so this sits at the same
+   specificity as the per-side rules in book mode above. A shorter selector here
+   would be a lower-specificity rule for the same element appearing later in the
+   file, which is the shape that makes a cascade unpredictable to read. */
+.codex-book[data-book="off"] .codex-page .codex-page-head,
+.codex-book[data-book="off"] .codex-page .codex-page-folio {
+  display: none;
+}
+
+/* The chapter title page.
+
+   Last in the file on purpose. It is the most specific rule targeting
+   `.codex-chapter` and `.codex-page-prose`, so anywhere earlier it would sit
+   above lower-specificity rules for the same elements - the descending-
+   specificity shape that makes a stylesheet unreadable, and that the linter
+   refuses. Placed here it reads in cascade order: general page, then flowing
+   page, then this one case. */
+.codex-book[data-book="on"] .codex-page[data-title-page] .codex-chapter {
+  margin-block: auto;
+  padding-block: 0;
+}
+
+.codex-book[data-book="on"] .codex-page[data-title-page] .codex-page-prose {
   display: none;
 }
 

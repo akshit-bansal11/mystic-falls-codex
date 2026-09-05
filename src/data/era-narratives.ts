@@ -10,17 +10,17 @@ export const ERA_NARRATIVES: EraNarrative[] = [
       {
         heading: null,
         paragraphs: [
-          'Everything begins with two people who were good at magic and bad at each other. Silas was a warlock. Qetsiyah — a name later mangled into Tessa, into legend, into a footnote in grimoires nobody could read — was the most powerful witch alive, and they were engaged to be married. Together they did something no witch had done: they made an elixir that would end death. Silas asked for it. Qetsiyah made it, out of her own blood and her own spellcraft, because she believed they would drink it together and be together forever.',
-          'He drank it with her handmaiden, Amara.',
+          'It begins, as the oldest griefs do, with two people of extraordinary gift and no talent whatever for one another. Silas was a warlock of the ancient world. Qetsiyah — a name the centuries would wear down to Tessa, and then to legend, and then to a marginal note in grimoires no living hand could read — was the most powerful witch then breathing, and she was to be his wife. Between them they accomplished what no witch had dared: an elixir that would put an end to death itself. Silas asked it of her. She made it out of her own blood and her own spellcraft, believing that they would drink it together and be, in the plainest and most terrible sense, forever.',
+          'He drank it with Amara, her handmaiden.',
         ],
         keyPoint: null,
       },
       {
-        heading: 'What Qetsiyah did next',
+        heading: 'The Architecture of Her Revenge',
         paragraphs: [
-          'A lesser story would have had her kill them. She did something with more architecture in it. She buried Silas alive in a tomb on an island, and she put beside him the one dose of a cure she had also made — so that if he ever escaped, or if hunger ever became unbearable, his only exit would be to become mortal, die, and land in a place she had built specifically to hold him.',
-          'That place is the Other Side: a mirror of the living world, visible to nothing and able to touch nothing, where every supernatural being goes when it dies. It exists to trap one man. Every ghost, every stranded soul, every resurrection in the next two thousand years is collateral damage from a wedding that did not happen.',
-          'And Amara she did not kill either. She turned her into the Anchor — the physical doorway between the living world and the Other Side, immortal, conscious, and made to feel every supernatural death that passed through her. Two thousand years of that. Silas was shown a body and allowed to believe she was simply gone.',
+          'A smaller woman would have killed them both and considered the account settled. Qetsiyah built instead. She sealed Silas alive in a tomb upon an island, and laid beside him the single dose of the cure she had also brewed — so that if ever he clawed his way free, or if ever the hunger grew past bearing, his only road out would be to become mortal, to die, and to arrive in a country she had raised for the express purpose of receiving him.',
+          'That country is the Other Side: a mirror held up to the living world, seeing everything and able to touch nothing, into which every supernatural creature falls when it dies. An entire afterlife, engineered as a cell for one man. Every ghost that lingers, every soul stranded at the glass, every resurrection of the next two thousand years is wreckage from a wedding that never took place.',
+          'Amara she did not kill either. She made her the Anchor — the doorway itself, the seam between the living world and the dead, immortal and awake and compelled to feel the passage of every supernatural death that crossed her. Two thousand years of that. Silas was shown a body, and permitted to believe she had simply gone.',
         ],
         keyPoint: null,
       },
@@ -28,28 +28,28 @@ export const ERA_NARRATIVES: EraNarrative[] = [
         heading: null,
         paragraphs: [],
         keyPoint:
-          'The three-part revenge. The cure, the Other Side, and the doppelgängers. All three are still running when the franchise ends two thousand years later, and all three exist because one man chose someone else.',
+          'A revenge in three movements: the cure, the Other Side, and the doppelgängers. All three are still turning when the last of the story is told, two thousand years downstream, and all three exist because one man chose somebody else.',
       },
       {
-        heading: 'Nature files a correction',
+        heading: 'Nature Keeps Its Ledger',
         paragraphs: [
-          'The universe of these shows has exactly one law, and Qetsiyah is the one who states it: nature demands balance. Two people had escaped death, so nature began printing their faces again — mortal shadows born every few centuries, one for Silas and one for Amara. Doppelgängers.',
-          'This is not decoration. Doppelgänger blood is the only fuel that will run a spell at the Original tier. It is why a Bulgarian girl in 1490 spends five hundred years running, why a seventeen-year-old in Virginia in 2009 is the most valuable object on Earth, and why a man in a boarding house has the face of an ancient Greek immortal and never once wonders about it.',
+          'This world is governed by a single law, and it is Qetsiyah herself who pronounces it: nature demands balance. Two souls had slipped the noose, and so nature set about, patiently and without malice, striking their faces again — mortal shadows cast forward every few centuries, one for Silas and one for Amara. Doppelgängers.',
+          'They are not ornament. Doppelgänger blood is the one fuel that will drive a working at the Original tier, and every expensive thing in this history runs upon it: a Bulgarian girl in 1490 who will spend five hundred years running; a girl of seventeen in Virginia in 2009 who is, without the least idea of it, the most valuable object on the face of the earth; and a man in a boarding house who wears the face of an ancient Greek immortal and never once thinks to ask why.',
         ],
         keyPoint: null,
       },
       {
-        heading: 'The Travelers',
+        heading: 'The Travelers, Cursed to Wander',
         paragraphs: [
-          'Silas and Qetsiyah had themselves been Travelers — its two most powerful members — and when her spell tore the witch community apart, the rest of the witches turned on the Travelers as a whole. Fearing that a coven that powerful could unbalance nature the way Qetsiyah just had, they cursed them: they can never settle. Any home they build fails, any community they form scatters, and they have been wandering for two thousand years. They are called the Travelers, they practise a magic that draws on their own collective will rather than on nature or the dead, and they pass consciousness from body to body rather than dying properly.',
-          "Their entire long-term project is the reverse of Qetsiyah's: find the last two doppelgängers, spill their blood together, break the curse — and, as a side effect that they consider a feature, unmake every other kind of magic in the world.",
+          'Silas and Qetsiyah had themselves been Travelers — the two most powerful the people ever produced — and when her working tore the witch community in half, the surviving covens turned upon the Travelers entire. A people who could hold that much power, they reasoned, might unbalance nature as thoroughly as she had just done. So a curse was laid upon them: never to settle. Every hearth they build goes cold, every community they gather comes apart, and they have been walking for two thousand years. Their magic draws upon the massed will of their own kind rather than upon nature or upon the dead, and they do not so much die as move house, carrying consciousness from body to body.',
+          "Their long labour is Qetsiyah's inverted: to find the last two doppelgängers, to spill their blood together, to break the curse — and, as a consequence they regard less as a cost than as a dividend, to unmake every other kind of magic in the world.",
         ],
         keyPoint: null,
       },
       {
-        heading: 'And, quietly, a second afterlife',
+        heading: 'And, Quietly, a Second Afterlife',
         paragraphs: [
-          'Somewhere before 750 BC — he is older than the sirens, older than vampires, older even than Silas — a genuine psychic named Arcadius was burned at the stake by people who were frightened of him. He did not stop existing. His consciousness became a dimension that consumes the souls of the guilty — Hell, in every practical sense, with a proprietor who negotiates rather than damns. Nobody in the story knows he is there for three thousand years and more. When the Other Side finally collapses, he is what is underneath.',
+          'Somewhere before 750 BC — earlier than the sirens, earlier than vampires, earlier even than Silas — a true psychic named Arcadius was burned at the stake by men frightened of what he could see. The burning did not end him. His consciousness cooled and hardened into a dimension of its own, one that feeds upon the souls of the guilty: Hell in every practical particular, kept by a proprietor who would rather bargain than damn. For three thousand years and more, no one in this history knows that he is there at all. When the Other Side at last comes down, he is what has been lying underneath it the whole time.',
         ],
         keyPoint: null,
       },
@@ -64,26 +64,26 @@ export const ERA_NARRATIVES: EraNarrative[] = [
       {
         heading: null,
         paragraphs: [
-          "A thousand years later and half a world away, a witch called Esther and a warrior called Mikael lost a child to plague in a village in the Old World. Esther's friend Ayana — a witch of formidable power in her own right — told them of a land across the sea where the people were healthy, tall and strong, and where sickness was unknown. They took what family they had and went.",
-          'They should not have had that family at all. Esther was barren. Her elder sister Dahlia, a far stronger and far worse witch, had made her fertile in exchange for a price paid in advance and forever: the firstborn of every generation of their bloodline. Esther paid once, handing over her daughter Freya and telling the world the child had died of plague. She spent the next thousand years hiding everyone else. The debt did not expire. It comes due, on a newborn, in New Orleans, in the 21st century.',
+          "A thousand years afterward and half a world away, a witch named Esther and a warrior named Mikael buried a child of theirs, taken by plague, in a village of the Old World. Esther's friend Ayana — a witch of formidable power in her own right — spoke of a country across the sea where the people grew tall and hale and where sickness was little more than a rumour. They gathered what family remained to them and went.",
+          'They ought never to have had that family at all. Esther was barren. Her elder sister Dahlia — the stronger witch by a considerable margin and the worse by a wider one — had made her fruitful, and set against it a price to be paid in advance and in perpetuity: the firstborn of every generation of their blood. Esther paid it once. She gave up her daughter Freya, told the world the child had died of plague, and spent the thousand years that followed concealing everyone who came after. Debts of that kind do not lapse. This one falls due upon a newborn, in New Orleans, in the twenty-first century.',
         ],
         keyPoint: null,
       },
       {
-        heading: 'The village, the wolves, and Henrik',
+        heading: 'The Village, the Wolves, and Henrik',
         paragraphs: [
-          'They settled in what would eventually be called Mystic Falls, Virginia, beside a community of people who turned into wolves at the full moon. This arrangement worked. The wolves changed, the Mikaelsons stayed indoors, and in the morning it was over. It worked for years.',
-          'Two things broke it. The first was that Esther had an affair with a man from the wolf village named Ansel, and her third son, Niklaus, was his. The second was that her youngest, Henrik, wanted to see the wolves change, and Niklaus took him out to watch. A wolf tore him apart.',
-          'Esther refused to bury another child. She went looking for a spell that would make the rest of them impossible to kill.',
+          'They settled in the country that would one day be called Mystic Falls, in Virginia, alongside a people who took the shape of wolves at the full of the moon. The arrangement held. The wolves changed; the Mikaelsons kept indoors; by morning the matter was closed. It held for years.',
+          'Two things broke it. The first was that Esther took a lover from the wolf village, a man named Ansel, and her third son, Niklaus, was his. The second was that her youngest, Henrik, wished to see the changing, and Niklaus carried him out into the night to watch it. A wolf tore the boy apart.',
+          'Esther would not bury a second child. She went looking for a working that would make the rest of them impossible to kill.',
         ],
         keyPoint: null,
       },
       {
-        heading: 'The spell',
+        heading: 'The Working',
         paragraphs: [
-          "The working needed four things: the life of the great white oak at the centre of the village, the power of the sun, the blood of a doppelgänger in the wine, and Mikael to run a sword through each of his children so the transition would take. The doppelgänger was Tatia — Amara's shadow, arriving precisely when the story required her, and a woman both Elijah and Niklaus were in love with. Esther drained her blood for the wine; a newly-turned Elijah, unable to stop, finished her, and Esther buried the memory behind a red door and let him believe she had done it herself.",
-          "Ayana refused to take part, called it an abomination against nature, and warned that the spirits would not stand for it. Esther used Ayana's own talisman and cast it anyway.",
-          'Mikael, Finn, Elijah, Niklaus, Kol and Rebekah woke up needing blood — Esther cast the spell and stayed a witch. They were the first vampires, and everything that has ever been a vampire since is descended from one of them.',
+          "The rite required four things: the life of the great white oak at the heart of the village, the strength of the sun, the blood of a doppelgänger in the wine, and Mikael to run a sword through each of his children so that the change would take. The doppelgänger was Tatia — Amara's shadow, arriving precisely when the story had need of her, and a woman whom both Elijah and Niklaus loved. Esther drained her blood for the wine; a newly turned Elijah, unable to stop himself, finished her; and Esther buried the memory behind a red door and let him believe the deed had been her own.",
+          "Ayana would take no part in it. She called it an abomination against nature and warned that the spirits would not suffer it. Esther took up Ayana's own talisman and cast the working regardless.",
+          'Mikael, Finn, Elijah, Niklaus, Kol and Rebekah woke needing blood — Esther cast the spell and remained a witch. They were the first vampires, and everything that has ever been a vampire since descends from one of them.',
         ],
         keyPoint: null,
       },
@@ -91,22 +91,22 @@ export const ERA_NARRATIVES: EraNarrative[] = [
         heading: null,
         paragraphs: [],
         keyPoint:
-          'Nature\'s bill. Sunlight. No entry to a home uninvited. Vervain. Wood through the heart. And every emotion amplified into something almost impossible to carry — which is why the "humanity switch" exists, and why the sympathetic characters in this franchise all have three-figure body counts.',
+          'Nature renders its account. Sunlight. No threshold crossed uninvited. Vervain. Wood through the heart. And every feeling amplified past what a creature can reasonably carry — which is why the "humanity switch" exists at all, and why the sympathetic figures of this history each keep a body count in three figures.',
       },
       {
-        heading: 'What the spell also did',
+        heading: 'What the Working Also Did',
         paragraphs: [
-          "Niklaus's first kill woke the werewolf gene he had inherited from Ansel. Mikael understood immediately what it meant, killed Ansel, and killed Ansel, his family and half the village's wolves in a night. Esther, to keep Mikael from killing her son too, bound Klaus's werewolf side — using Tatia's blood again, and a moonstone as the seal. Klaus spent the next thousand years trying to undo it, and the entire first act of The Vampire Diaries is that project arriving in Virginia.",
-          'Klaus learned the truth, killed his mother, and told his siblings Mikael had done it. The lie held for a thousand years. Mikael, who had also been turned, became the thing that hunts vampires — feeding on them rather than on people, chasing his own children across nine centuries and three continents.',
-          'And the white oak, because nature charges for everything, is now the only thing in existence that can permanently kill what Esther made. They burned it. Pieces survived: a stake Mikael carried, and a tree replanted three centuries after the family left, felled around 1912 to build Wickery Bridge — and its sign. Kill an Original with white oak and every vampire they ever sired dies with them.',
+          "Niklaus's first kill woke the wolf he had inherited from Ansel. Mikael understood at once what it meant, and killed Ansel, and killed Ansel's family and half the wolves of the village in a single night. Esther, to keep Mikael from turning on her son as well, bound the wolf in Klaus — using Tatia's blood a second time, with a moonstone for a seal. Klaus spent the next thousand years labouring to undo it, and the entire first act of The Vampire Diaries is that labour arriving in Virginia.",
+          'Klaus learned the truth, killed his mother for it, and told his siblings that Mikael had done the thing. The lie held a thousand years. Mikael, who had been turned along with the rest, became the hunter of his own kind — feeding upon vampires rather than upon people, and pursuing his own children across nine centuries and three continents.',
+          'And the white oak, because nature charges for everything, is now the only thing in existence that can permanently kill what Esther made. They burned it. Pieces survived: a stake Mikael carried, and a tree replanted three centuries after the family had gone, felled around 1912 to raise Wickery Bridge — and its sign. Kill an Original with white oak and every vampire that Original ever sired dies with them.',
         ],
         keyPoint: null,
       },
       {
-        heading: 'The first vampires they made',
+        heading: 'The First of Their Making',
         paragraphs: [
-          "Within a century the family had turned three people who matter enormously nine hundred years later: Lucien, a servant of the de Martel household, turned by Klaus and compelled by Elijah to pose as him while the family hid from Mikael; Tristan de Martel, a nobleman, turned by Elijah; and Tristan's sister Aurora, whom Klaus loved and Rebekah turned against his wishes. Every vampire alive traces back through one of these three lines.",
-          'And in 1110, a dying witch descended from Qetsiyah finished what her ancestor had started: five supernatural hunters with a living map burned into their skin, the Brotherhood of the Five. The tattoo grows with every vampire they kill and, when complete, points to Silas and the cure. She wanted someone, anyone, to dig him up.',
+          "Within a century the family had turned three people who would matter enormously nine hundred years later: Lucien, a servant of the de Martel household, turned by Klaus and compelled by Elijah to pass as him while the family hid from Mikael; Tristan de Martel, a nobleman, turned by Elijah; and Tristan's sister Aurora, whom Klaus loved and whom Rebekah turned against his wishes. Every vampire now walking traces back along one of those three lines.",
+          'And in 1110 a dying witch descended from Qetsiyah completed what her ancestor had begun: five supernatural hunters with a living map burned into their skin, the Brotherhood of the Five. The mark grows with every vampire they kill and, once whole, points to Silas and to the cure. She wanted someone — anyone — to dig him up.',
         ],
         keyPoint: null,
       },

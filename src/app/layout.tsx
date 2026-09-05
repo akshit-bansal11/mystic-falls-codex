@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Bodoni_Moda, Caveat, IBM_Plex_Mono, Spectral } from 'next/font/google'
+import { Bodoni_Moda, EB_Garamond, IBM_Plex_Mono, Spectral } from 'next/font/google'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
 import { SiteFooter } from '@/components/layout/site-footer'
@@ -24,21 +24,24 @@ const spectral = Spectral({
 })
 
 /**
- * The hand the codex is written in. Used only on the book's pages, never in the
- * interface: a handwriting face costs real legibility, so it is confined to the
- * surface whose whole point is that it looks handwritten, and the same prose is
- * set in Spectral everywhere else - including the book's own fallback below the
- * lg breakpoint and under reduced motion.
+ * The face the book's pages are set in.
  *
- * Caveat over the formal scripts (Tangerine, Petit Formal Script, Mrs Saint
- * Delafield): those are beautiful for a line and unreadable for a thousand
- * characters, which is what an era section actually is.
+ * Used only inside the book, never in the interface. EB Garamond is a book
+ * text face - that is what it was cut for - and it is here because the first
+ * attempt was not: Caveat is a marker hand, and at page length it read as small
+ * and hard, which is exactly what a script does when it is asked to carry a
+ * thousand characters instead of a signature.
+ *
+ * The apparent size is the x-height, not the point size. Caveat at 21.6px sits
+ * on a short x-height with long ascenders, so it measured large and looked
+ * small; Garamond at the same size reads noticeably bigger, and the page is set
+ * larger again on top of that.
  */
-const caveat = Caveat({
+const garamond = EB_Garamond({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  style: ['normal', 'italic'],
   display: 'swap',
-  variable: '--font-hand',
+  variable: '--font-garamond',
 })
 
 const plexMono = IBM_Plex_Mono({
@@ -71,7 +74,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${bodoni.variable} ${spectral.variable} ${plexMono.variable} ${caveat.variable} min-h-dvh antialiased`}
+        className={`${bodoni.variable} ${spectral.variable} ${plexMono.variable} ${garamond.variable} min-h-dvh antialiased`}
       >
         {/* Applies the stored theme (DES-04). Three approaches were rejected:
             an inline script needs dangerouslySetInnerHTML and CI-06 forbids
