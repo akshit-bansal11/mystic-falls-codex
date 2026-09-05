@@ -10,8 +10,9 @@ export const ERA_NARRATIVES: EraNarrative[] = [
       {
         heading: null,
         paragraphs: [
-          'It begins, as the oldest griefs do, with two people of extraordinary gift and no talent whatever for one another. Silas was a warlock of the ancient world. Qetsiyah — a name the centuries would wear down to Tessa, and then to legend, and then to a marginal note in grimoires no living hand could read — was the most powerful witch then breathing, and she was to be his wife. Between them they accomplished what no witch had dared: an elixir that would put an end to death itself. Silas asked it of her. She made it out of her own blood and her own spellcraft, believing that they would drink it together and be, in the plainest and most terrible sense, forever.',
-          'He drank it with Amara, her handmaiden.',
+          'It begins, as the oldest griefs do, with two people of extraordinary gift and no talent whatever for one another. The place is Greece and the century is the first before Christ, and both of them belong to a people called the Travelers — of whom they are, comfortably, the two most powerful ever produced.',
+          'Silas was a witch of the ancient world. Qetsiyah — a name the centuries would wear down to Tessa, and then to legend, and then to a marginal note in grimoires no living hand could read — was the most powerful witch then breathing, and she was to be his wife. He told her he wanted to be with her forever, and she was the one person alive capable of arranging it. Between them they accomplished what no witch had dared: an elixir that would put an end to death itself. She made it out of her own blood and her own spellcraft, and she intended them to drink it together at their wedding.',
+          'He drank it with Amara, her handmaiden — whose name means unfading, and who Silas held was his soulmate and not his betrayal. So the first immortal man and the first immortal woman in the history of the world are a bridegroom and a servant, and neither of them is the bride.',
         ],
         keyPoint: null,
       },
@@ -20,7 +21,8 @@ export const ERA_NARRATIVES: EraNarrative[] = [
         paragraphs: [
           'A smaller woman would have killed them both and considered the account settled. Qetsiyah built instead. She sealed Silas alive in a tomb upon an island, and laid beside him the single dose of the cure she had also brewed — so that if ever he clawed his way free, or if ever the hunger grew past bearing, his only road out would be to become mortal, to die, and to arrive in a country she had raised for the express purpose of receiving him.',
           'That country is the Other Side: a mirror held up to the living world, seeing everything and able to touch nothing, into which every supernatural creature falls when it dies. An entire afterlife, engineered as a cell for one man. Every ghost that lingers, every soul stranded at the glass, every resurrection of the next two thousand years is wreckage from a wedding that never took place.',
-          'Amara she did not kill either. She made her the Anchor — the doorway itself, the seam between the living world and the dead, immortal and awake and compelled to feel the passage of every supernatural death that crossed her. Two thousand years of that. Silas was shown a body, and permitted to believe she had simply gone.',
+          'Amara she did not kill either. She staged her death, so that Silas would have a body to grieve over, and then she used the one thing about Amara that could not be undone — that she could not die — and bound the working to her. Amara became the Anchor: the doorway itself, the seam between the living world and the dead, immortal and awake and compelled to feel the passage of every supernatural death that crossed her. Two thousand years of that, without pause and without company. Silas was shown a corpse and permitted to believe she had simply gone.',
+          "It is worth being plain about the shape of this. Qetsiyah did not build a prison and an afterlife and a doorway because she was cruel in general. She built them because she had been humiliated in particular, by two people, on what should have been her wedding day, and she had the power to make the arrangement permanent. Every ghost in this history is standing in the ruins of somebody else's engagement.",
         ],
         keyPoint: null,
       },
@@ -34,7 +36,8 @@ export const ERA_NARRATIVES: EraNarrative[] = [
         heading: 'Nature Keeps Its Ledger',
         paragraphs: [
           'This world is governed by a single law, and it is Qetsiyah herself who pronounces it: nature demands balance. Two souls had slipped the noose, and so nature set about, patiently and without malice, striking their faces again — mortal shadows cast forward every few centuries, one for Silas and one for Amara. Doppelgängers.',
-          'They are not ornament. Doppelgänger blood is the one fuel that will drive a working at the Original tier, and every expensive thing in this history runs upon it: a Bulgarian girl in 1490 who will spend five hundred years running; a girl of seventeen in Virginia in 2009 who is, without the least idea of it, the most valuable object on the face of the earth; and a man in a boarding house who wears the face of an ancient Greek immortal and never once thinks to ask why.',
+          "There are three of Amara's, and it is worth naming them together because the chronicle otherwise meets them a thousand years apart and never lines them up: Tatia, who dies in the eleventh century so that six children can become the first vampires; Katerina Petrova, who is born in 1490 and runs for five hundred years rather than be spent; and Elena Gilbert, the third and the last of them, born in Virginia in the twentieth century into a family that has no idea what she is.",
+          'They are not ornament. Doppelgänger blood is the one fuel that will drive a working at the Original tier, and every expensive thing in this history runs upon it: a Bulgarian girl who will spend five centuries never being where she is expected; a girl of seventeen who is, without the least idea of it, the most valuable object on the face of the earth; and a man in a boarding house who wears the face of an ancient Greek immortal and never once thinks to ask why.',
         ],
         keyPoint: null,
       },
@@ -43,6 +46,7 @@ export const ERA_NARRATIVES: EraNarrative[] = [
         paragraphs: [
           'Silas and Qetsiyah had themselves been Travelers — the two most powerful the people ever produced — and when her working tore the witch community in half, the surviving covens turned upon the Travelers entire. A people who could hold that much power, they reasoned, might unbalance nature as thoroughly as she had just done. So a curse was laid upon them: never to settle. Every hearth they build goes cold, every community they gather comes apart, and they have been walking for two thousand years. Their magic draws upon the massed will of their own kind rather than upon nature or upon the dead, and they do not so much die as move house, carrying consciousness from body to body.',
           "Their long labour is Qetsiyah's inverted: to find the last two doppelgängers, to spill their blood together, to break the curse — and, as a consequence they regard less as a cost than as a dividend, to unmake every other kind of magic in the world.",
+          "They settled their own account with her first. The Travelers killed Qetsiyah — she had made immortality, and they of all people wanted it unmade — and then took Amara's body and kept it moving, century after century, so that nobody who came looking would ever find the one thing capable of ending any of it.",
         ],
         keyPoint: null,
       },
