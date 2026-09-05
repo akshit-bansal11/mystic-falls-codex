@@ -15,9 +15,21 @@ export interface EraNarrativeSection {
   keyPoint: string | null
 }
 
+/**
+ * Chapter numeral in the chronicle. Deliberately not `EraNum`.
+ *
+ * The book's chapters and the causal map's era bands stopped being the same
+ * list when the concurrent years - Mystic Falls and New Orleans, which happen
+ * at the same time and were built to be read alternating - were merged into one
+ * chapter. The map still bands its nodes I to VII on its own scheme; the book
+ * runs to VIII. Typing both as one union would assert a correspondence that no
+ * longer holds, and the first person to rely on it would be wrong.
+ */
+export type ChapterNum = 'I' | 'II' | 'III' | 'IV' | 'V' | 'VI' | 'VII' | 'VIII'
+
 export interface EraNarrative {
   id: string
-  num: EraNum
+  num: ChapterNum
   name: string
   when: string
   sections: EraNarrativeSection[]

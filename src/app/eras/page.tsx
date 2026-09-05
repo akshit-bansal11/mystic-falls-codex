@@ -70,7 +70,7 @@ function buildChapters(): BookChapter[] {
 
     return {
       id: era.id,
-      kicker: `Era ${era.num}`,
+      kicker: `Chapter ${era.num}`,
       title: era.name,
       subtitle: era.when,
       blocks,
