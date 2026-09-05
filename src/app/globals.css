@@ -71,6 +71,26 @@
   --strand-death-dark: #8ca8be;
   --strand-house-dark: #d18c53;
 
+  /* ---- The book's own surface --------------------------------------------
+     Deliberately identical in both themes, and that is the decision rather
+     than an omission of one (DES-03): the book is an object in the page, not a
+     surface of it. Paper does not invert when the room lights go out, and ink
+     on a dark-themed page would read as a screen with a book drawn on it.
+
+     Ratios are measured against the darkest of the three paper stops, which is
+     the worst case a glyph can land on (DES-D04):
+       book-ink        9.85:1 on paper-low   (needs 4.5, DES-06)
+       book-ink-muted  5.32:1 on paper-low   (needs 4.5, DES-06)
+       book-rule       4.34:1 on paper-low   (needs 3,   DES-07; rules only)
+     #8a7250 was measured first and dropped at 2.75:1 - under even the non-text
+     bar, so it could not have been a hairline either. */
+  --book-paper-high: #efe3cc;
+  --book-paper: #e6d8bd;
+  --book-paper-low: #d8c7a6;
+  --book-ink: #2a1d12;
+  --book-ink-muted: #5c4630;
+  --book-rule: #6b5334;
+
   /* ---- Tier 2: semantic roles, light ------------------------------------- */
   color-scheme: light; /* DES-22 */
 
@@ -462,6 +482,293 @@ body {
 [data-strand-filter="death"] [data-strand]:not([data-strand="death"]),
 [data-strand-filter="house"] [data-strand]:not([data-strand="house"]) {
   opacity: 0.14;
+}
+
+/* =============================================================================
+   The codex, as a book
+
+   Two presentations of one markup, switched by `data-book` on the container.
+
+   `off` is what the server renders, what a reader without JavaScript keeps,
+   and what everything below 64rem or under `prefers-reduced-motion: reduce`
+   gets: ordinary flowing sections. The prose is in the document in both modes,
+   which is what holds find-in-page, the screen-reader order and indexation
+   together - a book that renders only the open spread would lose all three.
+
+   `on` stacks the sections into leaves over the drawn book. The flip is CSS:
+   the scroll handler writes one custom property, `--turn`, holding the leaf
+   index as a float, and each leaf derives its own angle from it. Nothing else
+   is written per frame.
+   ============================================================================= */
+
+.codex-book[data-book="on"] .codex-book-stage {
+  position: sticky;
+  top: 0;
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+}
+
+.codex-book[data-book="on"] .codex-book-spread {
+  position: relative;
+  width: min(100%, 90rem);
+
+  /* Locked to the plate's viewBox. This is what lets the leaves be positioned
+     in percentages and still land exactly on the drawn page rectangles. */
+  aspect-ratio: 1600 / 1000;
+  max-height: 84dvh;
+
+  /* Sizes the page type against the book rather than the viewport, so the
+     measure per line stays constant as the book scales. */
+  container-type: size;
+
+  /* Measured, not chosen by eye. Perspective magnifies whatever swings toward
+     the viewer: at 2600px a leaf passing 72deg had its near edge scaled by
+     2600/(2600-599) = 1.30, which threw 54px of parchment out past the top and
+     bottom boards. 4200px with the shorter leaf below keeps the whole turn
+     inside the covers, and the arc is still clearly an arc. Clipping the
+     spread instead is not available: `overflow` on a preserve-3d element
+     flattens it, and the flattening is what sorts the stack. */
+  perspective: 4200px;
+  transform-style: preserve-3d;
+}
+
+.codex-book[data-book="on"] .codex-book-leaf {
+  position: absolute;
+
+  /* verso 6.25%..50%, recto 50%..93.75%, page block 6%..94% - the rectangles
+     in book-plate.tsx. The leaf is the recto and hinges on the spine, so a
+     half turn lands it exactly on the verso. */
+  top: 8%;
+  left: 50%;
+  width: 43.75%;
+  height: 84%;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+
+  /* The whole animation. `--turn` counts leaves; this leaf's share of it is
+     its own index subtracted and clamped, so leaf 3 is flat until --turn
+     passes 3, turning through 4, and fully over after. */
+  --r: clamp(0, calc(var(--turn, 0) - var(--i)), 1);
+
+  /* The z offset is what makes the stack sort itself. With preserve-3d the
+     browser paints by real depth, so a turned leaf passes behind the ones
+     still to come without a single z-index.
+
+     0.9px per leaf, and that number is the whole rule. At 0.06px - a plausible
+     "just enough to break the tie" - twenty leaves spanned 1.2px of depth,
+     under the compositor's precision, and the turned leaves z-fought: two and
+     three pages' text rendered through one another on the verso. It looks like
+     a text bug and is a depth-buffer one. 0.9px gives the block 18px of
+     thickness, which is about what twenty leaves of paper measure.
+
+     The depth has to invert across the turn, and this is the part that is not
+     obvious. `translateZ(18px) rotateY(180deg)` does not leave the leaf at
+     -18px: the rotation maps the element's own plane, which is at z=0 locally,
+     and the translate then adds 18 in the parent's frame. A turned leaf keeps
+     the depth it started with, so leaf 0 stayed nearest the viewer for the
+     whole book and the verso showed page 1 against whatever recto was open -
+     page 2 facing page 13.
+
+     Negating it is not the fix either: the plate is a sibling at z=0, so a
+     leaf at negative z renders behind the drawn page block and disappears.
+     So the stack is interpolated instead, from (leaves - i) when the leaf is
+     down on the recto to (i + 1) when it is down on the verso. Both ends are
+     positive, and the order reverses exactly as a turned stack's does. */
+  --z: calc((1 - var(--r)) * (var(--leaves) - var(--i)) + var(--r) * (var(--i) + 1));
+
+  transform: translateZ(calc(var(--z) * 0.9px)) rotateY(calc(var(--r) * -180deg));
+}
+
+.codex-book[data-book="on"] .codex-book-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  backface-visibility: hidden;
+  padding: 6% 8% 7%;
+
+  /* Four layers, cheapest last, and each one is doing a different job:
+
+       1  grain      an encoded feTurbulence tile, multiplied into the paper so
+                     the surface has tooth instead of being flat colour
+       2  fibres     faint horizontal laid lines, the marks a mould leaves in
+                     handmade paper
+       3  foxing     two soft brown blooms, the age spots
+       4  the sheet  the paper itself
+
+     The grain is a data URI rather than an SVG element because it repeats: one
+     180px tile decoded once and tiled beats a filter region the size of the
+     page, and every face shares the one decode. */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='0.42'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(
+      180deg,
+      rgb(120 92 54 / 5%) 0,
+      rgb(120 92 54 / 5%) 1px,
+      transparent 1px,
+      transparent 7px
+    ),
+    radial-gradient(38% 26% at 82% 14%, rgb(138 106 58 / 16%), transparent 70%),
+    radial-gradient(30% 22% at 12% 88%, rgb(138 106 58 / 13%), transparent 72%),
+    radial-gradient(120% 90% at 18% 0%, rgb(255 255 255 / 30%), transparent 62%),
+    linear-gradient(158deg, var(--book-paper-high), var(--book-paper) 54%, var(--book-paper-low));
+  background-blend-mode: multiply, multiply, normal, normal, normal, normal;
+  color: var(--book-ink);
+
+  /* The fore-edge, cut rough. A straight edge is the single thing that makes a
+     drawn book read as a rectangle with a picture on it; the spine edge stays
+     straight because that one is bound. */
+  clip-path: polygon(
+    0% 0%,
+    99.1% 0%,
+    98.4% 4%,
+    99.5% 8%,
+    98.2% 13%,
+    99.3% 18%,
+    98.0% 24%,
+    99.4% 29%,
+    98.6% 35%,
+    99.1% 41%,
+    98.1% 47%,
+    99.5% 53%,
+    98.3% 59%,
+    99.2% 64%,
+    98.0% 70%,
+    99.4% 76%,
+    98.5% 82%,
+    99.0% 88%,
+    98.2% 94%,
+    99.3% 100%,
+    0% 100%
+  );
+}
+
+.codex-book[data-book="on"] .codex-book-face-back {
+  transform: rotateY(180deg);
+}
+
+/* The running head on an opener already reads "Era III - 12th-19th century -
+   Europe, Bulgaria, New Orleans", so the era number and dates below it are the
+   same facts a second time, in a third typeface. They belong to the flowing
+   layout, where there is no running head to carry them. */
+.codex-book[data-book="on"] .codex-page-eyebrow,
+.codex-book[data-book="on"] .codex-page-when {
+  display: none;
+}
+
+/* A page is one narrow column whatever the reading layout does elsewhere. */
+.codex-book[data-book="on"] .codex-columns {
+  column-count: 1;
+  column-rule: none;
+  max-height: none;
+}
+
+/* ---- the page, in book mode ---------------------------------------------- */
+
+.codex-book[data-book="on"] .codex-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  /* The hand runs about a third smaller on the body than a serif at the same
+     size - Caveat's x-height is short and its ascenders are long - so the page
+     is set larger than the interface would be and leaded loosely, which is
+     also how a hand actually fills a ruled page. */
+  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
+  font-size: clamp(0.95rem, 1.5cqw, 1.5rem);
+  line-height: 1.42;
+}
+
+/* The furniture is in the same hand as the body. A monospace running head and
+   a Bodoni chapter title on a page of cursive would read as three people
+   writing in one book. */
+.codex-book[data-book="on"] .codex-page-head {
+  display: block;
+  border-bottom: 1px solid var(--book-rule);
+  padding-bottom: 0.5em;
+  color: var(--book-ink-muted);
+  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
+  font-size: 0.85em;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.codex-book[data-book="on"] .codex-page-title {
+  margin-top: 0.5em;
+  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
+  font-size: 1.9em;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.codex-book[data-book="on"] .codex-page-title,
+.codex-book[data-book="on"] .codex-page-prose p,
+.codex-book[data-book="on"] .codex-page-prose {
+  color: var(--book-ink);
+}
+
+.codex-book[data-book="on"] .codex-page-prose {
+  flex: 1 1 auto;
+  margin-top: 0.8em;
+  overflow: hidden;
+
+  /* Ragged right, and no hyphenation. Justification was right for the serif
+     and is wrong for a hand: nobody writing with a pen stretches a line to
+     meet the margin, and a hyphenated break in cursive reads as a mistake. */
+  text-align: left;
+  hyphens: manual;
+}
+
+/* The pen varies. Alternating a hair of weight and slant between paragraphs
+   stops forty pages of one font from reading as a typeface again - it is the
+   evenness that gives a handwriting face away, not the letterforms. */
+.codex-book[data-book="on"] .codex-page-prose > p:nth-child(odd) {
+  transform: rotate(-0.12deg);
+  font-weight: 400;
+}
+
+.codex-book[data-book="on"] .codex-page-prose > p:nth-child(even) {
+  transform: rotate(0.1deg);
+  font-weight: 500;
+}
+
+/* The opening letter, three lines deep, the way a chapter opens. Applied only
+   to the first paragraph of a page: on every paragraph it would be a texture
+   rather than an opening. */
+.codex-book[data-book="on"] .codex-page-opener .codex-page-prose > p:first-child::first-letter {
+  float: left;
+  padding-right: 0.08em;
+  color: var(--book-ink);
+  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
+  font-size: 2.7em;
+  line-height: 0.9;
+}
+
+.codex-book[data-book="on"] .codex-page-folio {
+  display: block;
+  margin-top: 0.7em;
+  color: var(--book-ink-muted);
+  font-family: var(--font-hand), ui-rounded, "Segoe Script", cursive;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+/* ---- the same markup, flowing --------------------------------------------- */
+
+.codex-book[data-book="off"] .codex-book-leaf {
+  display: contents;
+}
+
+.codex-book[data-book="off"] .codex-page {
+  display: block;
+  margin-bottom: 3.5rem;
+}
+
+/* The running head and the folio are the book's furniture, not the chronicle's.
+   In flow they would be a page number on a page that does not exist. */
+.codex-book[data-book="off"] .codex-page-head,
+.codex-book[data-book="off"] .codex-page-folio {
+  display: none;
 }
 
 /* The map pans by drag, by keyboard and by wheel, so the scrollbars were only
