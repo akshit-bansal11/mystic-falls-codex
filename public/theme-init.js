@@ -14,3 +14,14 @@ try {
   // Storage unavailable (private mode, blocked cookies). The system
   // preference in globals.css remains in effect.
 }
+
+// Same pre-paint reason as the theme: the spoiler advisory must not flash back
+// for a reader who has already dismissed it, and the family-tree and map links
+// are plain anchors, so full navigations are common here.
+try {
+  if (localStorage.getItem('codex-spoiler-notice') === 'dismissed') {
+    document.documentElement.dataset.spoilerNotice = 'dismissed'
+  }
+} catch {
+  // Storage unavailable. The notice shows for this page view.
+}

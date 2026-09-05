@@ -402,3 +402,10 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Hidden before first paint for a reader who already dismissed it; the
+   attribute is stamped by /theme-init.js. display:none also removes it from
+   the accessibility tree, so the dismiss button is not tabbable once gone. */
+[data-spoiler-notice="dismissed"] .spoiler-notice {
+  display: none;
+}

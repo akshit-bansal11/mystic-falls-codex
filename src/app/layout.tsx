@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 import { SiteFooter } from '@/components/layout/site-footer'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SkipLink } from '@/components/layout/skip-link'
+import { SpoilerNotice } from '@/components/layout/spoiler-notice'
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/config/site'
 import './globals.css'
 
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <SiteFooter />
+        <SpoilerNotice />
       </body>
     </html>
   )
