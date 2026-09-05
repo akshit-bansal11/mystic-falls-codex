@@ -29,7 +29,7 @@ refresh **Current state**, **Open threads** and **Next actions**.
   checking the Decisions log on the Notion page first.
 - `_inbox/` in the parent directory is the original source material. It is read-only
   and is not part of this repo.
-- No content data may be imported by a client component. The four client components
-  are the map viewport, the people search, the theme toggle and the section nav;
-  none of them import from `src/data/`. Adding such an import ships the encyclopedia
-  to the browser.
+- No content data may be imported by a client component. The five client components
+  are the map viewport, the people search, the theme toggle, the section nav and the
+  spoiler notice; none of them import from `src/data/`. Adding such an import ships
+  the encyclopedia to the browser. Update this count when you add one.

@@ -48,8 +48,8 @@ Next.js App Router, TypeScript, Tailwind 4. Every route is statically generated 
 
 The content lives in typed modules under `src/data/`, one per entity, and is
 consumed only by Server Components. **No content data reaches the browser.** The
-four client components — the map viewport, the people search, the theme toggle and
-the section nav — import no data module between them.
+five client components — the map viewport, the people search, the theme toggle, the
+section nav and the spoiler notice — import no data module between them.
 
 `src/lib/codex/` holds the pure layout maths: the causal map's era banding and edge
 routing, and the family-tree geometry.
