@@ -4,7 +4,7 @@ import { ThemeToggle } from '@/components/layout/theme-toggle'
 export function SiteHeader() {
   return (
     <header className="bg-surface">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-baseline justify-between gap-4 px-4 py-6">
+      <div className="shell flex flex-wrap items-baseline justify-between gap-4 py-6">
         <div>
           <h1 className="font-display text-h1 text-primary">
             The Mystic Falls <em className="text-accent not-italic">Codex</em>

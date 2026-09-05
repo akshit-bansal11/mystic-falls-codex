@@ -15,7 +15,7 @@ export default function GroupsPage() {
   return (
     <>
       <h2 className="text-primary font-display text-h1">Factions</h2>
-      <p className="text-muted mt-2 mb-10 max-w-2xl text-lead">
+      <p className="text-muted mt-2 mb-10 max-w-4xl text-lead">
         Nineteen groups. Rosters are labelled by relationship, not membership: the people a faction
         hunted are not the people who belonged to it.
       </p>
@@ -30,10 +30,10 @@ export default function GroupsPage() {
           <article key={group.id} id={group.id} className="border-subtle scroll-mt-8 border-t pt-6">
             <h3 className="text-primary font-display text-h2">{group.name}</h3>
             <p className="text-faint font-mono text-meta">{group.era}</p>
-            <p className="text-primary mt-3 max-w-3xl text-body">{group.description}</p>
+            <p className="text-primary mt-3 max-w-4xl text-body">{group.description}</p>
 
             {group.points.length > 0 ? (
-              <ul className="mt-4 max-w-3xl space-y-2">
+              <ul className="codex-columns mt-4 space-y-2">
                 {group.points.map((point) => (
                   <li
                     key={point.slice(0, 48)}

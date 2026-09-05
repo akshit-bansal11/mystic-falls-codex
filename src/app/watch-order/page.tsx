@@ -12,7 +12,7 @@ export default function WatchOrderPage() {
   return (
     <>
       <h2 className="text-primary font-display text-h1">Watch Order</h2>
-      <p className="text-muted mt-2 max-w-2xl text-lead">
+      <p className="text-muted mt-2 max-w-4xl text-lead">
         Broadcast order, never chronological. The flashbacks are the reveals: watching 1490 before
         2009 turns the structure that carries the story into plain exposition.
       </p>
@@ -42,7 +42,7 @@ export default function WatchOrderPage() {
                 <h4 className="text-primary font-display text-h3">{step.title}</h4>
               </div>
               <p className="text-faint mt-1 font-mono text-meta">{step.meta}</p>
-              <p className="text-primary mt-3 max-w-3xl text-body">{step.note}</p>
+              <p className="text-primary mt-3 max-w-4xl text-body">{step.note}</p>
               {step.pairing.length > 0 ? (
                 <ul className="bg-raised rounded-card mt-4 inline-flex list-none flex-col gap-1 p-3">
                   {step.pairing.map((pair) => (

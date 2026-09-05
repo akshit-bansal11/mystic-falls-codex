@@ -10,7 +10,7 @@ export default function MapPage() {
   return (
     <>
       <h2 className="text-primary font-display text-h1">The Map</h2>
-      <p className="text-muted mt-2 mb-6 max-w-2xl text-lead">
+      <p className="text-muted mt-2 mb-6 max-w-4xl text-lead">
         Eighty events across seven eras, each linked to what caused it and what it caused. The
         franchise tells this out of order across 331 episodes; here it is as one shape.
       </p>

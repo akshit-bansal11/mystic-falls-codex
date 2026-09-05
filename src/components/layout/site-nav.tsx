@@ -17,7 +17,7 @@ export function SiteNav() {
 
   return (
     <nav aria-label="Codex sections" className="border-subtle border-b">
-      <ul className="mx-auto flex max-w-6xl list-none flex-wrap gap-x-1 gap-y-0 px-4">
+      <ul className="shell flex list-none flex-wrap gap-x-1 gap-y-0">
         {NAV_ITEMS.map((item) => {
           const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href)
 

@@ -24,7 +24,7 @@ export default function TimelinePage() {
   return (
     <>
       <h2 className="text-primary font-display text-h1">Timeline</h2>
-      <p className="text-muted mt-2 mb-10 max-w-2xl text-lead">
+      <p className="text-muted mt-2 mb-10 max-w-4xl text-lead">
         Two thousand years in order, from the immortality elixir to the last class at the Salvatore
         School.
       </p>

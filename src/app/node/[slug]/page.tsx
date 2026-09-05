@@ -51,7 +51,7 @@ export default async function NodePage({ params }: NodePageProps) {
   }))
 
   return (
-    <article className="max-w-3xl">
+    <article>
       <Breadcrumbs trail={[{ href: '/', label: 'The Map' }]} current={node.title} />
       <p className="text-faint flex items-center gap-2 font-mono text-eyebrow uppercase">
         <StrandDot strand={node.category} />
@@ -61,12 +61,12 @@ export default async function NodePage({ params }: NodePageProps) {
       <h2 className="text-primary mt-1 font-display text-display">{node.title}</h2>
       <p className="text-faint mt-1 font-mono text-meta">{node.dated}</p>
 
-      <p className="text-primary mt-6 font-body text-lead">{node.summary}</p>
+      <p className="text-primary mt-6 max-w-4xl font-body text-lead">{node.summary}</p>
 
       {node.facts.length > 0 ? (
         <section className="mt-10">
           <h3 className="text-primary font-display text-h3">Details</h3>
-          <ul className="mt-3 space-y-2">
+          <ul className="codex-columns mt-3 space-y-2">
             {node.facts.map((fact) => (
               <li
                 key={fact.slice(0, 48)}

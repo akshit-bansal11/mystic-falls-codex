@@ -16,7 +16,7 @@ export default function FamiliesPage() {
   return (
     <>
       <h2 className="text-primary font-display text-h1">Families</h2>
-      <p className="text-muted mt-2 mb-10 max-w-2xl text-lead">
+      <p className="text-muted mt-2 mb-10 max-w-4xl text-lead">
         Eleven trees. Solid lines are blood, level lines are marriages, dashed lines are sirelines:
         the vampire equivalent of descent.
       </p>
@@ -36,7 +36,7 @@ export default function FamiliesPage() {
           return (
             <article key={family.id} id={family.id} className="scroll-mt-8">
               <h3 className="text-primary font-display text-h2">{family.name}</h3>
-              <p className="text-muted mt-1 mb-4 max-w-3xl text-body">{family.blurb}</p>
+              <p className="text-muted mt-1 mb-4 max-w-4xl text-body">{family.blurb}</p>
 
               {/* The chart scrolls inside its own box so the page never scrolls
                   horizontally at 320px (UI-16). */}

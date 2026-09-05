@@ -41,7 +41,7 @@ export default async function PersonPage({ params }: PersonPageProps) {
   const category = CATEGORY_BY_KEY.get(person.category)
 
   return (
-    <article className="max-w-3xl">
+    <article>
       <Breadcrumbs trail={[{ href: '/people', label: 'People' }]} current={person.name} />
       <p className="text-faint flex items-center gap-2 text-eyebrow uppercase">
         <StrandDot strand={person.category} />
@@ -63,7 +63,7 @@ export default async function PersonPage({ params }: PersonPageProps) {
         <dd className="text-primary">{person.appearsIn}</dd>
       </dl>
 
-      <div className="mt-8 space-y-4">
+      <div className="codex-columns mt-8 space-y-4">
         {person.biography.map((paragraph) => (
           <p key={paragraph.slice(0, 48)} className="text-primary text-body">
             {paragraph}
@@ -74,7 +74,7 @@ export default async function PersonPage({ params }: PersonPageProps) {
       {person.facts.length > 0 ? (
         <section className="mt-10">
           <h3 className="text-primary font-display text-h3">Details</h3>
-          <ul className="mt-3 space-y-2">
+          <ul className="codex-columns mt-3 space-y-2">
             {person.facts.map((fact) => (
               <li
                 key={fact.slice(0, 48)}

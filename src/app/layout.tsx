@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Script src="/theme-init.js" strategy="beforeInteractive" />
         <SkipLink />
         <SiteHeader />
-        <main id="content" className="mx-auto max-w-6xl px-4 py-10">
+        <main id="content" className="shell py-10">
           {children}
         </main>
         <SiteFooter />

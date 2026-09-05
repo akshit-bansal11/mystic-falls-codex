@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <section className="max-w-2xl">
+    <section className="max-w-4xl">
       <p className="text-faint font-mono text-eyebrow uppercase">404</p>
       <h2 className="text-primary mt-1 font-display text-h1">
         Nothing in the chronicle is filed here

@@ -27,7 +27,7 @@ export default function PeoplePage() {
   return (
     <>
       <h2 className="font-display text-h1 text-primary">People</h2>
-      <p className="text-muted mt-2 mb-8 max-w-2xl text-lead">
+      <p className="text-muted mt-2 mb-8 max-w-4xl text-lead">
         Every named figure the chronicle turns on, from the first immortals to the last class at the
         Salvatore School.
       </p>

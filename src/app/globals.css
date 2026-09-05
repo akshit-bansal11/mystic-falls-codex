@@ -273,6 +273,80 @@ body {
   line-height: 1.7;
 }
 
+/* =============================================================================
+   The page shell
+
+   One width rule shared by the masthead, the section nav, the main column and
+   the footer, so every tab is the same shape. There is deliberately no
+   max-width: the site fills whatever device it is on. Reading measure is the
+   column layout's job below, not a narrow container's.
+
+   The breakpoints are Tailwind's own, referenced by name rather than restated
+   as numbers, so the 320/768/1280 sweep sees the same set the utilities do
+   (UI-D10).
+   ============================================================================= */
+.shell {
+  width: 100%;
+  padding-inline: 1rem;
+
+  @variant md {
+    padding-inline: 1.5rem;
+  }
+
+  @variant xl {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* =============================================================================
+   The book column layout
+
+   Long prose is set in columns rather than as one full-width measure. A line
+   1,800 px wide cannot be read, and a narrow column centred in a wide page
+   wastes the screen the reader actually has; a codex sets both problems the
+   way a printed page does.
+
+   The columns balance rather than filling in order, and that was measured
+   rather than assumed. `column-fill: auto` with a 70vh cap is the rule that
+   reads correctly on paper - fill a column to the foot of the page, then start
+   the next - but only 1 of the 40 era sections is tall enough to reach a 630 px
+   cap at 1440x900. The other 39 sat as a single 475 px strip with two thirds of
+   the row empty, which is narrower than the 768 px measure they replaced.
+   Balancing spreads every section across the full width, which is what a
+   printed page does and what makes the width worth taking.
+
+   `max-height` stays as the cap the balanced height is never expected to reach;
+   it binds only if a future section outgrows three columns of 70vh, and
+   `overflow-x` catches that case rather than letting it push the page sideways.
+
+   Below md there is one column and no cap. Both matter: a second column at
+   320 px is too narrow to set type in, and a height cap there would push the
+   overflow sideways off the screen, which is the UI-16 failure.
+   ============================================================================= */
+.codex-columns {
+  column-gap: 3rem;
+  orphans: 2;
+  widows: 2;
+
+  @variant md {
+    column-count: 2;
+    column-rule: 1px solid var(--border-subtle);
+    max-height: 70vh;
+    overflow-x: auto;
+  }
+
+  @variant xl {
+    column-count: 3;
+  }
+}
+
+/* A fact or a roster entry is one unit; splitting one across a column break
+   reads as two half-facts. Paragraphs are left to break, which is what lets a
+   column fill to its foot. */
+.codex-columns li {
+  break-inside: avoid;
+}
+
 /* One visible focus indicator on every focusable control (UI-06), measured
    against the surface behind it (DES-07). */
 :focus-visible {
