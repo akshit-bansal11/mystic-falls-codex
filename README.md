@@ -1,5 +1,7 @@
 # The Mystic Falls Codex
 
+**[mystic-falls-codex.vercel.app](https://mystic-falls-codex.vercel.app)**
+
 An interactive encyclopedia of the **in-universe** history of *The Vampire Diaries*,
 *The Originals* and *Legacies* — the fiction's own two-thousand-year chronology, not
 the production story.
@@ -19,9 +21,13 @@ in one place. This is that spine.
 | Factions | 19 groups, rosters labelled by relationship |
 | Rules | 8 supernatural mechanics the plot obeys |
 | Timeline | ~100 dated events, c. 100 BC to 2028 |
-| Watch Order | Broadcast order, with the alternating schedule and every crossover |
+| Watch Order | Broadcast order, episode by episode: all 122 sittings of the three concurrent years, and every crossover |
 
 Every event and every person is a real URL: `/node/silas`, `/people/klaus`.
+
+**It spoils all three shows, completely and on purpose.** The whole value of the site
+is the causal spine stated plainly, so nothing is hidden or progressively revealed.
+You are warned once on arrival and then not again.
 
 ## Running it
 
