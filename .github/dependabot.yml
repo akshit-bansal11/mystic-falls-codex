@@ -14,6 +14,15 @@ updates:
         patterns: ['react', 'react-dom', '@types/react', '@types/react-dom']
       tooling:
         patterns: ['@biomejs/*', 'stylelint*', 'eslint*', 'vitest', '@vitest/*', 'typescript']
+    ignore:
+      # typescript-eslint refuses to load against TS 7.0 and throws at require
+      # time, so eslint exits 2 and the whole gate dies before it lints a file.
+      # The project is on TS 5.x by the framework scaffold's choice; TS 6 is the
+      # documented side-by-side path and TS >=7.1 support is tracked upstream at
+      # typescript-eslint#10940. Bumping to 7.x breaks CI 100% of the time, so
+      # the bot should stop proposing it until that issue closes.
+      - dependency-name: typescript
+        versions: ['>=7.0.0']
   - package-ecosystem: github-actions
     directory: /
     schedule:
