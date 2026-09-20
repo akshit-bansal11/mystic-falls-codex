@@ -44,13 +44,26 @@ export default function WatchOrderPage() {
               <p className="text-faint mt-1 font-mono text-meta">{step.meta}</p>
               <p className="text-primary mt-3 max-w-4xl text-body">{step.note}</p>
               {step.pairing.length > 0 ? (
-                <ul className="bg-raised rounded-card mt-4 inline-flex list-none flex-col gap-1 p-3">
-                  {step.pairing.map((pair) => (
-                    <li key={pair} className="text-muted font-mono text-meta">
-                      {pair}
+                <ol
+                  aria-label={`Episode order for step ${step.step}`}
+                  className="bg-raised rounded-card mt-4 columns-1 list-none overflow-hidden p-0 sm:columns-2 xl:columns-3"
+                >
+                  {step.pairing.map((sitting) => (
+                    <li
+                      key={`${sitting.show} ${sitting.episodes}`}
+                      className={
+                        sitting.show === 'TO'
+                          ? 'bg-sunk flex break-inside-avoid items-baseline gap-3 px-3 py-1'
+                          : 'flex break-inside-avoid items-baseline gap-3 px-3 py-1'
+                      }
+                    >
+                      <span className="text-faint w-9 shrink-0 font-mono text-meta">
+                        {sitting.show}
+                      </span>
+                      <span className="text-primary font-mono text-meta">{sitting.episodes}</span>
                     </li>
                   ))}
-                </ul>
+                </ol>
               ) : null}
             </li>
           ))}
