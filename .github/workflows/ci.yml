@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   pull_request:
+  # A lockfile commit pushed by the relock job carries GITHUB_TOKEN, and pushes
+  # made with that token deliberately do not trigger workflows. Without this,
+  # the commit that fixes CI is the one commit CI never runs on.
+  workflow_dispatch:
 
 # Deployment is its own phase with its own gate (CD-21). Nothing here ships.
 permissions:
